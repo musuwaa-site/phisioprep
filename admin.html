@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin MTF Editor - PhysioPrep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const localSession = localStorage.getItem('activeSession');
+        const sessionSession = sessionStorage.getItem('activeSession');
+        const activeSession = localSession ? JSON.parse(localSession) : (sessionSession ? JSON.parse(sessionSession) : null);
+        
+        if (!activeSession || activeSession.role !== 'admin') {
+            window.location.replace('login.html'); // Silent, bulletproof rejection
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 h-screen flex flex-col overflow-hidden font-sans selection:bg-indigo-100 selection:text-indigo-900">
+
+    <header class="bg-white border-b border-slate-200 flex-shrink-0 z-20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-rose-600 text-white p-1.5 rounded-lg shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <h1 class="font-black text-lg text-slate-900 hidden sm:block">Admin MTF Editor</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-xs font-bold text-rose-700 bg-rose-50 px-3 py-1.5 rounded-full border border-rose-200 hidden md:inline-block">Admin Secured</span>
+                <a href="index.html" class="text-sm font-bold text-slate-600 hover:text-slate-900 px-3 py-2 bg-slate-100 rounded-lg transition-colors">Exit</a>
+                <button onclick="downloadJSON(this)" class="px-4 py-2 text-sm font-bold rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 shadow-md transition-all flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg> Save JSON
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex-1 flex overflow-hidden">
+        <aside class="w-64 bg-white border-r border-slate-200 flex flex-col hidden md:flex z-10 shadow-[4px_0_15px_-3px_rgba(0,0,0,0.05)]">
+            <div class="p-4 border-b border-slate-100 bg-slate-50 flex justify-between items-center">
+                <h2 class="text-xs font-black text-slate-500 uppercase tracking-wider">Exam Database</h2>
+                <button onclick="createNewExam()" class="text-indigo-600 hover:text-indigo-800 bg-indigo-100 hover:bg-indigo-200 p-1.5 rounded-lg transition-colors font-bold shadow-sm" title="Add Year"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg></button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-3 space-y-2" id="exam-list"></div>
+        </aside>
+
+        <main class="flex-1 flex flex-col bg-slate-50 overflow-hidden relative">
+            <div class="md:hidden p-4 bg-white border-b border-slate-200 flex gap-2 shadow-sm z-10">
+                <select id="mobile-exam-select" class="flex-1 bg-slate-50 border border-slate-200 text-sm font-bold rounded-xl p-2 outline-none focus:ring-2 focus:ring-indigo-500" onchange="selectExam(this.value)"></select>
+                <button onclick="createNewExam()" class="bg-indigo-600 text-white p-2.5 rounded-xl font-bold shadow-sm"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg></button>
+            </div>
+
+            <div id="editor-header" class="bg-white p-4 sm:p-6 border-b border-slate-200 hidden flex-shrink-0 shadow-sm z-10">
+                <div class="max-w-4xl mx-auto flex justify-between items-center">
+                    <div>
+                        <h2 class="text-2xl font-black text-slate-900" id="current-exam-title">Editor</h2>
+                        <p class="text-xs font-medium text-slate-500 mt-1">Manage stems and true/false statements.</p>
+                    </div>
+                    <button onclick="addQuestionStem()" class="px-4 py-2 border border-indigo-200 rounded-xl text-sm font-bold text-indigo-700 bg-indigo-50 hover:bg-indigo-100 shadow-sm transition-colors flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg> Add Stem Block
+                    </button>
+                </div>
+            </div>
+
+            <div id="questions-container" class="flex-1 overflow-y-auto p-4 sm:p-6 hidden">
+                <div class="max-w-4xl mx-auto space-y-8 pb-32" id="questions-list"></div>
+            </div>
+            
+            <div id="empty-state" class="flex-1 flex flex-col items-center justify-center p-6 text-center">
+                <div class="w-16 h-16 bg-slate-200 rounded-full flex items-center justify-center mb-4 text-slate-400"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"></path></svg></div>
+                <h3 class="text-xl font-bold text-slate-800">No Exams Loaded</h3>
+                <p class="text-sm font-medium text-slate-500 mt-2">Ensure exams.json is formatted correctly or create a new one.</p>
+                <button onclick="createNewExam()" class="mt-6 px-6 py-3 bg-slate-900 text-white rounded-xl font-bold shadow-md hover:bg-slate-800 transition-all transform hover:-translate-y-0.5">Initialize Database</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let database = {};
+        let currentYear = null;
+
+        async function loadData() {
+            try {
+                const response = await fetch('exams.json');
+                if (!response.ok) throw new Error("File not found");
+                const rawData = await response.json();
+                
+                // Bulletproof adaptation to Dictionary format
+                if (Array.isArray(rawData)) {
+                    database = {};
+                    rawData.forEach(item => {
+                        const yr = item.examYear || item.year || "Unknown";
+                        database[yr] = { examYear: yr, title: `${yr} Exam`, questions: item.questions || [], definitions: item.definitions || {} };
+                    });
+                } else if (rawData.examYear || rawData.questions) {
+                    const yr = rawData.examYear || "Unknown";
+                    database[yr] = rawData;
+                } else {
+                    database = rawData;
+                }
+            } catch (e) {
+                database = {};
+            }
+            renderSidebar();
+            const years = Object.keys(database);
+            if (years.length > 0) selectExam(years[0]);
+            else showEmptyState();
+        }
+
+        function renderSidebar() {
+            const list = document.getElementById('exam-list');
+            const mSelect = document.getElementById('mobile-exam-select');
+            list.innerHTML = ''; mSelect.innerHTML = '';
+            
+            Object.keys(database).sort().reverse().forEach(year => {
+                const qLen = database[year].questions?.length || 0;
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left px-4 py-3 rounded-xl text-sm font-bold transition-all ${currentYear === year ? 'bg-indigo-600 text-white shadow-md' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`;
+                btn.innerHTML = `<div class="flex justify-between items-center"><span>${year} Exam</span> <span class="text-[10px] bg-black/10 px-2 py-0.5 rounded-full">${qLen}</span></div>`;
+                btn.onclick = () => selectExam(year);
+                list.appendChild(btn);
+
+                const opt = document.createElement('option');
+                opt.value = year; opt.textContent = `${year} Exam (${qLen} Blocks)`;
+                if (currentYear === year) opt.selected = true;
+                mSelect.appendChild(opt);
+            });
+        }
+
+        function showEmptyState() {
+            document.getElementById('editor-header').classList.add('hidden');
+            document.getElementById('questions-container').classList.add('hidden');
+            document.getElementById('empty-state').classList.remove('hidden');
+        }
+
+        function selectExam(year) {
+            currentYear = year;
+            renderSidebar();
+            document.getElementById('empty-state').classList.add('hidden');
+            document.getElementById('editor-header').classList.remove('hidden');
+            document.getElementById('questions-container').classList.remove('hidden');
+            document.getElementById('current-exam-title').innerText = `${year} Editor`;
+            renderQuestions();
+        }
+
+        function renderQuestions() {
+            const container = document.getElementById('questions-list');
+            container.innerHTML = '';
+            const questions = database[currentYear].questions || [];
+            
+            if(questions.length === 0) {
+                container.innerHTML = `<div class="text-center py-10 bg-white border border-dashed border-slate-300 rounded-2xl text-slate-500 font-bold">No questions. Add a Stem Block above.</div>`;
+                return;
+            }
+
+            questions.forEach((q, qIdx) => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden";
+                
+                // Nested Statements Generation
+                let statementsHTML = (q.statements || []).map((s, sIdx) => `
+                    <div class="mt-3 p-4 bg-slate-50 border border-slate-200 rounded-xl relative group">
+                        <button onclick="deleteStatement(${qIdx}, ${sIdx})" class="absolute top-2 right-2 text-[10px] uppercase font-black text-rose-500 bg-rose-100 hover:bg-rose-200 px-2 py-1 rounded transition-colors opacity-0 group-hover:opacity-100">Remove</button>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-3 mb-3">
+                            <div class="md:col-span-3">
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Statement</label>
+                                <input value="${s.text || ''}" onchange="updateStatement(${qIdx}, ${sIdx}, 'text', this.value)" class="w-full text-sm p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none font-medium text-slate-800" placeholder="e.g. Vagal stimulation">
+                            </div>
+                            <div class="md:col-span-1">
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Answer</label>
+                                <select onchange="updateStatement(${qIdx}, ${sIdx}, 'answer', this.value === 'true')" class="w-full text-sm p-2 border border-slate-300 rounded-lg font-black outline-none focus:ring-2 focus:ring-indigo-500 ${s.answer ? 'text-emerald-600 bg-emerald-50' : 'text-rose-600 bg-rose-50'}">
+                                    <option value="true" ${s.answer === true ? 'selected' : ''}>TRUE</option>
+                                    <option value="false" ${s.answer === false ? 'selected' : ''}>FALSE</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <label class="block text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Explanation / Citation</label>
+                        <textarea rows="2" onchange="updateStatement(${qIdx}, ${sIdx}, 'explanation', this.value)" class="w-full text-sm p-2 border border-slate-300 rounded-lg bg-white outline-none focus:ring-2 focus:ring-indigo-500 text-slate-600" placeholder="Explain why it's true or false...">${s.explanation || ''}</textarea>
+                    </div>
+                `).join('');
+
+                if(!q.statements || q.statements.length === 0) statementsHTML = `<p class="text-xs text-slate-400 font-medium italic py-2">No true/false statements added yet.</p>`;
+
+                card.innerHTML = `
+                    <div class="absolute top-0 left-0 w-2 h-full bg-indigo-600"></div>
+                    <div class="flex justify-between items-center border-b border-slate-100 pb-3 mb-4 pl-2">
+                        <span class="bg-indigo-100 text-indigo-800 text-[10px] uppercase font-black tracking-widest px-3 py-1 rounded-md border border-indigo-200">Block ${qIdx + 1}</span>
+                        <button onclick="deleteQuestion(${qIdx})" class="text-rose-500 hover:text-rose-700 font-bold text-xs uppercase tracking-wider bg-white border border-slate-200 px-3 py-1 rounded-md shadow-sm">Delete Block</button>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 pl-2">
+                        <div class="md:col-span-3">
+                            <label class="block text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Stem (Main Header)</label>
+                            <textarea rows="2" onchange="updateStem(${qIdx}, 'stem', this.value)" class="w-full border border-slate-300 rounded-xl p-3 text-base font-black text-slate-900 focus:ring-2 focus:ring-indigo-500 outline-none shadow-inner" placeholder="e.g. Gastric acid secretion is stimulated by:">${q.stem || ''}</textarea>
+                        </div>
+                        <div class="md:col-span-1 space-y-3">
+                            <div>
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Topic</label>
+                                <input type="text" value="${q.topic || ''}" onchange="updateStem(${qIdx}, 'topic', this.value)" class="w-full border border-slate-300 rounded-lg p-2 text-sm font-bold text-slate-700 focus:ring-2 focus:ring-indigo-500 outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-wider mb-1">Stem ID</label>
+                                <input type="text" value="${q.id || ''}" onchange="updateStem(${qIdx}, 'id', this.value)" class="w-full border border-slate-300 rounded-lg p-2 text-xs font-mono text-slate-500 focus:ring-2 focus:ring-indigo-500 outline-none bg-slate-50">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-slate-200 pt-4 bg-slate-100/50 -mx-6 px-6 -mb-6 pb-6 rounded-b-2xl pl-8">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-sm font-black text-slate-800 uppercase tracking-wide">Statements</h4>
+                            <button onclick="addStatement(${qIdx})" class="text-xs bg-slate-800 text-white px-3 py-1.5 rounded-lg font-bold shadow-sm hover:bg-slate-700 transition-colors flex items-center gap-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg> Add</button>
+                        </div>
+                        <div class="space-y-2">${statementsHTML}</div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function createNewExam() {
+            const year = prompt("Enter Name or Year for the new exam (e.g., 2024):");
+            if (year && year.trim()) {
+                if(!database[year]) database[year] = { examYear: year, title: `${year} Exam`, questions: [], definitions: {} };
+                selectExam(year);
+            }
+        }
+
+        function addQuestionStem() {
+            if (!currentYear) return;
+            if (!database[currentYear].questions) database[currentYear].questions = [];
+            database[currentYear].questions.push({ id: `q${Date.now()}`, topic: "General", stem: "New Stem...", statements: [] });
+            renderQuestions(); renderSidebar();
+            setTimeout(() => document.getElementById('questions-container').scrollTo({ top: 99999, behavior: 'smooth' }), 100);
+        }
+
+        window.updateStem = function(qIdx, field, value) { database[currentYear].questions[qIdx][field] = value; };
+        window.deleteQuestion = function(qIdx) {
+            if (confirm("Delete this entire Stem block and all its statements?")) { database[currentYear].questions.splice(qIdx, 1); renderQuestions(); renderSidebar(); }
+        };
+
+        window.addStatement = function(qIdx) {
+            if(!database[currentYear].questions[qIdx].statements) database[currentYear].questions[qIdx].statements = [];
+            database[currentYear].questions[qIdx].statements.push({ id: `s_${Date.now()}`, text: "", answer: true, explanation: "" });
+            renderQuestions();
+        };
+
+        window.updateStatement = function(qIdx, sIdx, field, value) {
+            database[currentYear].questions[qIdx].statements[sIdx][field] = value;
+            if(field === 'answer') renderQuestions(); 
+        };
+
+        window.deleteStatement = function(qIdx, sIdx) {
+            database[currentYear].questions[qIdx].statements.splice(sIdx, 1);
+            renderQuestions();
+        };
+
+        function downloadJSON(btn) {
+            const dataStr = JSON.stringify(database, null, 4);
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url; a.download = "exams.json"; // Master filename requirement
+            document.body.appendChild(a); a.click(); document.body.removeChild(a); URL.revokeObjectURL(url);
+            
+            // Visual success indicator
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = `✅ Saved!`; btn.classList.add('bg-emerald-500'); btn.classList.remove('bg-indigo-600');
+            setTimeout(() => { btn.innerHTML = originalHTML; btn.classList.remove('bg-emerald-500'); btn.classList.add('bg-indigo-600'); }, 2000);
+        }
+
+        window.onload = loadData;
+    </script>
+</body>
+</html>

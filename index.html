@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PhysioPrep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const localSession = localStorage.getItem('activeSession');
+        const sessionSession = sessionStorage.getItem('activeSession');
+        const activeSession = localSession ? JSON.parse(localSession) : (sessionSession ? JSON.parse(sessionSession) : null);
+        if (!activeSession) window.location.replace('login.html');
+    </script>
+</head>
+<body class="bg-slate-50 min-h-screen font-sans selection:bg-indigo-100 selection:text-indigo-900">
+
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.reload()">
+                    <div class="bg-indigo-600 text-white p-2 rounded-xl shadow-sm">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <span class="font-extrabold text-xl text-slate-900 tracking-tight hidden sm:block">PhysioPrep</span>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <a href="admin.html" id="admin-btn" class="hidden px-4 py-2 border border-indigo-200 text-sm font-bold rounded-lg text-indigo-700 bg-indigo-50 hover:bg-indigo-100 transition-colors shadow-sm">
+                        Admin Editor
+                    </a>
+                    <div class="hidden md:block text-sm font-medium text-slate-500 bg-slate-100 px-3 py-1.5 rounded-full" id="user-display"></div>
+                    <button onclick="logout()" class="px-4 py-2 border border-slate-300 text-sm font-bold rounded-lg text-slate-700 bg-white hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 transition-all shadow-sm">
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="mb-10 text-center sm:text-left">
+            <h1 class="text-3xl font-black text-slate-900 tracking-tight" id="welcome-message">Available Exams</h1>
+            <p class="mt-2 text-lg text-slate-500 font-medium">Select a past paper year to begin your practice session.</p>
+        </div>
+
+        <div id="exam-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div class="col-span-full flex flex-col items-center justify-center py-16 text-slate-400">
+                <svg class="animate-spin h-10 w-10 text-indigo-600 mb-4" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                <p class="font-medium">Connecting to exam database...</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (activeSession.email) document.getElementById('user-display').innerText = activeSession.email;
+            if (activeSession.role === 'admin') {
+                document.getElementById('admin-btn').classList.remove('hidden');
+                document.getElementById('welcome-message').innerText = "Exam Dashboard (Admin Mode)";
+            }
+            loadExams();
+        });
+
+        function logout() {
+            localStorage.removeItem('activeSession');
+            sessionStorage.removeItem('activeSession');
+            window.location.replace('login.html');
+        }
+
+        async function loadExams() {
+            const grid = document.getElementById('exam-grid');
+            try {
+                const response = await fetch('exams.json');
+                if (!response.ok) throw new Error("HTTP error");
+                const rawData = await response.json();
+                
+                // Bulletproof normalization
+                let examsArray = Array.isArray(rawData) ? rawData : Object.values(rawData);
+                renderExams(examsArray, grid);
+            } catch (error) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-dashed border-rose-300 shadow-sm">
+                        <div class="text-rose-500 mb-2"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                        <p class="text-rose-600 font-bold text-lg">Database Not Found</p>
+                        <p class="text-rose-500 text-sm mt-1">Please ensure 'exams.json' is saved in the same folder as this file.</p>
+                    </div>`;
+            }
+        }
+
+        function renderExams(exams, grid) {
+            grid.innerHTML = '';
+            if (exams.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500 font-medium bg-white rounded-2xl border border-slate-200">No exams available yet.</div>`;
+                return;
+            }
+
+            exams.forEach(exam => {
+                const yearStr = exam.examYear || exam.year || "Unknown";
+                const titleStr = exam.title || `${yearStr} Physiology Exam`;
+                const qCount = exam.questions ? exam.questions.length : 0;
+
+                const card = document.createElement('a');
+                card.href = `quiz.html?year=${yearStr}`;
+                card.className = "group block bg-white rounded-2xl shadow-sm hover:shadow-xl border border-slate-200 p-6 transition-all duration-300 transform hover:-translate-y-1 relative overflow-hidden";
+                card.innerHTML = `
+                    <div class="absolute top-0 right-0 bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-bl-xl border-b border-l border-indigo-100">${qCount} Topics</div>
+                    <div class="flex flex-col items-center justify-center text-center mt-2">
+                        <div class="h-16 w-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300 shadow-sm">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-black text-slate-900 mb-1">${yearStr} Exam</h3>
+                        <p class="text-sm text-slate-500 mb-6 font-medium">${titleStr}</p>
+                        <div class="w-full flex items-center justify-center py-2.5 px-4 bg-slate-50 text-indigo-700 rounded-xl text-sm font-bold group-hover:bg-indigo-50 transition-colors border border-slate-100 group-hover:border-indigo-100">
+                            Start Practicing <svg class="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>`;
+                grid.appendChild(card);
+            });
+        }
+    </script>
+</body>
+</html>

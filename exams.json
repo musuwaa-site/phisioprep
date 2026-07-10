@@ -1,0 +1,1204 @@
+{
+    "2019": {
+        "examYear": "2019",
+        "title": "2019 Physiology Exam",
+        "definitions": {
+            "Achlorhydria": "A medical condition where there is a lack of hydrochloric acid (HCl) in the digestive juices of the stomach.",
+            "Steatorrhea": "The presence of excess, unabsorbed fat in the stool, making it bulky, foul-smelling, and prone to float.",
+            "Osteomalacia": "Softening of the bones, typically through a deficiency of vitamin D or calcium.",
+            "Megaloblastic anemia": "A type of anemia characterized by very large, structurally abnormal, immature red blood cells, often due to B12 or folate deficiency.",
+            "Dumping syndrome": "Rapid emptying of gastric contents into the small intestine, leading to nausea, diarrhea, and weakness.",
+            "Hepatomegaly": "Abnormal enlargement of the liver.",
+            "Atelectasis": "A complete or partial collapse of the entire lung or area (lobe) of the lung.",
+            "Kyphoscoliosis": "A deformity of the spine characterized by abnormal curvature, which can severely restrict chest wall expansion.",
+            "Methaemoglobin": "A form of hemoglobin where the iron is oxidized (Fe3+) and cannot effectively bind or transport oxygen.",
+            "Endotoxins": "Toxins present inside a bacterial cell that are released when the cell disintegrates, which can cause severe shock."
+        },
+        "questions": [
+            {
+                "id": "q1",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Gastric acid secretion is stimulated by:",
+                "statements": [
+                    {
+                        "id": "s1_a",
+                        "text": "Vagal stimulation",
+                        "answer": true,
+                        "explanation": "The vagus nerve releases acetylcholine (ACh), which directly binds to receptors on parietal cells to stimulate stomach acid production. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s1_b",
+                        "text": "Gastrin hyper secretion",
+                        "answer": true,
+                        "explanation": "Gastrin is a hormone that directly and powerfully stimulates the parietal cells in the stomach to secrete hydrochloric acid. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s1_c",
+                        "text": "Drugs that block histamine release",
+                        "answer": false,
+                        "explanation": "Histamine stimulates gastric acid secretion. Therefore, drugs that block histamine (like H2 blockers) will decrease, not stimulate, acid secretion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s1_d",
+                        "text": "Increased stomach pH above 2.0",
+                        "answer": true,
+                        "explanation": "A higher pH (less acidic environment) removes the inhibitory effect of somatostatin, thereby stimulating gastrin release and subsequent acid secretion to restore acidity. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s1_e",
+                        "text": "Acute helicobacter pylori infection",
+                        "answer": true,
+                        "explanation": "Acute infection with H. pylori, particularly in the lower part of the stomach (antrum), often suppresses somatostatin and increases gastrin, leading to increased acid secretion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q2",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Complications of a partial gastrectomy include:",
+                "statements": [
+                    {
+                        "id": "s2_a",
+                        "text": "Anaemia",
+                        "answer": true,
+                        "explanation": "Removing part of the stomach reduces parietal cells, decreasing intrinsic factor (needed for Vitamin B12 absorption) and stomach acid (needed for iron absorption), leading to anemia. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s2_b",
+                        "text": "Loss of weight",
+                        "answer": true,
+                        "explanation": "Weight loss is common due to a smaller stomach size causing early fullness, leading to reduced food intake. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s2_c",
+                        "text": "Malabsorption of fat",
+                        "answer": true,
+                        "explanation": "Rapid emptying of food into the intestine (dumping) prevents proper mixing with pancreatic enzymes and bile, leading to mild to moderate fat malabsorption. [Source: Vander's Human Physiology, 6th edition]"
+                    },
+                    {
+                        "id": "s2_d",
+                        "text": "Severe constipation",
+                        "answer": false,
+                        "explanation": "Gastrectomy more commonly causes diarrhea (due to rapid transit and dumping syndrome) rather than severe constipation. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s2_e",
+                        "text": "Carbohydrate malabsorption",
+                        "answer": false,
+                        "explanation": "Carbohydrates are usually rapidly absorbed in gastrectomy patients; the issue is often too rapid absorption causing insulin spikes, not malabsorption. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q3",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Mal-absorption:",
+                "statements": [
+                    {
+                        "id": "s3_a",
+                        "text": "Of fats is commonly caused by fall in bile pigment concentration",
+                        "answer": false,
+                        "explanation": "Fat malabsorption is caused by a lack of bile salts, which are needed to break down fats, not bile pigments (which are just waste products). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s3_b",
+                        "text": "Occurring as a result of exocrine pancreatic insufficiency is mainly due to undigested starch",
+                        "answer": false,
+                        "explanation": "It is mainly due to undigested fat (causing steatorrhea), because other enzymes (like salivary amylase) can still handle starch. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s3_c",
+                        "text": "Due to congenital lactase deficiency present with acidic stool",
+                        "answer": true,
+                        "explanation": "Undigested lactose is fermented by gut bacteria into lactic acid and short-chain fatty acids, making the stool highly acidic. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s3_d",
+                        "text": "Due to any cause present with diarrhea as a prompt symptom",
+                        "answer": false,
+                        "explanation": "While diarrhea is common, not all malabsorption (e.g., selective B12 or iron malabsorption) presents promptly with diarrhea. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s3_e",
+                        "text": "May lead to mal-nutrition",
+                        "answer": true,
+                        "explanation": "Failure to absorb essential nutrients inevitably leads to systemic malnutrition and weight loss over time. [Source: Vander's Human Physiology, 6th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q4",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Surgical removal of about 90% of the ileum and jejunum tends to cause:",
+                "statements": [
+                    {
+                        "id": "s4_a",
+                        "text": "Steatorrhoea",
+                        "answer": true,
+                        "explanation": "The terminal ileum absorbs bile salts. Without it, the liver cannot keep up with bile salt production, leading to impaired fat digestion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s4_b",
+                        "text": "Osteomalacia",
+                        "answer": true,
+                        "explanation": "Fat malabsorption leads to the loss of fat-soluble vitamins, including Vitamin D. Lack of Vitamin D reduces calcium absorption, softening bones. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s4_c",
+                        "text": "A fall in the extracellular fluid volume",
+                        "answer": true,
+                        "explanation": "Massive loss of the small intestine reduces the surface area for fluid reabsorption, causing severe diarrhea and dehydration. [Source: Vander's Human Physiology, 6th edition]"
+                    },
+                    {
+                        "id": "s4_d",
+                        "text": "Megaloblastic anemia",
+                        "answer": true,
+                        "explanation": "Vitamin B12 is exclusively absorbed in the terminal ileum. Its loss leads to B12 deficiency and enlarged, immature red blood cells. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s4_e",
+                        "text": "Jaundice",
+                        "answer": false,
+                        "explanation": "Jaundice is caused by liver or biliary tract disease (excess bilirubin), which is not a direct consequence of small bowel resection. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q5",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Poor intestinal absorption of:",
+                "statements": [
+                    {
+                        "id": "s5_a",
+                        "text": "Iron is a likely consequence of removal of most of the stomach",
+                        "answer": true,
+                        "explanation": "Stomach acid is necessary to keep iron in its easily absorbable form (ferrous state, Fe2+). Removing the stomach impairs this process. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s5_b",
+                        "text": "Iodide leads to a reduction in size of the thyroid gland",
+                        "answer": false,
+                        "explanation": "Lack of iodine prevents thyroid hormone synthesis, causing an increase in TSH from the pituitary, which enlarges the thyroid (goiter). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s5_c",
+                        "text": "Water occurs in infants who cannot digest disaccharides",
+                        "answer": true,
+                        "explanation": "Undigested sugars like lactose remain in the gut and draw water in by osmosis, preventing water absorption and causing watery diarrhea. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s5_d",
+                        "text": "Calcium is associated with removal of the terminal portion of the ileum",
+                        "answer": true,
+                        "explanation": "While calcium is absorbed in the duodenum, removal of the ileum causes fat malabsorption, which binds calcium in the gut (soaps) and malabsorbs Vitamin D, leading to poor calcium absorption. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s5_e",
+                        "text": "Vitamin B12 occur as a result of cholestatic bile deficiency",
+                        "answer": false,
+                        "explanation": "Vitamin B12 requires intrinsic factor (from the stomach) for absorption, not bile. Fat-soluble vitamins require bile. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q6",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "A patient suffering from severe diarrhea characteristically has:",
+                "statements": [
+                    {
+                        "id": "s6_a",
+                        "text": "A decrease in the potassium content of the body",
+                        "answer": true,
+                        "explanation": "Gastrointestinal secretions are very rich in potassium. Severe diarrhea causes massive loss of this potassium. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s6_b",
+                        "text": "A decrease in the sodium content of the body",
+                        "answer": true,
+                        "explanation": "Diarrhea fluid contains high amounts of sodium and water, leading to total body sodium depletion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s6_c",
+                        "text": "A raised peripheral resistance",
+                        "answer": true,
+                        "explanation": "Loss of fluid causes low blood pressure, triggering sympathetic reflexes that constrict blood vessels to maintain blood pressure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s6_d",
+                        "text": "An alkalosis rather than an acidosis",
+                        "answer": false,
+                        "explanation": "Diarrhea causes the loss of bicarbonate (a base) found in intestinal juices, leading to metabolic acidosis, not alkalosis. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s6_e",
+                        "text": "Faster rather than slower heart rate",
+                        "answer": true,
+                        "explanation": "Dehydration triggers a reflex increase in heart rate (tachycardia) to keep cardiac output stable despite low blood volume. [Source: Vander's Human Physiology, 6th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q7",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Regarding the physiology of pancreas:",
+                "statements": [
+                    {
+                        "id": "s7_a",
+                        "text": "Secretin stimulates secretion of pancreatic juice rich in enzymes",
+                        "answer": false,
+                        "explanation": "Secretin stimulates the pancreas to release fluid rich in bicarbonate to neutralize acid. Cholecystokinin (CCK) stimulates enzyme release. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s7_b",
+                        "text": "Somatostatin stimulates histamine release by ECL-cells",
+                        "answer": false,
+                        "explanation": "Somatostatin is a universal inhibitor in the gut and inhibits the release of histamine from Enterochromaffin-like (ECL) cells. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s7_c",
+                        "text": "Chymotrypsinogen is activated by trypsin",
+                        "answer": true,
+                        "explanation": "Trypsin, once activated in the gut, acts on chymotrypsinogen to convert it into the active enzyme chymotrypsin. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s7_d",
+                        "text": "Enterokinase is a hormone secreted by pancreas",
+                        "answer": false,
+                        "explanation": "Enterokinase (enteropeptidase) is an enzyme, not a hormone, and it is secreted by the mucosal lining of the duodenum, not the pancreas. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s7_e",
+                        "text": "CCK stimulates secretion of pancreatic bicarbonate",
+                        "answer": false,
+                        "explanation": "CCK mainly stimulates the secretion of pancreatic digestive enzymes. Secretin handles bicarbonate. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q8",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Bile:",
+                "statements": [
+                    {
+                        "id": "s8_a",
+                        "text": "Is synthesized by the gall bladder",
+                        "answer": false,
+                        "explanation": "Bile is synthesized by the liver cells (hepatocytes). The gall bladder only stores and concentrates it. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s8_b",
+                        "text": "Is stored in hepatic sinusoids",
+                        "answer": false,
+                        "explanation": "Hepatic sinusoids contain blood. Bile is stored in the gall bladder between meals. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s8_c",
+                        "text": "Release from the gall bladder is enhanced by gastrin",
+                        "answer": false,
+                        "explanation": "The release of bile is primarily stimulated by Cholecystokinin (CCK), which causes the gall bladder to contract. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s8_d",
+                        "text": "Is required for maximal fat digestion and absorption",
+                        "answer": true,
+                        "explanation": "Bile salts act like detergents, breaking down fat drops into tiny pieces (emulsification) allowing fat enzymes to work optimally. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s8_e",
+                        "text": "Deficiency is characterized by dark coloured stool",
+                        "answer": false,
+                        "explanation": "Bile pigments give stool its normal brown color. Lack of bile results in pale or clay-colored stools. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q9",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "In achlorhydria",
+                "statements": [
+                    {
+                        "id": "s9_a",
+                        "text": "Malabsorption of fat is uncommon",
+                        "answer": true,
+                        "explanation": "Stomach acid is not critical for fat digestion; fat digestion relies heavily on pancreatic lipases and liver bile, so fat absorption remains normal. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s9_b",
+                        "text": "Protein digestion is impaired",
+                        "answer": true,
+                        "explanation": "Hydrochloric acid is needed to activate pepsin, the enzyme that starts protein breakdown in the stomach. Without acid, this step is impaired. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s9_c",
+                        "text": "There is increased bacterial overgrowth in the stomach",
+                        "answer": true,
+                        "explanation": "Stomach acid normally sterilizes swallowed food. Without it, bacteria can easily colonize and overgrow in the stomach. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s9_d",
+                        "text": "Pepsin activity is increased",
+                        "answer": false,
+                        "explanation": "Pepsin requires a highly acidic environment (pH 1.8-3.5) to function. In achlorhydria, its activity is essentially zero. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s9_e",
+                        "text": "Gastric pH falls below 6.5 with maximal stimulation",
+                        "answer": false,
+                        "explanation": "Achlorhydria means acid production is completely absent, so the pH remains high (near neutral) even with maximal stimulation. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q10",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "In the causation of peptic ulcer disease the following are grouped as mucosal damaging agents/forces:",
+                "statements": [
+                    {
+                        "id": "s10_a",
+                        "text": "Pepsin",
+                        "answer": true,
+                        "explanation": "Pepsin is a strong protein-digesting enzyme that can digest the stomach's own mucosal wall if the protective mucus barrier is breached. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s10_b",
+                        "text": "NSAIDS",
+                        "answer": true,
+                        "explanation": "Non-steroidal anti-inflammatory drugs (NSAIDs) block the production of protective prostaglandins, directly damaging the gastric lining. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s10_c",
+                        "text": "Corticosteroids",
+                        "answer": true,
+                        "explanation": "Steroids decrease mucosal blood flow, slow cell renewal, and reduce protective prostaglandin synthesis, predisposing to ulcers. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s10_d",
+                        "text": "Cigarette smoking",
+                        "answer": true,
+                        "explanation": "Smoking reduces pancreatic bicarbonate secretion and mucosal blood flow, making the gut lining more vulnerable to acid. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s10_e",
+                        "text": "Sucralfate",
+                        "answer": false,
+                        "explanation": "Sucralfate is a medication used to treat ulcers; it forms a protective coating over the ulcer bed, making it a protective agent, not a damaging one. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q11",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Diseases/conditions which are likely to be associated with peptic ulcer disease include",
+                "statements": [
+                    {
+                        "id": "s11_a",
+                        "text": "Chronic renal failure",
+                        "answer": true,
+                        "explanation": "The kidneys normally clear gastrin from the blood. In failure, high gastrin levels cause excess acid secretion, leading to ulcers. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s11_b",
+                        "text": "Hyperparathyroidism",
+                        "answer": true,
+                        "explanation": "High calcium levels from parathyroid overactivity strongly stimulate the stomach to release gastrin and acid, increasing ulcer risk. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s11_c",
+                        "text": "Chronic pancreatitis",
+                        "answer": true,
+                        "explanation": "A damaged pancreas cannot produce enough neutralizing bicarbonate, allowing stomach acid to damage the duodenum. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s11_d",
+                        "text": "Liver cirrhosis",
+                        "answer": true,
+                        "explanation": "A failing liver cannot clear hormones like gastrin and histamine efficiently, leading to increased acid drive and ulceration. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s11_e",
+                        "text": "Diabetes mellitus",
+                        "answer": false,
+                        "explanation": "Diabetes commonly causes delayed stomach emptying (gastroparesis), but it is not a direct primary risk factor for excessive acid or peptic ulcers. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q12",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "The following are useful in the management of peptic ulcer disease (PUD).",
+                "statements": [
+                    {
+                        "id": "s12_a",
+                        "text": "Anticholinesterase drugs",
+                        "answer": false,
+                        "explanation": "These drugs prevent the breakdown of acetylcholine, increasing parasympathetic activity which would mistakenly increase stomach acid production. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s12_b",
+                        "text": "Proton pump inhibitors",
+                        "answer": true,
+                        "explanation": "PPIs strongly block the H+/K+ pump on parietal cells, effectively shutting down stomach acid production to allow healing. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s12_c",
+                        "text": "Clarithromycin",
+                        "answer": true,
+                        "explanation": "This is a key antibiotic used to eradicate Helicobacter pylori, a major infectious cause of peptic ulcers. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s12_d",
+                        "text": "A synthetic PGE1 analogue (Misoprostol)",
+                        "answer": true,
+                        "explanation": "Prostaglandins protect the stomach lining. Misoprostol replaces them, particularly helpful in patients taking NSAIDs which deplete natural prostaglandins. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s12_e",
+                        "text": "Bismuth salts",
+                        "answer": true,
+                        "explanation": "Bismuth helps coat and protect the ulcer crater, and also has direct antibacterial effects against H. pylori. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q13",
+                "topic": "Gastrointestinal Physiology",
+                "stem": "Chronic loss of liver functions tend to cause:",
+                "statements": [
+                    {
+                        "id": "s13_a",
+                        "text": "A fall in plasma gamma globulin levels",
+                        "answer": false,
+                        "explanation": "Gamma globulins (antibodies) are produced by immune cells (plasma cells), not the liver. The liver produces albumin. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s13_b",
+                        "text": "Bleeding tendency",
+                        "answer": true,
+                        "explanation": "The liver synthesizes almost all the body's blood clotting factors. Liver failure leads to severe bleeding risks. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s13_c",
+                        "text": "Increased breast size in men",
+                        "answer": true,
+                        "explanation": "The liver normally breaks down estrogen. When it fails, estrogen builds up, causing breast tissue growth (gynecomastia) in males. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s13_d",
+                        "text": "Enhanced renal sodium reabsorption",
+                        "answer": true,
+                        "explanation": "Liver failure lowers blood volume (due to fluid leaking out of vessels), which activates the kidneys to retain massive amounts of sodium and water. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s13_e",
+                        "text": "Increased interstitial fluid",
+                        "answer": true,
+                        "explanation": "The liver makes albumin, a protein that holds water in the blood. Without it, fluid leaks into tissues, causing edema. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q14",
+                "topic": "Cardiovascular Physiology",
+                "stem": "A fall in blood pressure below normal leads to:",
+                "statements": [
+                    {
+                        "id": "s14_a",
+                        "text": "Increased catecholamine release",
+                        "answer": true,
+                        "explanation": "Low blood pressure triggers the sympathetic nervous system to release epinephrine and norepinephrine to stimulate the heart. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s14_b",
+                        "text": "Reduced total peripheral resistance",
+                        "answer": false,
+                        "explanation": "To bring blood pressure back up, blood vessels must constrict, which increases (not reduces) peripheral resistance. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s14_c",
+                        "text": "Venous vasoconstriction",
+                        "answer": true,
+                        "explanation": "Sympathetic nerves constrict veins to push stored blood back into the heart, increasing cardiac output and blood pressure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s14_d",
+                        "text": "Increased baroreceptor activity",
+                        "answer": false,
+                        "explanation": "Baroreceptors fire when stretched by high blood pressure. In low blood pressure, their firing rate decreases to remove inhibition on sympathetic centers. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s14_e",
+                        "text": "Increased Aldosterone secretion",
+                        "answer": true,
+                        "explanation": "Low pressure triggers the renin-angiotensin-aldosterone system, causing the kidneys to retain salt and water to raise pressure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q15",
+                "topic": "Cardiovascular Physiology",
+                "stem": "Features of isolated left ventricular failure may include:",
+                "statements": [
+                    {
+                        "id": "s15_a",
+                        "text": "Weakness on exertion",
+                        "answer": true,
+                        "explanation": "The failing left heart cannot pump enough fresh blood (low cardiac output) to fuel exercising muscles, causing weakness. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s15_b",
+                        "text": "Left ventricular hypertrophy",
+                        "answer": true,
+                        "explanation": "The left ventricle often thickens (hypertrophies) over time as an adaptive response to push against high pressure or handle extra fluid load. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s15_c",
+                        "text": "Pulmonary congestion",
+                        "answer": true,
+                        "explanation": "Because the left heart cannot pump blood out effectively, blood backs up into the lungs, causing congestion and shortness of breath. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s15_d",
+                        "text": "Cold extremities",
+                        "answer": true,
+                        "explanation": "Low cardiac output triggers sympathetic reflexes that intensely constrict blood vessels in the skin and limbs, making them cold. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s15_e",
+                        "text": "Hepatomegaly",
+                        "answer": false,
+                        "explanation": "Liver enlargement happens when blood backs up into the systemic circulation, which is a hallmark of right-sided, not left-sided, heart failure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q16",
+                "topic": "Cardiovascular Physiology",
+                "stem": "During anaphylactic shock, there is:",
+                "statements": [
+                    {
+                        "id": "s16_a",
+                        "text": "A rise in peripheral resistance",
+                        "answer": false,
+                        "explanation": "Anaphylaxis causes massive release of histamine, a potent vasodilator, which catastrophically lowers peripheral resistance. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s16_b",
+                        "text": "Reduced heart rate",
+                        "answer": false,
+                        "explanation": "The massive drop in blood pressure triggers a reflex sympathetic response, which increases the heart rate (tachycardia). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s16_c",
+                        "text": "Reduced renal retention of fluids",
+                        "answer": false,
+                        "explanation": "The kidneys respond to the shock and low blood pressure by intensely retaining fluid to save the patient, not reducing retention. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s16_d",
+                        "text": "Decreased venous return",
+                        "answer": true,
+                        "explanation": "Massive vasodilation causes blood to pool in the veins. Therefore, less blood flows back to the heart. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s16_e",
+                        "text": "Mast cells release histamine",
+                        "answer": true,
+                        "explanation": "The core trigger of anaphylactic shock is the allergen binding to antibodies on mast cells, triggering explosive release of histamine. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q17",
+                "topic": "Cardiovascular Physiology",
+                "stem": "The following mechanisms may be responsible for progression of shock to irreversible stage:",
+                "statements": [
+                    {
+                        "id": "s17_a",
+                        "text": "Increased sympathetic activity",
+                        "answer": false,
+                        "explanation": "Increased sympathetic drive is an early, compensatory mechanism attempting to reverse shock. Only severe, prolonged vasoconstriction might cause ischemia. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s17_b",
+                        "text": "Fluid retention by kidneys",
+                        "answer": false,
+                        "explanation": "Fluid retention is a compensatory, life-saving measure to restore blood volume, not a cause of progressive irreversible shock. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s17_c",
+                        "text": "Failure of vasomotor center",
+                        "answer": true,
+                        "explanation": "As blood pressure stays critically low, the brain stem (vasomotor center) itself becomes ischemic and fails, losing the sympathetic drive keeping the patient alive. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s17_d",
+                        "text": "Release of toxins by ischaemic tissues",
+                        "answer": true,
+                        "explanation": "Starved tissues die and release acids and toxins (like myocardial toxic factor) that further depress heart function and worsen shock. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s17_e",
+                        "text": "Increased capillary permeability",
+                        "answer": true,
+                        "explanation": "Severe oxygen starvation damages capillary walls, making them leaky. The last remaining blood volume leaks into tissues, sealing the patient's fate. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q18",
+                "topic": "Cardiovascular Physiology",
+                "stem": "Compensatory mechanisms during heart failure include:",
+                "statements": [
+                    {
+                        "id": "s18_a",
+                        "text": "Peripheral vasoconstriction",
+                        "answer": true,
+                        "explanation": "The body activates the sympathetic nervous system to constrict blood vessels, aiming to keep blood pressure up despite a weak heart. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s18_b",
+                        "text": "Release of atrial natriuretic peptide",
+                        "answer": true,
+                        "explanation": "As fluid backs up, the stretched heart atria release ANP, a hormone that tries to force the kidneys to excrete the excess fluid. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s18_c",
+                        "text": "Ventricular hypertrophy",
+                        "answer": true,
+                        "explanation": "The heart muscle thickens over time to generate more force against high resistance or to cope with extra stretch. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s18_d",
+                        "text": "Stimulation of chemoreceptors",
+                        "answer": true,
+                        "explanation": "Sluggish blood flow from a weak heart causes oxygen drop and CO2 buildup in tissues, activating chemoreceptors to raise breathing and heart rates. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s18_e",
+                        "text": "Activation of the renin angiotensin system",
+                        "answer": true,
+                        "explanation": "Low blood flow to the kidneys triggers the release of renin, retaining salt and water to raise blood volume and pressure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q19",
+                "topic": "Cardiovascular Physiology",
+                "stem": "The following may cause circulatory shock:",
+                "statements": [
+                    {
+                        "id": "s19_a",
+                        "text": "Pain",
+                        "answer": true,
+                        "explanation": "Severe pain can cause a massive parasympathetic reflex (vasovagal reaction), slowing the heart and dilating vessels, leading to neurogenic shock. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s19_b",
+                        "text": "Excessive use of diuretics",
+                        "answer": true,
+                        "explanation": "Overuse of water pills drains the body's water via urine, causing severe low blood volume (hypovolemic shock). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s19_c",
+                        "text": "Destruction of the adrenal cortex",
+                        "answer": true,
+                        "explanation": "Loss of the adrenal glands stops the production of aldosterone and cortisol, leading to massive salt/water loss and fatal hypovolemic shock (Addisonian crisis). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s19_d",
+                        "text": "Spinal anesthesia",
+                        "answer": true,
+                        "explanation": "It blocks the sympathetic nerves leaving the spinal cord, causing sudden, massive blood vessel dilation (neurogenic shock). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s19_e",
+                        "text": "Diabetes insipidus",
+                        "answer": true,
+                        "explanation": "A lack of antidiuretic hormone causes the kidneys to excrete gallons of dilute urine, rapidly leading to severe hypovolemic shock. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q20",
+                "topic": "Endocrine Physiology",
+                "stem": "The fall in urine output associated with major trauma may be caused by:",
+                "statements": [
+                    {
+                        "id": "s20_a",
+                        "text": "Haemorrhage",
+                        "answer": true,
+                        "explanation": "Blood loss directly drops kidney blood pressure, reducing filtration and causing the kidneys to conserve water to save the patient's life. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s20_b",
+                        "text": "A rise in antidiuretic hormone activity",
+                        "answer": true,
+                        "explanation": "Trauma and low blood volume trigger massive release of ADH, which forces the kidneys to reabsorb free water, shutting down urine flow. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s20_c",
+                        "text": "A fall in aldosterone activity",
+                        "answer": false,
+                        "explanation": "Aldosterone actually rises sharply during trauma to retain sodium and water. A fall would increase urine output. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s20_d",
+                        "text": "An increase in the level of circulating catecholamines",
+                        "answer": true,
+                        "explanation": "Stress hormones like epinephrine constrict the kidney arteries, dropping filtration rates to save blood for the heart and brain. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s20_e",
+                        "text": "A rise in corticosteroid output",
+                        "answer": true,
+                        "explanation": "Cortisol rises during the stress response and has mild fluid-retaining properties, supporting the reduction of urine output. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q21",
+                "topic": "Respiratory Physiology",
+                "stem": "The following abnormalities in respiratory system constitute lung failure:",
+                "statements": [
+                    {
+                        "id": "s21_a",
+                        "text": "Pulmonary micro emboli blocking pulmonary capillaries",
+                        "answer": true,
+                        "explanation": "Tiny blood clots block blood flow to working alveoli, causing dead space and failure to oxygenate blood (Type 1 respiratory failure). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s21_b",
+                        "text": "Interference with transmission at the neuromuscular junction of respiratory muscles",
+                        "answer": true,
+                        "explanation": "If nerve signals cannot reach the diaphragm, the patient stops breathing. This represents ventilatory failure (Type 2). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s21_c",
+                        "text": "Disease process causing destruction of alveoli",
+                        "answer": true,
+                        "explanation": "Diseases like emphysema destroy the lung architecture, drastically reducing the surface area for gas exchange. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s21_d",
+                        "text": "Drug overdose affecting the respiratory centre",
+                        "answer": true,
+                        "explanation": "Drugs like opioids severely depress the brain's breathing centers, causing hypoventilation and fatal hypercapnic respiratory failure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s21_e",
+                        "text": "Pulmonary oedema",
+                        "answer": true,
+                        "explanation": "Fluid flooding the alveoli creates a thick barrier that oxygen cannot easily diffuse across, causing severe hypoxemia. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q22",
+                "topic": "Respiratory Physiology",
+                "stem": "The following factors would decrease ventilatory supply:",
+                "statements": [
+                    {
+                        "id": "s22_a",
+                        "text": "Fever",
+                        "answer": false,
+                        "explanation": "Fever increases the body's metabolic demand for oxygen, causing an increase in breathing rate, not a decrease in supply capability. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s22_b",
+                        "text": "Severe asthmatic attack",
+                        "answer": true,
+                        "explanation": "Asthma causes severe constriction of the airways, directly reducing the physical ability to supply air to the lungs. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s22_c",
+                        "text": "High carbohydrate feeding",
+                        "answer": false,
+                        "explanation": "Carb metabolism produces high CO2, which increases ventilatory demand (need to breathe), it does not physically impair the lung's supply capacity. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s22_d",
+                        "text": "Chest wall deformity (kyphoscoliosis)",
+                        "answer": true,
+                        "explanation": "A severely crooked spine restricts how much the rib cage can expand, physically decreasing how much air can be drawn in (restrictive lung disease). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s22_e",
+                        "text": "Loss of lung volume",
+                        "answer": true,
+                        "explanation": "Loss of functional lung tissue (like surgical removal or fibrosis) directly reduces the absolute volume of ventilation possible. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q23",
+                "topic": "Respiratory Physiology",
+                "stem": "Causes of hypoxia in type I respiratory failure include:",
+                "statements": [
+                    {
+                        "id": "s23_a",
+                        "text": "Elevation of PaCO2",
+                        "answer": false,
+                        "explanation": "An elevation in carbon dioxide (hypercapnia) is the defining feature of Type II respiratory failure, not Type I. Type I is hypoxia without CO2 retention. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s23_b",
+                        "text": "Mismatch of ventilation perfusion ratio",
+                        "answer": true,
+                        "explanation": "V/Q mismatch (blood going to unventilated lung parts, or air going to unperfused parts) is the most common cause of Type I hypoxemic failure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s23_c",
+                        "text": "Neuromuscular abnormalities",
+                        "answer": false,
+                        "explanation": "Neuromuscular issues (like polio or muscle dystrophies) cause global hypoventilation, which causes CO2 buildup, meaning they cause Type II failure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s23_d",
+                        "text": "Atelectasis (lung collapse)",
+                        "answer": true,
+                        "explanation": "Collapsed lungs get blood flow but no air. This is a true 'shunt', dropping blood oxygen drastically (Type I failure). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s23_e",
+                        "text": "Pulmonary fibrosis",
+                        "answer": true,
+                        "explanation": "Scarring thickens the walls of the alveoli, creating a diffusion block where oxygen cannot cross fast enough, leading to Type I failure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q24",
+                "topic": "Respiratory Physiology",
+                "stem": "Ventilation perfusion ratio (V/Q)",
+                "statements": [
+                    {
+                        "id": "s24_a",
+                        "text": "In a normal lung is 0.8",
+                        "answer": true,
+                        "explanation": "Normally, alveolar ventilation is around 4 L/min and pulmonary blood flow is 5 L/min. Thus, the ratio is about 0.8. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s24_b",
+                        "text": "Less than the normal signifies a physiological dead space",
+                        "answer": false,
+                        "explanation": "A ratio less than normal signifies a physiological 'shunt' (blood with no air). A ratio greater than normal signifies dead space (air with no blood). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s24_c",
+                        "text": "Would decrease below normal in pulmonary embolism",
+                        "answer": false,
+                        "explanation": "An embolism blocks blood flow. The denominator (Q) approaches zero, making the V/Q ratio increase towards infinity (dead space). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s24_d",
+                        "text": "Is greater than normal in the upper part of the lung of an upright individual",
+                        "answer": true,
+                        "explanation": "Gravity pulls blood to the base of the lung much more than it pulls air. So at the top (apex), blood flow is very low, making the V/Q ratio high. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s24_e",
+                        "text": "Greater than normal leads to a greater oxygenation of pulmonary capillary blood",
+                        "answer": true,
+                        "explanation": "Because a high V/Q means excess air compared to blood, the local oxygen concentration is higher at the apices of the lungs. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q25",
+                "topic": "Respiratory Physiology",
+                "stem": "Alveolar oxygen tension (PAO2)",
+                "statements": [
+                    {
+                        "id": "s25_a",
+                        "text": "Increases as the atmospheric pressure increases",
+                        "answer": true,
+                        "explanation": "Because 21% of the atmosphere is oxygen, higher total atmospheric pressure (like descending below sea level) directly increases the partial pressure of alveolar oxygen. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s25_b",
+                        "text": "Increases as the rate of breathing increases",
+                        "answer": true,
+                        "explanation": "Hyperventilation blows off more CO2, replacing it with fresh room air, thereby increasing alveolar oxygen. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s25_c",
+                        "text": "Would increase if PACO2 increases",
+                        "answer": false,
+                        "explanation": "Oxygen and carbon dioxide compete for space in the alveolus. If alveolar CO2 increases (hypoventilation), alveolar O2 must decrease. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s25_d",
+                        "text": "Is normally equal to arterial PO2",
+                        "answer": false,
+                        "explanation": "There is a normal physiological mismatch and minor shunt (bronchial veins) that causes arterial PO2 to be slightly lower than alveolar PO2 (the A-a gradient). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s25_e",
+                        "text": "Facilitate CO2 unloading from blood",
+                        "answer": true,
+                        "explanation": "High oxygen in the alveoli binds to hemoglobin in the blood, which chemically kicks CO2 off the hemoglobin to be exhaled. This is the Haldane effect. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q26",
+                "topic": "Respiratory Physiology",
+                "stem": "Compensatory mechanisms involved in hypoxia at high altitude include:",
+                "statements": [
+                    {
+                        "id": "s26_a",
+                        "text": "Reduced blood flow to the skin",
+                        "answer": false,
+                        "explanation": "High altitude hypoxia doesn't primarily cause skin vasoconstriction as a compensatory tool. The primary response involves increased breathing and red blood cell production. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s26_b",
+                        "text": "Vasoconstriction of myocardial blood vessels",
+                        "answer": false,
+                        "explanation": "Hypoxia causes extreme vasodilation of heart vessels, to supply the demanding heart muscle with as much oxygen as possible. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s26_c",
+                        "text": "Increased efficiency of oxidative phosphorylation mechanisms",
+                        "answer": true,
+                        "explanation": "At a cellular level, tissues adapt to chronic low oxygen by increasing the number of mitochondria and oxidative enzymes to use oxygen more efficiently. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s26_d",
+                        "text": "An increase in P50 of the oxygen haemoglobin dissociation curve",
+                        "answer": true,
+                        "explanation": "High altitude stimulates the production of 2,3-DPG in red cells, which shifts the oxygen curve to the right (higher P50) so oxygen unloads easier to the tissues. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s26_e",
+                        "text": "Increase in pulmonary arterial pressure",
+                        "answer": true,
+                        "explanation": "The lungs unique response to hypoxia is to constrict blood vessels. At high altitude, this happens globally, causing pulmonary hypertension. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q27",
+                "topic": "Respiratory Physiology",
+                "stem": "The functional residual capacity (FRC) is the volume of the lungs at which:",
+                "statements": [
+                    {
+                        "id": "s27_a",
+                        "text": "Chest wall and lung recoil forces are equal and opposite",
+                        "answer": true,
+                        "explanation": "FRC is the resting volume at the end of a normal exhalation where the lung's tendency to collapse inward perfectly matches the chest wall's tendency to spring outward. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s27_b",
+                        "text": "Dynamic collapse of small airways occur",
+                        "answer": false,
+                        "explanation": "Collapse of small airways occurs at the 'Closing Capacity', which is usually below FRC in healthy young people. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s27_c",
+                        "text": "The elastic recoil of the lung vanishes",
+                        "answer": false,
+                        "explanation": "The elastic recoil never vanishes in a living person; it is just perfectly balanced by the chest wall at FRC. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s27_d",
+                        "text": "The chest cavity tends neither to contract nor to expand",
+                        "answer": true,
+                        "explanation": "This describes the mechanical equilibrium state of FRC where there is no net force moving the respiratory system. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s27_e",
+                        "text": "The diaphragm reaches its maximum downward movement",
+                        "answer": false,
+                        "explanation": "The diaphragm is at its maximum downward movement at Total Lung Capacity (TLC) during a maximal deep breath. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q28",
+                "topic": "Respiratory Physiology",
+                "stem": "Deficiency of surfactant:",
+                "statements": [
+                    {
+                        "id": "s28_a",
+                        "text": "Reduces the work of breathing",
+                        "answer": false,
+                        "explanation": "Surfactant acts like a lubricant. A lack of it makes the lungs incredibly stiff, vastly increasing the physical effort needed to expand them. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s28_b",
+                        "text": "Results in shift of equal pressure point away from alveoli",
+                        "answer": false,
+                        "explanation": "Stiff lungs have high recoil, which actually shifts the equal pressure point deeper towards the alveoli, risking airway collapse. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s28_c",
+                        "text": "Is associated with increased irritant receptor activity",
+                        "answer": true,
+                        "explanation": "Stiff, collapsing alveoli cause mechanical stress and atelectasis, which triggers lung irritant receptors leading to rapid, shallow breathing. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+                    },
+                    {
+                        "id": "s28_d",
+                        "text": "Increases pulmonary vascular resistance",
+                        "answer": true,
+                        "explanation": "Alveolar collapse (atelectasis) causes local hypoxia, triggering hypoxic pulmonary vasoconstriction which raises resistance in lung vessels. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s28_e",
+                        "text": "Reduces lung compliance",
+                        "answer": true,
+                        "explanation": "Compliance means how easily the lung stretches. Without surfactant, surface tension is massive, making the lungs hard and non-compliant. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q29",
+                "topic": "Respiratory Physiology",
+                "stem": "The oxygen haemoglobin dissociation curve is shifted to left by:",
+                "statements": [
+                    {
+                        "id": "s29_a",
+                        "text": "An increase in arterial PCO2",
+                        "answer": false,
+                        "explanation": "High CO2 shifts the curve to the right (the Bohr effect), encouraging oxygen release in exercising tissues. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s29_b",
+                        "text": "Ascent to high altitude",
+                        "answer": false,
+                        "explanation": "High altitude increases 2,3-DPG production in red blood cells, which shifts the curve to the right to help deliver oxygen to tissues. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s29_c",
+                        "text": "Presence of fetal haemoglobin",
+                        "answer": true,
+                        "explanation": "Fetal hemoglobin (HbF) has a much higher affinity for oxygen so it can steal oxygen from the mother's blood. This higher affinity is a leftward shift. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s29_d",
+                        "text": "An increase in methaemoglobin concentration in blood",
+                        "answer": true,
+                        "explanation": "Methemoglobin makes the remaining normal heme sites hold onto their oxygen incredibly tightly, shifting the functional curve to the left. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s29_e",
+                        "text": "A fall in temperature",
+                        "answer": true,
+                        "explanation": "Cold temperatures make hemoglobin hold tightly to oxygen, shifting the curve to the left. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q30",
+                "topic": "Respiratory Physiology",
+                "stem": "The amount of oxygen transported in blood per minute:",
+                "statements": [
+                    {
+                        "id": "s30_a",
+                        "text": "Would decrease as haemoglobin decreases",
+                        "answer": true,
+                        "explanation": "Hemoglobin carries 98% of oxygen in the blood. If it drops (anemia), total oxygen transport drops directly. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s30_b",
+                        "text": "Would decrease as cardiac output decreases",
+                        "answer": true,
+                        "explanation": "Oxygen delivery depends on blood flow. A failing heart pumps less blood, so less total oxygen reaches the body per minute. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s30_c",
+                        "text": "Depends on the saturation of haemoglobin with oxygen",
+                        "answer": true,
+                        "explanation": "Even with perfect heart function and normal hemoglobin levels, if the hemoglobin is not saturated (e.g., choking), delivery falls. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s30_d",
+                        "text": "In men is less than that in women",
+                        "answer": false,
+                        "explanation": "Men generally have a higher muscle mass, higher blood volume, and higher hemoglobin concentration due to testosterone, carrying more oxygen overall. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s30_e",
+                        "text": "Would increase if oxygen consumption by tissues increases",
+                        "answer": true,
+                        "explanation": "When tissues demand more oxygen (e.g., exercise), the body responds by massively increasing cardiac output to deliver more oxygen per minute. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q31",
+                "topic": "Respiratory Physiology",
+                "stem": "The oxygen flux:",
+                "statements": [
+                    {
+                        "id": "s31_a",
+                        "text": "Approximates 1000 mls/minute",
+                        "answer": true,
+                        "explanation": "Normally, 5 liters of blood is pumped per minute, carrying 200ml O2 per liter. 5 x 200 = 1000 ml of oxygen delivered per minute. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s31_b",
+                        "text": "Would be lower than normal in an individual with anaemia",
+                        "answer": true,
+                        "explanation": "Anemia means less hemoglobin per liter of blood, thus lowering the oxygen content multiplier in the delivery equation. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s31_c",
+                        "text": "Would increase in an individual with increased total peripheral resistant",
+                        "answer": false,
+                        "explanation": "High resistance usually decreases cardiac output (by fighting the heart), which would mathematically decrease the total oxygen delivery flux. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s31_d",
+                        "text": "Is higher than normal in foetal haemoglobin",
+                        "answer": false,
+                        "explanation": "While Fetal Hb binds O2 tighter, flux is a measure of total delivery (cardiac output x O2 content). It is not inherently higher due to Hb type. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s31_e",
+                        "text": "When reduced is associated with increased frequency of breathing",
+                        "answer": true,
+                        "explanation": "If the body detects a low oxygen delivery state (hypoxia), it triggers central and peripheral chemoreceptors to speed up breathing. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            },
+            {
+                "id": "q32",
+                "topic": "Respiratory Physiology",
+                "stem": "Transfer of gases across alveolar-capillary membrane is likely to:",
+                "statements": [
+                    {
+                        "id": "s32_a",
+                        "text": "Decrease in a patient with reduced cardiac output",
+                        "answer": true,
+                        "explanation": "Less blood flowing past the alveoli means less total hemoglobin is available per minute to grab onto oxygen gas. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s32_b",
+                        "text": "Be increased in an anaemic patient",
+                        "answer": false,
+                        "explanation": "A lack of red blood cells means less hemoglobin is passing through the lung capillaries, directly reducing the lung's diffusing capacity. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s32_c",
+                        "text": "Be decreased in an individual with larger than normal arterio-venous capillary gas pressure difference",
+                        "answer": false,
+                        "explanation": "According to diffusion laws (Fick's law), a larger pressure gradient mathematically drives a much faster, greater transfer of gas. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s32_d",
+                        "text": "Increase in an individual with pulmonary oedema",
+                        "answer": false,
+                        "explanation": "Edema fluid thickens the membrane wall. A thicker wall makes it much harder for gas to diffuse across, heavily reducing transfer. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    },
+                    {
+                        "id": "s32_e",
+                        "text": "Decrease in an individual with raised body temperature",
+                        "answer": false,
+                        "explanation": "Fever raises metabolic demand, which raises cardiac output and opens more lung capillaries, usually increasing total gas transfer capacity. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+                    }
+                ]
+            }
+        ]
+    }
+}
