@@ -103,7 +103,7 @@
                 <span class="text-gray-600 flex items-center gap-1" title="Answered"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg> <span id="stat-answered">0/0</span></span>
                 <div class="w-px h-4 bg-gray-300"></div>
                 <span class="text-green-600 flex items-center gap-1" title="Correct"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span id="stat-correct">0</span></span>
-                <span class="text-red-600 flex items-center gap-1" title="Incorrect"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> <span id="stat-incorrect">0</span></span>
+                <span class="text-red-600 flex items-center gap-1" title="Incorrect"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> <span id="stat-incorrect">0</span></span>
                 <div class="w-px h-4 bg-gray-300"></div>
                 <span class="text-indigo-600 font-bold" id="stat-accuracy">0%</span>
             </div>
@@ -205,14 +205,21 @@
 
             <!-- Settings -->
             <div>
-                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Settings</label>
-                <div class="flex items-center justify-between bg-gray-100 p-3 rounded-xl">
+                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Settings & API</label>
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded-xl mb-3">
                     <span class="font-semibold text-gray-700">🔠 Font Size</span>
                     <div class="flex gap-1">
                         <button class="font-btn w-8 h-8 flex items-center justify-center bg-white rounded border border-gray-300 hover:bg-gray-50 text-xs font-bold" data-size="text-sm">A-</button>
                         <button class="font-btn w-8 h-8 flex items-center justify-center bg-gray-800 text-white rounded border border-gray-800 text-sm font-bold active" data-size="text-base">A</button>
                         <button class="font-btn w-8 h-8 flex items-center justify-center bg-white rounded border border-gray-300 hover:bg-gray-50 text-lg font-bold" data-size="text-lg">A+</button>
                     </div>
+                </div>
+                
+                <!-- NEW API KEY INPUT FOR GITHUB PAGES COMPATIBILITY -->
+                <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-200">
+                    <span class="font-semibold text-indigo-900 text-sm flex items-center gap-1 mb-2">✨ AI Tutor API Key</span>
+                    <input type="password" id="api-key-input" placeholder="Paste Gemini API Key here..." class="w-full px-3 py-2 bg-white border border-indigo-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all text-sm mb-2 shadow-inner">
+                    <p class="text-xs text-indigo-700 leading-tight">To use the AI Tutor, get a free key from <a href="https://aistudio.google.com/app/apikey" target="_blank" class="underline font-bold hover:text-indigo-900">Google AI Studio</a> and paste it above. It saves securely to your browser.</p>
                 </div>
             </div>
 
@@ -411,6 +418,12 @@
                     document.getElementById('page-title').textContent = `Exam ${TARGET_YEAR}`;
                     document.getElementById('main-heading').textContent = `${TARGET_YEAR} Physiology Practice`;
                 }
+                
+                // Initialize the API Key from local storage so it persists between sessions
+                const savedKey = localStorage.getItem('gemini_api_key');
+                if (savedKey) {
+                    document.getElementById('api-key-input').value = savedKey;
+                }
 
                 // Bulletproof fetch
                 const response = await fetch('./exams.json?t=' + new Date().getTime());
@@ -467,8 +480,6 @@
             let examsList = [];
 
             // Robust nested data extractor
-            // This guarantees it will find your exam arrays whether they are flat arrays, 
-            // or nested inside an object key like "2019" as seen in your exams.json file.
             const extractExams = (item) => {
                 if (!item) return;
                 // Check if this object itself is an exam object
@@ -532,10 +543,10 @@
                             ${dynamicExplanation}
                             <br><br>
                             <span class="block bg-gray-50 p-3 rounded-lg border border-gray-100 text-xs sm:text-sm text-gray-600">
-                                <strong>Preferred References:</strong><br>
-                                1. Guyton and Hall Textbook of Medical Physiology, 15th edition, by John E. Hall and Michael E. Hall.<br>
-                                2. Ganong’s Review of Medical Physiology, 26th edition by Kim E. Barret et al.<br>
-                                3. Human Physiology, by Vander, Sherman, & Luciano, 6th edition.
+                                <strong> Disclaimer:</strong><br>
+                                This content is entirely AI-generated<br>
+                                If you find any answer confusing or doubtful, please cross-check it with other reliable sources to verify the fact.
+                            
                             </span>
                         </p>
                     `;
@@ -739,7 +750,7 @@
             checkExamCompletion();
 
             if (STATE.mode === 'study') {
-                // If correct, scroll smoothly to the next question
+                // Only auto-scroll if the user got the question correct
                 if (choice === q.isTrue) {
                     const cards = Array.from(document.querySelectorAll('.question-card'));
                     const currentIndex = cards.findIndex(c => c.dataset.id === id);
@@ -753,7 +764,7 @@
                         }, 400);
                     }
                 } else {
-                    // If incorrect, stay here so they can read the explanation and use AI tutor
+                    // If incorrect, keep focus on current card so they can use the AI Tutor or read explanation
                     setTimeout(() => {
                         const currentCard = document.getElementById(`card-${id}`);
                         if (currentCard) {
@@ -973,6 +984,11 @@
         };
 
         function setupEventListeners() {
+            // Save the API key to local storage when the user types it in
+            document.getElementById('api-key-input').addEventListener('input', (e) => {
+                localStorage.setItem('gemini_api_key', e.target.value.trim());
+            });
+
             document.querySelectorAll('.filter-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     document.querySelectorAll('.filter-btn').forEach(b => {
@@ -1116,11 +1132,14 @@
         // ==========================================
         // 8. GEMINI AI API INTEGRATION
         // ==========================================
-        const apiKey = ""; // Execution environment injects this securely
         
-        // Robust fetch wrapper with Exponential Backoff
-        async function fetchGeminiWithRetry(prompt, retries = 5) {
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+        // Robust fetch wrapper with Exponential Backoff and Error Handling for invalid/missing keys
+        async function fetchGeminiWithRetry(prompt, retries = 3) {
+            // It will check local storage first. If it's running in my chat editor, the empty string magically works.
+            const storedKey = localStorage.getItem('gemini_api_key');
+            const key = storedKey !== null ? storedKey : ""; 
+            
+            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${key}`;
             const payload = {
                 contents: [{ parts: [{ text: prompt }] }],
                 systemInstruction: { parts: [{ text: "You are an expert, friendly medical physiology tutor. Keep your answers concise, highly accurate, and easy to understand for medical students. Rely heavily on Guyton and Hall, Ganong's, and Vander's Physiology." }] }
@@ -1129,20 +1148,32 @@
             let delay = 1000;
             for (let i = 0; i < retries; i++) {
                 try {
+                    // Check if it's completely empty on a real server
+                    if (!key && window.location.hostname !== "") {
+                         throw new Error("MISSING_API_KEY");
+                    }
+                    
                     const res = await fetch(endpoint, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify(payload)
                     });
                     
+                    if (res.status === 403 || res.status === 400) {
+                        throw new Error("INVALID_API_KEY");
+                    }
                     if (!res.ok) throw new Error(`HTTP ${res.status}`);
                     
                     const data = await res.json();
                     return data.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
                 } catch (error) {
-                    if (i === retries - 1) return `Oops! The AI Tutor is currently unavailable. (${error.message})`;
+                    if (error.message === "INVALID_API_KEY" || error.message === "MISSING_API_KEY") {
+                        return `<span class="text-rose-600 font-bold">Oops! The AI Tutor is asleep.</span><br>To wake it up, please open the ⚙️ Menu (top right) and paste your free Google Gemini API Key in the Settings section.`;
+                    }
+                    
+                    if (i === retries - 1) return `Oops! The AI Tutor is currently unavailable. Please try again later. (${error.message})`;
                     await new Promise(r => setTimeout(r, delay));
-                    delay *= 2; // Delays: 1s, 2s, 4s, 8s, 16s
+                    delay *= 2; // Delays: 1s, 2s, 4s
                 }
             }
         }
