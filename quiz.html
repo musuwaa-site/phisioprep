@@ -480,7 +480,15 @@
                             ${stmt.answer ? '✅ Why You Are Right' : '📖 Explanation'} 
                             <span class="text-xs text-gray-500 font-normal ml-auto text-right bg-white px-2 py-1 rounded border">Reference Answer: <strong>${stmt.answer ? 'TRUE' : 'FALSE'}</strong></span>
                         </div>
-                        
+                       <p class="text-sm sm:text-base text-gray-800 leading-relaxed font-medium">
+                            ${dynamicExplanation}
+                            <br><br>
+                            <span class="block bg-gray-50 p-3 rounded-lg border border-gray-100 text-xs sm:text-sm text-gray-600">
+                                <strong> Disclaimer:</strong><br>
+                                This content is entirely AI-generated<br>
+                                If you find any answer confusing or doubtful, please cross-check it with other reliable sources to verify the fact.
+                            </span>
+                        </p> 
                     `;
                 });
             });
