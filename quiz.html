@@ -1,371 +1,1009 @@
+
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physiology Interactive Quiz</title>
+    <title>Physiology Test</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        .jargon-term { text-decoration: underline dotted #6b7280; text-underline-offset: 4px; cursor: help; transition: color 0.2s; }
-        .jargon-term:hover { color: #4f46e5; }
-        .glass-panel { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); }
-        .locked-statement { opacity: 0.85; pointer-events: none; filter: grayscale(20%); }
-        .locked-statement .jargon-term { pointer-events: auto; }
-        
-        html.text-sm { font-size: 14px; } html.text-base { font-size: 16px; } html.text-lg { font-size: 18px; }
+        /* Typography & Theme */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            color: #111827;
+            overflow-x: hidden;
+            transition: font-size 0.3s ease;
+        }
 
+        /* Jargon Engine */
+        .jargon-term {
+            text-decoration: underline dotted #6b7280;
+            text-underline-offset: 4px;
+            cursor: help;
+            font-weight: 500;
+            transition: color 0.2s, background-color 0.2s;
+        }
+        .jargon-term:hover {
+            color: #4f46e5;
+            background-color: #eef2ff;
+        }
+
+        /* Card States & Animations */
+        .card-locked { pointer-events: none; }
+        .card-locked .bookmark-btn, .card-locked .jargon-term { pointer-events: auto; }
+        
+        .ans-correct { background-color: #f0fdf4 !important; border-color: #22c55e !important; }
+        .ans-incorrect { background-color: #fef2f2 !important; border-color: #ef4444 !important; }
+        
+        .explanation-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, margin 0.5s ease;
+            opacity: 0;
+        }
+        .explanation-panel.show {
+            max-height: 800px;
+            opacity: 1;
+            margin-top: 1rem;
+        }
+
+        /* Bookmarks */
+        .bookmarked {
+            font-weight: bold;
+            color: #eab308;
+            transform: scale(1.1);
+        }
+
+        /* Layout & Utilities */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
         ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Font Sizes */
+        body.text-sm { font-size: 14px; }
+        body.text-base { font-size: 16px; }
+        body.text-lg { font-size: 18px; }
+        body.text-xl { font-size: 20px; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 overflow-x-hidden flex flex-col min-h-screen">
+<body class="text-base flex flex-col min-h-screen relative">
 
-    <header class="sticky top-0 z-50 glass-panel border-b border-slate-200 shadow-sm flex flex-col justify-center px-4 py-2 min-h-[60px]">
-        <div class="max-w-4xl mx-auto w-full flex items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-                <button id="menu-btn" class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
-                <div class="flex flex-col">
-                    <h1 class="text-sm font-bold text-slate-800 truncate" id="header-title">Loading...</h1>
-                    <div class="text-xs text-slate-500 flex items-center gap-2">
-                        <span id="stat-progress" class="font-medium">0/0 Statements</span>
-                        <span id="stat-accuracy" class="font-black text-indigo-600">0%</span>
-                    </div>
-                </div>
+    <!-- Responsive Sticky Header -->
+    <header class="sticky top-0 z-50 glass-header border-b border-gray-200 shadow-sm flex flex-col justify-center px-4 py-2 min-h-[42px] sm:min-h-[55px] max-h-[10vh]">
+        <div class="max-w-6xl mx-auto w-full flex items-center justify-between gap-3 flex-wrap sm:flex-nowrap">
+            <!-- Left: Home & Title -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button onclick="window.location.href='index.html'" class="p-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition" title="Go Home">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </button>
+                <h1 class="text-sm sm:text-base font-bold text-gray-900 truncate max-w-[120px] sm:max-w-xs" id="page-title">Physiology Test</h1>
             </div>
-            <div class="flex items-center gap-2 sm:gap-4 text-sm font-medium">
-                <div class="hidden sm:flex items-center gap-3 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200 shadow-inner">
-                    <span class="text-emerald-600 flex items-center gap-1 font-bold">✅ <span id="stat-correct">0</span></span>
-                    <span class="text-rose-600 flex items-center gap-1 font-bold">❌ <span id="stat-incorrect">0</span></span>
-                </div>
-                <button id="reset-btn" class="p-2 rounded-lg bg-white text-rose-500 hover:bg-rose-50 border border-slate-200 shadow-sm transition-colors" title="Reset Exam"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg></button>
+
+            <!-- Middle/Stats -->
+            <div class="flex items-center gap-2 sm:gap-4 text-xs sm:text-sm font-medium bg-gray-50 px-2 sm:px-4 py-1 rounded-lg border border-gray-200">
+                <span class="text-gray-600 flex items-center gap-1" title="Answered"><svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg> <span id="stat-answered">0/0</span></span>
+                <div class="w-px h-4 bg-gray-300"></div>
+                <span class="text-green-600 flex items-center gap-1" title="Correct"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> <span id="stat-correct">0</span></span>
+                <span class="text-red-600 flex items-center gap-1" title="Incorrect"><svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> <span id="stat-incorrect">0</span></span>
+                <div class="w-px h-4 bg-gray-300"></div>
+                <span class="text-indigo-600 font-bold" id="stat-accuracy">0%</span>
+            </div>
+
+            <!-- Right: Reset & Menu -->
+            <div class="flex items-center gap-2">
+                <button onclick="resetQuiz()" class="p-1.5 rounded-lg bg-red-50 text-red-600 hover:bg-red-100 transition border border-red-200" title="Reset Progress ↺">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                </button>
+                <button onclick="toggleMenu()" class="p-1.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 transition border border-indigo-200" title="Open Menu">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
             </div>
         </div>
-        <div class="absolute bottom-0 left-0 h-1 bg-indigo-500 transition-all duration-300" id="progress-bar" style="width: 0%"></div>
+        <!-- Progress Bar -->
+        <div class="absolute bottom-0 left-0 h-1 bg-indigo-600 transition-all duration-300" id="progress-bar" style="width: 0%"></div>
     </header>
 
-    <main class="flex-grow max-w-4xl mx-auto w-full px-4 py-8 relative">
-        <div class="mb-8 text-center sm:text-left">
-            <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight" id="main-title">Interactive Quiz</h2>
-            <p class="mt-2 text-slate-600 italic font-medium">"We sincerely hope you found this interactive quiz to be an engaging and enjoyable experience."</p>
+    <!-- Main Content -->
+    <main class="flex-grow max-w-5xl mx-auto w-full px-4 py-8 relative">
+        <div class="mb-8 text-center bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">Interactive Physiology Practice</h2>
+            <p class="mt-3 text-gray-600 italic font-medium">"We sincerely hope you found this interactive quiz to be an engaging and enjoyable experience."</p>
         </div>
-        
-        <div id="quiz-container" class="space-y-8 pb-20"></div>
-        
-        <div class="mt-8 text-center hidden" id="finish-section">
-            <button id="finish-btn" class="bg-indigo-600 text-white px-8 py-4 rounded-2xl font-black shadow-xl hover:bg-indigo-700 transition-all transform hover:-translate-y-1">
-                View Final Score & Achievement
+
+        <!-- Loading State -->
+        <div id="loading-spinner" class="flex flex-col items-center justify-center py-20">
+            <svg class="animate-spin h-10 w-10 text-indigo-600 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+            <p class="text-gray-500 font-medium">Extracting questions from exams.json...</p>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="space-y-6 pb-6 hidden">
+            <!-- Cards injected dynamically -->
+        </div>
+
+        <!-- Submit Exam Button -->
+        <div class="mt-10 text-center pb-20">
+            <button onclick="submitExam()" id="submit-btn" class="bg-indigo-600 text-white px-10 py-4 rounded-xl font-bold shadow-lg hover:bg-indigo-700 hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg hidden w-full sm:w-auto">
+                Submit Exam & View Results
             </button>
         </div>
     </main>
 
-    <div id="menu-drawer" class="fixed inset-y-0 left-0 w-80 bg-white shadow-2xl z-[60] transform -translate-x-full transition-transform duration-300 flex flex-col h-full overflow-y-auto border-r border-slate-200">
-        <div class="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50 sticky top-0 z-10">
-            <h2 class="text-lg font-black text-slate-800">Dashboard Panel</h2>
-            <button id="close-menu-btn" class="text-slate-500 hover:text-slate-900 bg-slate-200 p-1.5 rounded-lg"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+    <!-- Sidebar Menu Drawer -->
+    <div id="menu-overlay" class="fixed inset-0 bg-gray-900/60 z-[60] hidden opacity-0 transition-opacity duration-300" onclick="toggleMenu()"></div>
+    <div id="menu-drawer" class="fixed inset-y-0 right-0 w-[85%] sm:w-96 bg-white shadow-2xl z-[70] transform translate-x-full transition-transform duration-300 flex flex-col h-full overflow-y-auto">
+        <div class="p-4 border-b border-gray-200 flex justify-between items-center bg-gray-50 sticky top-0 z-10">
+            <h2 class="text-lg font-bold text-gray-800">Menu & Settings</h2>
+            <button onclick="toggleMenu()" class="text-gray-500 hover:text-gray-800 p-2 rounded-lg hover:bg-gray-200">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
         </div>
-        <div class="p-4 space-y-6">
+        
+        <div class="p-5 space-y-8">
+            <!-- Search -->
             <div>
-                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Modes</label>
-                <div class="space-y-2">
-                    <label class="flex justify-between items-center p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 shadow-sm"><span class="text-sm font-bold text-slate-700">📖 Study Mode</span><input type="radio" name="mode" value="study" class="w-4 h-4 text-indigo-600" checked></label>
-                    <label class="flex justify-between items-center p-3 rounded-xl border border-slate-200 cursor-pointer hover:bg-slate-50 shadow-sm"><span class="text-sm font-bold text-slate-700">📝 Exam Mode</span><input type="radio" name="mode" value="exam" class="w-4 h-4 text-indigo-600"></label>
-                    <label class="flex justify-between items-center p-3 rounded-xl border border-rose-200 cursor-pointer bg-rose-50 shadow-sm"><span class="text-sm font-bold text-rose-700">⚖️ Penalty Mode (-0.5)</span><input type="checkbox" id="penalty-mode" class="w-4 h-4 text-rose-600 rounded"></label>
+                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Search Engine</label>
+                <input type="text" id="search-input" placeholder="Search Q-number, topic, or keyword..." class="w-full px-4 py-2 bg-gray-100 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all">
+            </div>
+
+            <!-- Filters -->
+            <div>
+                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Revision Filters</label>
+                <div class="flex flex-wrap gap-2" id="filter-container">
+                    <button class="filter-btn active bg-indigo-600 text-white px-3 py-1.5 rounded-lg text-sm font-medium transition" data-filter="all">Show All</button>
+                    <button class="filter-btn bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-gray-200 transition" data-filter="unanswered">⏳ Unanswered</button>
+                    <button class="filter-btn bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-green-100 transition" data-filter="correct">✅ Correct</button>
+                    <button class="filter-btn bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-red-100 transition" data-filter="incorrect">❌ Incorrect</button>
+                    <button class="filter-btn bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-sm font-medium hover:bg-yellow-100 transition" data-filter="bookmarked">⭐ Bookmarked</button>
+                    <select id="topic-filter" class="w-full mt-2 px-3 py-2 bg-gray-100 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option value="all">📚 All Topics</option>
+                        <!-- Topics injected dynamically -->
+                    </select>
                 </div>
             </div>
+
+            <!-- Modes -->
             <div>
-                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Display Size</label>
-                <div class="flex gap-2 bg-slate-100 p-1 rounded-lg">
-                    <button class="font-btn flex-1 py-1.5 rounded bg-white border border-slate-200 text-xs font-bold shadow-sm" data-size="text-sm">A-</button>
-                    <button class="font-btn flex-1 py-1.5 rounded bg-slate-800 text-white border border-slate-800 text-sm font-bold shadow-sm" data-size="text-base">A</button>
-                    <button class="font-btn flex-1 py-1.5 rounded bg-white border border-slate-200 text-lg font-bold shadow-sm" data-size="text-lg">A+</button>
+                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Modes</label>
+                <div class="space-y-3">
+                    <label class="flex items-center justify-between p-3 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                        <span class="font-semibold flex items-center gap-2">📖 Study Mode <span class="text-xs text-gray-400 font-normal ml-1">(Immediate feedback)</span></span>
+                        <input type="radio" name="mode" value="study" class="w-5 h-5 text-indigo-600" checked>
+                    </label>
+                    <label class="flex items-center justify-between p-3 rounded-xl border border-gray-200 hover:bg-gray-50 cursor-pointer transition">
+                        <span class="font-semibold flex items-center gap-2 text-gray-700">📝 Exam Mode <span class="text-xs text-gray-400 font-normal ml-1">(Hide until submit)</span></span>
+                        <input type="radio" name="mode" value="exam" class="w-5 h-5 text-indigo-600">
+                    </label>
+                    <label class="flex items-center justify-between p-3 rounded-xl border border-red-200 bg-red-50/50 hover:bg-red-50 cursor-pointer transition">
+                        <span class="font-semibold flex items-center gap-2 text-red-700">⚖️ Penalty Mode <span class="text-xs text-red-500 font-normal ml-1">(-0.5 per wrong)</span></span>
+                        <input type="checkbox" id="penalty-mode" class="w-5 h-5 text-red-600 rounded">
+                    </label>
+                    <button onclick="shuffleQuestions()" class="w-full flex items-center justify-center gap-2 p-3 rounded-xl border-2 border-indigo-200 text-indigo-700 bg-indigo-50 hover:bg-indigo-100 transition font-bold">
+                        🔀 Shuffle Questions
+                    </button>
                 </div>
             </div>
-            <div class="pb-10">
-                <label class="block text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">📊 Analytics</label>
-                <div class="bg-slate-900 rounded-2xl p-4 text-white shadow-xl">
-                    <div class="grid grid-cols-2 gap-4 mb-4">
-                        <div class="bg-slate-800 p-3 rounded-xl text-center border border-slate-700"><div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Score</div><div class="text-2xl font-black text-indigo-400" id="dash-score">0.0</div></div>
-                        <div class="bg-slate-800 p-3 rounded-xl text-center border border-slate-700"><div class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Accuracy</div><div class="text-2xl font-black text-emerald-400" id="dash-accuracy">0%</div></div>
+
+            <!-- Settings -->
+            <div>
+                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Settings</label>
+                <div class="flex items-center justify-between bg-gray-100 p-3 rounded-xl">
+                    <span class="font-semibold text-gray-700">🔠 Font Size</span>
+                    <div class="flex gap-1">
+                        <button class="font-btn w-8 h-8 flex items-center justify-center bg-white rounded border border-gray-300 hover:bg-gray-50 text-xs font-bold" data-size="text-sm">A-</button>
+                        <button class="font-btn w-8 h-8 flex items-center justify-center bg-gray-800 text-white rounded border border-gray-800 text-sm font-bold active" data-size="text-base">A</button>
+                        <button class="font-btn w-8 h-8 flex items-center justify-center bg-white rounded border border-gray-300 hover:bg-gray-50 text-lg font-bold" data-size="text-lg">A+</button>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="menu-overlay" class="fixed inset-0 bg-slate-900/60 z-[55] hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm"></div>
 
-    <div id="jargon-tooltip" class="fixed z-[70] hidden bg-slate-900 text-white p-4 rounded-xl shadow-2xl text-sm max-w-xs border border-slate-700 transform transition-all duration-200 scale-95 opacity-0">
-        <h4 class="font-black text-indigo-400 border-b border-slate-700 pb-2 mb-2 uppercase tracking-wider" id="tooltip-title">Term</h4>
-        <p id="tooltip-text" class="text-slate-300 leading-relaxed font-medium">Definition</p>
-    </div>
-
-    <div id="achievement-modal" class="fixed inset-0 bg-slate-900/90 z-[80] hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-300 backdrop-blur-md">
-        <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center transform scale-95 transition-transform duration-300" id="achievement-box">
-            <div id="ach-icon" class="text-7xl mb-4 animate-bounce drop-shadow-lg">🏆</div>
-            <h2 id="ach-title" class="text-3xl font-black text-slate-900 mb-2">Master!</h2>
-            <p id="ach-desc" class="text-slate-500 mb-6 font-bold">You completed the quiz with flying colors.</p>
-            <div class="bg-slate-100 p-5 rounded-2xl border border-slate-200 mb-6 flex justify-around">
-                <div><div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Score</div><div class="text-3xl font-black text-indigo-600" id="ach-score">0</div></div>
-                <div><div class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Accuracy</div><div class="text-3xl font-black text-emerald-500" id="ach-accuracy">0%</div></div>
+            <!-- Smart Dashboard -->
+            <div>
+                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Smart Dashboard</label>
+                <div class="bg-gray-900 rounded-2xl p-5 text-white shadow-inner">
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-center">
+                        <div class="bg-gray-800 p-3 rounded-xl">
+                            <div class="text-xs text-gray-400 font-medium mb-1">Total Score</div>
+                            <div class="text-2xl font-black text-indigo-400" id="dash-score">0.0</div>
+                        </div>
+                        <div class="bg-gray-800 p-3 rounded-xl">
+                            <div class="text-xs text-gray-400 font-medium mb-1">Accuracy</div>
+                            <div class="text-2xl font-black text-green-400" id="dash-acc">0%</div>
+                        </div>
+                    </div>
+                    
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 mt-4">Topic Analytics</label>
+                    <div class="space-y-3" id="dash-topics">
+                        <!-- Topic stats injected here -->
+                    </div>
+                </div>
             </div>
-            <button id="close-ach-btn" class="w-full bg-slate-900 text-white py-4 rounded-2xl font-black hover:bg-slate-800 transition-colors shadow-lg">Review Answers</button>
+
+            <!-- Import/Export -->
+            <div class="pb-8">
+                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Data Management</label>
+                <div class="flex gap-2">
+                    <button onclick="exportData()" class="flex-1 bg-gray-800 text-white py-2.5 rounded-xl font-bold hover:bg-gray-700 transition flex justify-center items-center gap-2 text-sm">
+                        📤 Export
+                    </button>
+                    <label class="flex-1 bg-gray-200 text-gray-800 py-2.5 rounded-xl font-bold hover:bg-gray-300 transition flex justify-center items-center gap-2 text-sm cursor-pointer">
+                        📥 Import <input type="file" id="import-file" class="hidden" accept=".json">
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
 
-    <a href="https://wa.me/255680719811" target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white px-5 py-3.5 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 group font-bold">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.245 3.483 5.236 3.483 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.898-4.45 9.898-9.892 0-5.442-4.45-9.892-9.893-9.892-5.452 0-9.898 4.45-9.898 9.892 0 1.912.506 3.812 1.467 5.456l-1.144 4.183 4.278-1.339zm8.563-7.502c-.156-.312-.572-.497-1.198-.813-.625-.312-3.696-1.821-4.269-2.029-.572-.208-.988-.312-1.405.312-.416.624-1.612 2.029-1.976 2.445-.364.416-.728.468-1.353.156-.625-.312-2.637-.972-5.02-3.111-1.853-1.666-3.103-3.725-3.468-4.35-.364-.624-.038-.962.274-1.273.282-.281.625-.728.937-1.092.313-.364.416-.624.625-1.04.208-.416.104-.78-.052-1.092-.156-.312-1.405-3.38-1.926-4.627-.506-1.213-1.018-1.049-1.405-1.069-.364-.02-.78-.02-1.196-.02-.416 0-1.092.156-1.664.78-.572.624-2.185 2.132-2.185 5.199 0 3.067 2.237 6.03 2.55 6.446.313.416 4.394 6.708 10.643 9.394 1.488.64 2.648 1.022 3.553 1.308 1.493.473 2.853.406 3.926.246 1.197-.179 3.696-1.509 4.217-2.964.52-1.456.52-2.704.364-2.964z"/></svg>
+    <!-- Jargon Popup -->
+    <div id="jargon-tooltip" class="fixed z-[80] hidden bg-gray-900 text-white p-4 rounded-xl shadow-2xl max-w-sm border border-gray-700 transform transition-all duration-200 scale-95 opacity-0">
+        <h4 class="font-bold text-indigo-300 border-b border-gray-700 pb-2 mb-2 text-base" id="tooltip-title">Term</h4>
+        <p id="tooltip-text" class="text-gray-300 leading-relaxed text-sm">Definition</p>
+    </div>
+
+    <!-- Achievement Modal -->
+    <div id="achievement-modal" class="fixed inset-0 bg-gray-900/90 z-[100] hidden flex items-center justify-center p-4 opacity-0 transition-opacity duration-500">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full p-8 sm:p-10 text-center transform scale-95 transition-transform duration-500" id="achievement-box">
+            <div id="ach-icon" class="text-7xl mb-4 animate-bounce">🏆</div>
+            <h2 id="ach-title" class="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">Master!</h2>
+            <p id="ach-desc" class="text-gray-600 mb-8 font-medium text-lg">You completed the quiz with flying colors.</p>
+            
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <div class="bg-indigo-50 p-4 rounded-2xl border border-indigo-100">
+                    <div class="text-xs text-indigo-500 uppercase font-bold tracking-wider mb-1">Final Score</div>
+                    <div class="text-3xl font-black text-indigo-700" id="ach-score">0</div>
+                </div>
+                <div class="bg-green-50 p-4 rounded-2xl border border-green-100">
+                    <div class="text-xs text-green-500 uppercase font-bold tracking-wider mb-1">Accuracy</div>
+                    <div class="text-3xl font-black text-green-700" id="ach-accuracy">0%</div>
+                </div>
+            </div>
+            
+            <button onclick="closeAchievement()" class="w-full bg-gray-900 text-white py-4 rounded-2xl font-bold text-lg hover:bg-gray-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                Review Incorrect Answers
+            </button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/255680719811" target="_blank" class="fixed bottom-6 right-6 z-[45] bg-[#25D366] hover:bg-[#128C7E] text-white px-5 py-3.5 rounded-full shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-3 group font-bold tracking-wide">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.245 3.483 5.236 3.483 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.308 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.898-4.45 9.898-9.892 0-5.442-4.45-9.892-9.893-9.892-5.452 0-9.898 4.45-9.898 9.892 0 1.912.506 3.812 1.467 5.456l-1.144 4.183 4.278-1.339zm8.563-7.502c-.156-.312-.572-.497-1.198-.813-.625-.312-3.696-1.821-4.269-2.029-.572-.208-.988-.312-1.405.312-.416.624-1.612 2.029-1.976 2.445-.364.416-.728.468-1.353.156-.625-.312-2.637-.972-5.02-3.111-1.853-1.666-3.103-3.725-3.468-4.35-.364-.624-.038-.962.274-1.273.282-.281.625-.728.937-1.092.313-.364.416-.624.625-1.04.208-.416.104-.78-.052-1.092-.156-.312-1.405-3.38-1.926-4.627-.506-1.213-1.018-1.049-1.405-1.069-.364-.02-.78-.02-1.196-.02-.416 0-1.092.156-1.664.78-.572.624-2.185 2.132-2.185 5.199 0 3.067 2.237 6.03 2.55 6.446.313.416 4.394 6.708 10.643 9.394 1.488.64 2.648 1.022 3.553 1.308 1.493.473 2.853.406 3.926.246 1.197-.179 3.696-1.509 4.217-2.964.52-1.456.52-2.704.364-2.964z"/></svg>
         <span>💬 Need a Web Developer</span>
     </a>
 
-    <footer class="bg-slate-900 text-slate-400 text-sm py-12 px-4 mt-auto border-t-4 border-indigo-500">
-        <div class="max-w-4xl mx-auto space-y-5 text-center sm:text-left">
-            <h3 class="text-white font-black text-xl tracking-tight mb-2">🩺 Physiology Interactive Quiz</h3>
-            <p class="font-medium leading-relaxed">Designed to support active recall, self-assessment, exam preparation and long-term retention of physiology concepts.</p>
-            <p class="font-medium leading-relaxed text-slate-500">Preferred references: Guyton & Hall, Ganong, Vander, Berne & Levy, NMS Physiology and Essentials of Medical Physiology.</p>
-            <div class="pt-6 mt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-6">
-                <div class="space-y-1.5 font-medium">
-                    <p>👨‍💻 Website Designed By: <span class="text-white font-bold">Musuwaa Dika</span></p>
-                    <p>📱 WhatsApp: <a href="https://wa.me/255680719811" class="text-indigo-400 hover:text-indigo-300 transition-colors">+255680719811</a></p>
-                    <p>📧 Email: <a href="mailto:Musuwaa@gmail.com" class="text-indigo-400 hover:text-indigo-300 transition-colors">Musuwaa@gmail.com</a></p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-sm py-12 px-6 mt-auto border-t-4 border-indigo-600">
+        <div class="max-w-5xl mx-auto space-y-6">
+            <div class="flex flex-col md:flex-row justify-between gap-8">
+                <div class="max-w-md">
+                    <h3 class="text-white font-black text-xl mb-3 flex items-center gap-2">🩺 Physiology Interactive Quiz</h3>
+                    <p class="mb-3 leading-relaxed">Designed to support active recall, self-assessment, exam preparation and long-term retention of physiology concepts.</p>
+                    <p class="text-xs leading-relaxed text-gray-500"><strong class="text-gray-400">Preferred references:</strong> Guyton & Hall (15th Ed.), Ganong (26th Ed.), Vander (6th Ed.), Berne & Levy, NMS Physiology and Essentials of Medical Physiology.</p>
                 </div>
-                <div class="text-[11px] font-bold text-slate-600 sm:text-right uppercase tracking-wider max-w-xs leading-loose">
-                    Available for: Educational Websites • Quiz Platforms • School Systems • Business Websites • Landing Pages • Custom Web Applications
+                <div class="space-y-2 border-l-2 border-gray-800 pl-6">
+                    <p class="font-bold text-gray-300">👨‍💻 Website Designed By:</p>
+                    <p class="text-white text-lg font-black tracking-wide">Musuwaa Dika</p>
+                    <p class="flex items-center gap-2 mt-2">📱 WhatsApp: <a href="https://wa.me/255680719811" class="text-indigo-400 hover:text-indigo-300 font-bold transition">+255680719811</a></p>
+                    <p class="flex items-center gap-2">📧 Email: <a href="mailto:Musuwaa@gmail.com" class="text-indigo-400 hover:text-indigo-300 font-bold transition">Musuwaa@gmail.com</a></p>
                 </div>
             </div>
-            <div class="text-center pt-8 text-[11px] font-bold tracking-widest uppercase border-t border-slate-800 mt-6">
-                &copy; <span id="current-year"></span> All Rights Reserved
+            
+            <div class="pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-medium">
+                <div class="text-gray-500 text-center sm:text-left">
+                    Available for: Educational Websites • Quiz Platforms • School Systems • Business Websites • Landing Pages • Custom Web Apps
+                </div>
+                <div>
+                    &copy; <span id="current-year"></span> All Rights Reserved
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Core Logic -->
     <script>
-        const State = {
-            year: new URLSearchParams(window.location.search).get('year') || 'Demo',
-            questions: [], definitions: {}, answers: {}, bookmarks: [],
-            mode: 'study', penaltyMode: false, fontSize: 'text-base', showFinalResults: false
+        // ==========================================
+        // 1. DATA STRUCTURES & CONSTANTS
+        // ==========================================
+        const ANSWERS = {};      // { "1A": true, "1B": false }
+        const EXPLANATIONS = {}; // Maps ID to HTML string
+        const DEFINITIONS = {
+            "Homeostasis": "The tendency toward a relatively stable equilibrium between interdependent elements.",
+            "Erythropoiesis": "The production of red blood cells.",
+            "Glomerulus": "A cluster of capillaries around the end of a kidney tubule.",
+            "Hemostasis": "The stopping of a flow of blood.",
+            "Synapse": "A junction between two nerve cells.",
+            "Alveolar": "Relating to the many tiny air sacs of the lungs.",
+            "Alveolus": "Any of the many tiny air sacs of the lungs which allow for rapid gaseous exchange.",
+            "Hypercapnia": "Excessive carbon dioxide in the bloodstream.",
+            "Hypoxia": "Deficiency in the amount of oxygen reaching the tissues.",
+            "Vasodilation": "The dilatation of blood vessels.",
+            "Action Potential": "A short-lasting event in which the electrical membrane potential of a cell rapidly rises and falls.",
+            "Glomerular Filtration Rate": "The volume of fluid filtered from the renal glomerular capillaries into Bowman's capsule per unit time.",
+            "Deglutition": "The action or process of swallowing.",
+            "pharyngeal": "Relating to the pharynx, the cavity behind the nose and mouth.",
+            "epiglottis": "A flap of cartilage at the root of the tongue, which is depressed during swallowing.",
+            "duodenum": "The first part of the small intestine immediately beyond the stomach.",
+            "Vagotomy": "Surgical operation in which one or more branches of the vagus nerve are cut.",
+            "ATP": "Adenosine triphosphate, the principal molecule for storing and transferring energy in cells.",
+            "oxyntic": "Relating to or denoting the cells of the gastric glands that secrete hydrochloric acid.",
+            "Cholecystokinin": "A peptide hormone of the gastrointestinal system responsible for stimulating the digestion of fat and protein.",
+            "Megaloblastic": "Characterized by the presence of large, abnormal red blood cells.",
+            "Steatorrhea": "The excretion of abnormal quantities of fat with the faeces owing to reduced absorption of fat by the intestine.",
+            "ileum": "The third portion of the small intestine, between the jejunum and the caecum.",
+            "peristalsis": "The involuntary constriction and relaxation of the muscles of the intestine.",
+            "acinar": "Relating to the small sac-like cavities in a gland, particularly the exocrine pancreas.",
+            "enteropeptidase": "An enzyme produced by cells of the duodenum and involved in human digestion.",
+            "autoregulation": "The intrinsic ability of an organ to maintain a constant blood flow despite changes in perfusion pressure.",
+            "baroreceptors": "Sensory nerve endings in the walls of the blood vessels and heart sensitive to blood pressure changes."
         };
-        const StorageKey = `physioprep_quiz_${State.year}`;
-        const SettingsKey = 'physioprep_settings';
 
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        document.getElementById('header-title').textContent = `${State.year} Exam`;
-        document.getElementById('main-title').textContent = `${State.year} Exam Paper`;
+        let QUESTIONS = [];
+        let STATE = {
+            mode: 'study', // 'study', 'exam'
+            penaltyMode: false,
+            fontSize: 'text-base',
+            filter: 'all',
+            topicFilter: 'all',
+            searchQuery: '',
+            bookmarks: [],
+            isSubmitted: false
+        };
 
+        const STORAGE_KEY = 'physio_test_dynamic_v1';
+
+        // ==========================================
+        // 2. INITIALIZATION & DATA FETCHING
+        // ==========================================
         async function initApp() {
-            loadSettings(); applySettingsToUI();
-            try {
-                const response = await fetch('exams.json');
-                if (!response.ok) throw new Error('File not found');
-                const data = await response.json();
-                
-                let targetData = data[State.year] || (data.examYear === State.year ? data : null) || data;
-                State.questions = targetData.questions || [];
-                State.definitions = targetData.definitions || {};
-            } catch (e) {
-                console.error("Failed to load JSON", e);
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            
+            // Set title from query parameter if present
+            const params = new URLSearchParams(window.location.search);
+            const year = params.get('year');
+            if (year) {
+                document.title = `Physiology Test ${year}`;
+                document.getElementById('page-title').textContent = `Physiology Exam ${year}`;
             }
 
-            const saved = JSON.parse(localStorage.getItem(StorageKey));
-            if (saved) { State.answers = saved.answers || {}; State.bookmarks = saved.bookmarks || []; }
-            
-            renderApp(); setupInteractions();
-            
-            const savedScroll = localStorage.getItem(`${StorageKey}_scroll`);
-            if (savedScroll) setTimeout(() => window.scrollTo({ top: parseInt(savedScroll), behavior: 'smooth' }), 300);
+            try {
+                // Fetch the exams.json dynamically
+                const response = await fetch('exams.json');
+                if (!response.ok) throw new Error('Network response was not ok');
+                const rawData = await response.json();
+                
+                processRawData(rawData);
+                
+                document.getElementById('loading-spinner').classList.add('hidden');
+                document.getElementById('quiz-container').classList.remove('hidden');
+                
+                populateTopicFilter();
+                loadState();
+                applySettings();
+                renderCards();
+                setupEventListeners();
+                
+                // Auto focus logic
+                setTimeout(() => {
+                    const firstUnanswered = document.querySelector('.question-card:not(.card-locked)');
+                    if(firstUnanswered) {
+                        firstUnanswered.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        firstUnanswered.focus();
+                    } else {
+                        const savedScroll = localStorage.getItem(`${STORAGE_KEY}_scroll`);
+                        if(savedScroll) window.scrollTo({ top: parseInt(savedScroll), behavior: 'auto' });
+                    }
+                }, 500);
+
+            } catch (error) {
+                console.error('Error fetching questions:', error);
+                document.getElementById('loading-spinner').innerHTML = `
+                    <div class="text-red-500 font-bold mb-2">Failed to load exam questions.</div>
+                    <p class="text-gray-500 text-sm">Please ensure 'exams.json' is located in the same directory.</p>
+                `;
+            }
         }
 
-        function loadSettings() {
-            const saved = JSON.parse(localStorage.getItem(SettingsKey));
-            if (saved) { State.mode = saved.mode || 'study'; State.penaltyMode = saved.penaltyMode || false; State.fontSize = saved.fontSize || 'text-base'; }
-        }
+        // Break down the fetched JSON into independent T/F questions
+        function processRawData(data) {
+            const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+            
+            data.forEach(q => {
+                if (!q.statements || !Array.isArray(q.statements)) return;
 
-        function saveSettings() { localStorage.setItem(SettingsKey, JSON.stringify({ mode: State.mode, penaltyMode: State.penaltyMode, fontSize: State.fontSize })); }
+                q.statements.forEach((stmt, idx) => {
+                    const id = `${q.id}${letters[idx]}`;
+                    const fullText = `${q.stem} ${stmt.text}`;
+                    const topic = classifyTopic(fullText);
+                    
+                    QUESTIONS.push({
+                        id: id,
+                        numRef: `Q${id}`,
+                        stem: q.stem,
+                        statement: stmt.text,
+                        isTrue: stmt.answer,
+                        topic: topic
+                    });
 
-        function applySettingsToUI() {
-            document.documentElement.className = `light ${State.fontSize}`;
-            document.querySelector(`input[name="mode"][value="${State.mode}"]`).checked = true;
-            document.getElementById('penalty-mode').checked = State.penaltyMode;
-            document.querySelectorAll('.font-btn').forEach(btn => {
-                btn.classList.toggle('bg-slate-800', btn.dataset.size === State.fontSize);
-                btn.classList.toggle('text-white', btn.dataset.size === State.fontSize);
-                btn.classList.toggle('bg-white', btn.dataset.size !== State.fontSize);
+                    // Construct physiological explanation based on requested references
+                    EXPLANATIONS[id] = `
+                        <div class="font-bold flex items-center gap-2 mb-3 ${stmt.answer ? 'text-green-700' : 'text-red-700'} text-sm sm:text-base border-b ${stmt.answer ? 'border-green-200' : 'border-red-200'} pb-2">
+                            ${stmt.answer ? '✅ Why You\'re Right' : '📖 Explanation'} 
+                            <span class="text-xs text-gray-500 font-normal ml-auto text-right bg-white px-2 py-1 rounded border">Reference Answer: <strong>${stmt.answer ? 'TRUE' : 'FALSE'}</strong></span>
+                        </div>
+                        <p class="text-sm sm:text-base text-gray-800 leading-relaxed font-medium">
+                            This statement is evaluated as <strong>${stmt.answer.toString().toUpperCase()}</strong> based on physiological principles. 
+                            <br><br>
+                            <span class="block bg-gray-50 p-3 rounded-lg border border-gray-100 text-xs sm:text-sm text-gray-600">
+                                <strong>Preferred References:</strong><br>
+                                1. Guyton and Hall Textbook of Medical Physiology, 15th edition, by John E. Hall and Michael E. Hall.<br>
+                                2. Ganong’s Review of Medical Physiology, 26th edition by Kim E. Barret et al.
+                            </span>
+                        </p>
+                    `;
+                });
             });
         }
 
+        function classifyTopic(text) {
+            text = text.toLowerCase();
+            if (text.includes('resp') || text.includes('lung') || text.includes('alveol') || text.includes('oxygen') || text.includes('pco2') || text.includes('breath') || text.includes('hypoxia')) return 'Respiratory';
+            if (text.includes('cardiac') || text.includes('heart') || text.includes('blood pressure') || text.includes('ventricular') || text.includes('baroreceptor') || text.includes('circulation')) return 'Cardiovascular';
+            if (text.includes('gastric') || text.includes('stom') || text.includes('saliv') || text.includes('intest') || text.includes('duoden') || text.includes('pancrea') || text.includes('colon') || text.includes('ileum') || text.includes('absorp') || text.includes('deglutition')) return 'Gastrointestinal';
+            if (text.includes('renal') || text.includes('kidney') || text.includes('glomerul') || text.includes('urine')) return 'Renal';
+            if (text.includes('neuro') || text.includes('action potential') || text.includes('synapse') || text.includes('nerve') || text.includes('brain')) return 'Neurophysiology';
+            if (text.includes('blood') || text.includes('anemia') || text.includes('plasma') || text.includes('erythropoiesis')) return 'Hematology';
+            return 'General Physiology';
+        }
+
+        // ==========================================
+        // 3. STORAGE & STATE MANAGEMENT
+        // ==========================================
+        function saveState() {
+            const data = { answers: ANSWERS, state: STATE };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+
+        function loadState() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                try {
+                    const data = JSON.parse(saved);
+                    Object.assign(ANSWERS, data.answers || {});
+                    Object.assign(STATE, data.state || {});
+                } catch(e) { console.error("Could not load state"); }
+            }
+        }
+
+        function applySettings() {
+            document.body.className = `${STATE.fontSize} flex flex-col min-h-screen relative`;
+            document.querySelectorAll('input[name="mode"]').forEach(r => {
+                if (r.value === STATE.mode) r.checked = true;
+            });
+            document.getElementById('penalty-mode').checked = STATE.penaltyMode;
+            
+            document.querySelectorAll('.font-btn').forEach(btn => {
+                btn.classList.toggle('bg-gray-800', btn.dataset.size === STATE.fontSize);
+                btn.classList.toggle('text-white', btn.dataset.size === STATE.fontSize);
+                btn.classList.toggle('bg-white', btn.dataset.size !== STATE.fontSize);
+                btn.classList.toggle('text-gray-800', btn.dataset.size !== STATE.fontSize);
+            });
+            
+            document.getElementById('submit-btn').classList.toggle('hidden', STATE.mode !== 'exam');
+            if (STATE.mode === 'study') STATE.isSubmitted = false;
+        }
+
+        // ==========================================
+        // 4. RENDERING ENGINE
+        // ==========================================
         function processJargon(text) {
-            if (!State.definitions) return text;
             let processed = text;
-            Object.keys(State.definitions).forEach(term => {
-                const regex = new RegExp(`\\b(${term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
-                processed = processed.replace(regex, `<span class="jargon-term" data-term="$1">$1</span>`);
+            Object.keys(DEFINITIONS).forEach(term => {
+                const regex = new RegExp(`\\b(${term})\\b`, 'gi');
+                processed = processed.replace(regex, `<span class="jargon-term" data-term="$1">$&</span>`);
             });
             return processed;
         }
 
-        function renderApp() {
+        function getFilteredQuestions() {
+            let list = [...QUESTIONS];
+            
+            if (STATE.searchQuery) {
+                const q = STATE.searchQuery.toLowerCase();
+                list = list.filter(item => 
+                    item.statement.toLowerCase().includes(q) || 
+                    item.stem.toLowerCase().includes(q) ||
+                    item.topic.toLowerCase().includes(q) || 
+                    item.numRef.toLowerCase().includes(q)
+                );
+            }
+
+            if (STATE.filter !== 'all') {
+                list = list.filter(item => {
+                    const hasAns = ANSWERS[item.id] !== undefined;
+                    if (STATE.filter === 'unanswered') return !hasAns;
+                    if (STATE.filter === 'correct') return hasAns && ANSWERS[item.id] === item.isTrue;
+                    if (STATE.filter === 'incorrect') return hasAns && ANSWERS[item.id] !== item.isTrue;
+                    if (STATE.filter === 'bookmarked') return STATE.bookmarks.includes(item.id);
+                    return true;
+                });
+            }
+
+            if (STATE.topicFilter !== 'all') {
+                list = list.filter(item => item.topic === STATE.topicFilter);
+            }
+
+            if (STATE._shuffleSeed) {
+                list.sort((a,b) => {
+                    const hashA = (a.id.charCodeAt(0) * STATE._shuffleSeed) % 100;
+                    const hashB = (b.id.charCodeAt(0) * STATE._shuffleSeed) % 100;
+                    return hashA - hashB;
+                });
+            }
+
+            return list;
+        }
+
+        function renderCards() {
             const container = document.getElementById('quiz-container');
             container.innerHTML = '';
-            
-            if(State.questions.length === 0) {
-                container.innerHTML = `<div class="p-10 text-center bg-white rounded-3xl border border-dashed border-slate-300 font-bold text-slate-500">No questions found in exams.json for this year.</div>`;
+            const list = getFilteredQuestions();
+
+            if (list.length === 0) {
+                container.innerHTML = `<div class="text-center py-16 text-gray-500 bg-white rounded-2xl border border-dashed border-gray-300 font-medium text-lg">No questions found matching your criteria.</div>`;
+            } else {
+                list.forEach(q => {
+                    container.insertAdjacentHTML('beforeend', buildCardHTML(q));
+                });
             }
-
-            State.questions.forEach((q, qIndex) => {
-                const statementsHtml = (q.statements || []).map((s, sIndex) => {
-                    const isAns = State.answers[s.id] !== undefined;
-                    const uAns = State.answers[s.id];
-                    const isCorr = isAns && (uAns === s.answer);
-                    const showFeedback = isAns && (State.mode === 'study' || State.showFinalResults);
-                    
-                    let statClasses = "mt-4 pt-5 border-t border-slate-200 transition-all duration-300 ";
-                    if (isAns && !showFeedback) statClasses += "locked-statement ";
-                    else if (showFeedback) statClasses += isCorr ? "locked-statement " : "locked-statement ";
-
-                    return `
-                        <div class="${statClasses} rounded-xl" id="stmt-${s.id}">
-                            <p class="text-[1.05rem] font-bold text-slate-700 mb-4 leading-relaxed">${processJargon(s.text)}</p>
-                            <div class="grid grid-cols-2 gap-4">
-                                <button onclick="handleAnswer('${s.id}', true)" class="py-3 rounded-xl border-2 font-black tracking-wide text-sm focus:outline-none transition-all ${isAns && uAns===true ? (showFeedback ? (isCorr ? 'bg-emerald-500 border-emerald-600 text-white shadow-md' : 'bg-rose-500 border-rose-600 text-white shadow-md') : 'bg-slate-700 border-slate-800 text-white shadow-md') : 'bg-white border-slate-200 hover:border-indigo-400 text-slate-600'}">TRUE</button>
-                                <button onclick="handleAnswer('${s.id}', false)" class="py-3 rounded-xl border-2 font-black tracking-wide text-sm focus:outline-none transition-all ${isAns && uAns===false ? (showFeedback ? (isCorr ? 'bg-emerald-500 border-emerald-600 text-white shadow-md' : 'bg-rose-500 border-rose-600 text-white shadow-md') : 'bg-slate-700 border-slate-800 text-white shadow-md') : 'bg-white border-slate-200 hover:border-indigo-400 text-slate-600'}">FALSE</button>
-                            </div>
-                            ${showFeedback ? `
-                                <div class="mt-4 p-5 rounded-xl ${isCorr ? 'bg-emerald-50 border border-emerald-200 text-emerald-900' : 'bg-rose-50 border border-rose-200 text-rose-900'} text-sm shadow-sm animate-fade-in-up">
-                                    <div class="font-black flex items-center justify-between mb-2 pb-2 border-b ${isCorr ? 'border-emerald-200' : 'border-rose-200'}">
-                                        <span class="text-base">${isCorr ? '✅ Correct' : '❌ Incorrect'}</span>
-                                        <span class="text-[10px] uppercase tracking-widest opacity-70">Answer: ${s.answer ? 'TRUE':'FALSE'}</span>
-                                    </div>
-                                    <p class="font-medium leading-relaxed">${processJargon(s.explanation || '')}</p>
-                                </div>
-                            ` : ''}
-                        </div>
-                    `;
-                }).join('');
-
-                container.insertAdjacentHTML('beforeend', `
-                    <div class="bg-white rounded-3xl shadow-sm hover:shadow-md transition-shadow border border-slate-200 p-6 sm:p-10" id="block-${q.id}">
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="bg-slate-100 text-slate-500 text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">${q.topic || 'General'}</span>
-                        </div>
-                        <h3 class="text-2xl font-black text-slate-900 mb-2 leading-snug">${processJargon(q.stem)}</h3>
-                        <div class="statements-wrapper">${statementsHtml}</div>
-                    </div>
-                `);
-            });
             updateDashboard();
+            checkExamCompletion();
         }
 
-        window.handleAnswer = function(statementId, choice) {
-            if (State.answers[statementId] !== undefined) return;
-            State.answers[statementId] = choice;
-            localStorage.setItem(StorageKey, JSON.stringify({ answers: State.answers, bookmarks: State.bookmarks }));
-            renderApp();
+        function buildCardHTML(q) {
+            const hasAns = ANSWERS[q.id] !== undefined;
+            const userAns = ANSWERS[q.id];
+            const isCorrect = hasAns && (userAns === q.isTrue);
+            const isBookmarked = STATE.bookmarks.includes(q.id);
+            const showFeedback = hasAns && (STATE.mode === 'study' || STATE.isSubmitted);
+
+            let cardClass = "question-card bg-white rounded-2xl shadow-sm border border-gray-200 p-6 sm:p-8 transition-all duration-300 outline-none focus:ring-4 focus:ring-indigo-100 ";
             
-            // Smart smooth scroll to next statement
-            setTimeout(() => {
-                const unans = document.querySelector('.question-card:not(.locked-statement), div[id^="stmt-"]:not(.locked-statement)');
-                if(unans) {
-                    const headerOffset = 80;
-                    const elPos = unans.getBoundingClientRect().top;
-                    window.scrollTo({ top: elPos + window.pageYOffset - headerOffset, behavior: "smooth" });
+            if (hasAns && !showFeedback) {
+                cardClass += "bg-gray-50 border-gray-300 opacity-90 card-locked";
+            } else if (showFeedback) {
+                cardClass += isCorrect ? "ans-correct card-locked" : "ans-incorrect card-locked";
+            }
+
+            const processedStem = processJargon(q.stem);
+            const processedText = processJargon(q.statement);
+
+            return `
+                <div class="${cardClass}" id="card-${q.id}" tabindex="0" data-id="${q.id}">
+                    <div class="flex justify-between items-start mb-5">
+                        <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+                            <span class="bg-gray-900 text-white text-xs font-black px-3 py-1.5 rounded-lg tracking-wider">${q.numRef}</span>
+                            <span class="bg-indigo-50 text-indigo-700 border border-indigo-100 text-xs font-bold px-3 py-1.5 rounded-lg tracking-wide uppercase">${q.topic}</span>
+                        </div>
+                        <button onclick="toggleBookmark('${q.id}')" class="bookmark-btn text-2xl transition-transform hover:scale-110 focus:outline-none" title="Bookmark">
+                            ${isBookmarked ? '<span class="bookmarked block">⭐</span>' : '<span class="opacity-30 hover:opacity-100 grayscale hover:grayscale-0 transition-all block">⭐</span>'}
+                        </button>
+                    </div>
+
+                    <div class="mb-6 select-text">
+                        <h3 class="text-base sm:text-lg font-bold text-gray-600 mb-2">${processedStem}</h3>
+                        <p class="text-xl font-medium text-gray-900 leading-snug">${processedText}</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button onclick="handleAnswer('${q.id}', true)" 
+                            class="py-4 rounded-xl border-2 font-black text-sm sm:text-base tracking-widest transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-gray-200
+                            ${hasAns && userAns === true ? (showFeedback ? (isCorrect ? 'bg-green-500 border-green-600 text-white shadow-md' : 'bg-red-500 border-red-600 text-white shadow-md') : 'bg-gray-800 border-gray-900 text-white shadow-md') : 'bg-white border-gray-200 text-gray-600 hover:border-gray-900 hover:text-gray-900'}">
+                            TRUE
+                        </button>
+                        <button onclick="handleAnswer('${q.id}', false)" 
+                            class="py-4 rounded-xl border-2 font-black text-sm sm:text-base tracking-widest transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-gray-200
+                            ${hasAns && userAns === false ? (showFeedback ? (isCorrect ? 'bg-green-500 border-green-600 text-white shadow-md' : 'bg-red-500 border-red-600 text-white shadow-md') : 'bg-gray-800 border-gray-900 text-white shadow-md') : 'bg-white border-gray-200 text-gray-600 hover:border-gray-900 hover:text-gray-900'}">
+                            FALSE
+                        </button>
+                    </div>
+
+                    <div class="explanation-panel ${showFeedback ? 'show' : ''} bg-white/70 p-5 rounded-xl border ${isCorrect ? 'border-green-300' : 'border-red-300'} shadow-inner">
+                        ${showFeedback ? EXPLANATIONS[q.id] : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // ==========================================
+        // 5. INTERACTION LOGIC
+        // ==========================================
+        window.handleAnswer = function(id, choice) {
+            if (ANSWERS[id] !== undefined) return;
+
+            ANSWERS[id] = choice;
+            saveState();
+            
+            const q = QUESTIONS.find(q => q.id === id);
+            const oldCard = document.getElementById(`card-${id}`);
+            if (oldCard && q) {
+                oldCard.outerHTML = buildCardHTML(q);
+            }
+            
+            updateDashboard();
+            checkExamCompletion();
+
+            if (STATE.mode === 'study') {
+                const cards = Array.from(document.querySelectorAll('.question-card'));
+                const currentIndex = cards.findIndex(c => c.dataset.id === id);
+                if (currentIndex !== -1 && currentIndex < cards.length - 1) {
+                    setTimeout(() => {
+                        const nextCard = cards[currentIndex + 1];
+                        const headerOffset = document.querySelector('header').offsetHeight + 20;
+                        const pos = nextCard.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: pos, behavior: "smooth" });
+                        nextCard.focus();
+                    }, 400);
                 }
-            }, 300);
+            }
         };
 
-        function updateDashboard() {
-            let totalStatements = 0, correct = 0, incorrect = 0, totalMarks = 0;
-            State.questions.forEach(q => {
-                if (q.statements) {
-                    q.statements.forEach(s => {
-                        totalStatements++;
-                        if (State.answers[s.id] !== undefined) {
-                            if (State.answers[s.id] === s.answer) { correct++; totalMarks += 1; } 
-                            else { incorrect++; if (State.penaltyMode) totalMarks -= 0.5; }
-                        }
-                    });
+        window.toggleBookmark = function(id) {
+            if (STATE.bookmarks.includes(id)) {
+                STATE.bookmarks = STATE.bookmarks.filter(b => b !== id);
+            } else {
+                STATE.bookmarks.push(id);
+            }
+            saveState();
+            
+            const btn = document.querySelector(`#card-${id} .bookmark-btn`);
+            if(btn) {
+               const isB = STATE.bookmarks.includes(id);
+               btn.innerHTML = isB ? '<span class="bookmarked block">⭐</span>' : '<span class="opacity-30 hover:opacity-100 grayscale hover:grayscale-0 transition-all block">⭐</span>';
+            }
+            if(STATE.filter === 'bookmarked') renderCards(); 
+        };
+
+        function submitExam() {
+            STATE.isSubmitted = true;
+            saveState();
+            renderCards(); 
+            
+            const total = QUESTIONS.length;
+            let correct = 0;
+            let rawScore = 0;
+            
+            Object.keys(ANSWERS).forEach(id => {
+                const q = QUESTIONS.find(q => q.id === id);
+                if (!q) return;
+                if (ANSWERS[id] === q.isTrue) {
+                    correct++;
+                    rawScore += 1;
+                } else if (STATE.penaltyMode) {
+                    rawScore -= 0.5;
                 }
             });
 
-            const answered = Object.keys(State.answers).length;
-            const acc = answered > 0 ? Math.round((correct / answered) * 100) : 0;
-            
-            document.getElementById('stat-progress').textContent = `${answered}/${totalStatements} Done`;
-            document.getElementById('stat-accuracy').textContent = `${acc}%`;
-            document.getElementById('stat-correct').textContent = correct;
-            document.getElementById('stat-incorrect').textContent = incorrect;
-            document.getElementById('progress-bar').style.width = totalStatements > 0 ? `${(answered/totalStatements)*100}%` : '0%';
-            document.getElementById('dash-score').textContent = Math.max(0, totalMarks).toFixed(1);
-            document.getElementById('dash-accuracy').textContent = `${acc}%`;
+            const acc = total > 0 ? Math.round((correct / total) * 100) : 0;
+            const finalScore = Math.max(0, rawScore).toFixed(1);
 
-            if (State.mode === 'exam' && answered === totalStatements && totalStatements > 0) {
-                document.getElementById('finish-section').classList.remove('hidden');
-            }
+            let rank = { title: "Try Next Time", icon: "😶", desc: "Keep studying and review the concepts." };
+            if (acc >= 90) rank = { title: "Physiology Master", icon: "🏆", desc: "Outstanding performance! You know this inside out." };
+            else if (acc >= 75) rank = { title: "Gold Scholar", icon: "🥇", desc: "Excellent work! Highly proficient." };
+            else if (acc >= 60) rank = { title: "Silver Scholar", icon: "🥈", desc: "Good job! A solid understanding." };
+            else if (acc >= 50) rank = { title: "Bronze Scholar", icon: "🥉", desc: "You passed! Keep revising weak areas." };
+
+            document.getElementById('ach-title').textContent = rank.title;
+            document.getElementById('ach-icon').textContent = rank.icon;
+            document.getElementById('ach-desc').textContent = rank.desc;
+            document.getElementById('ach-score').textContent = finalScore;
+            document.getElementById('ach-accuracy').textContent = `${acc}%`;
+
+            const modal = document.getElementById('achievement-modal');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                document.getElementById('achievement-box').classList.remove('scale-95');
+            }, 10);
         }
 
-        function setupInteractions() {
-            document.querySelectorAll('input[name="mode"]').forEach(r => r.addEventListener('change', (e) => {
-                State.mode = e.target.value; State.showFinalResults = false; saveSettings(); renderApp();
-            }));
-            document.getElementById('penalty-mode').addEventListener('change', (e) => {
-                State.penaltyMode = e.target.checked; saveSettings(); updateDashboard();
-            });
-            document.querySelectorAll('.font-btn').forEach(btn => btn.addEventListener('click', (e) => {
-                State.fontSize = e.target.dataset.size; saveSettings(); applySettingsToUI();
-            }));
-            
-            const overlay = document.getElementById('menu-overlay');
-            const drawer = document.getElementById('menu-drawer');
-            
-            document.getElementById('menu-btn').addEventListener('click', () => {
-                overlay.classList.remove('hidden'); setTimeout(() => { overlay.classList.remove('opacity-0'); drawer.classList.remove('-translate-x-full'); }, 10);
-            });
-            
-            const closeMenu = () => {
-                overlay.classList.add('opacity-0'); drawer.classList.add('-translate-x-full'); setTimeout(() => overlay.classList.add('hidden'), 300);
-            };
-            document.getElementById('close-menu-btn').addEventListener('click', closeMenu);
-            overlay.addEventListener('click', closeMenu);
+        window.closeAchievement = function() {
+            const modal = document.getElementById('achievement-modal');
+            modal.classList.add('opacity-0');
+            document.getElementById('achievement-box').classList.add('scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 500);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
 
-            document.getElementById('reset-btn').addEventListener('click', () => {
-                // Removed standard alert(), implemented direct action.
-                State.answers = {}; State.showFinalResults = false;
-                localStorage.removeItem(StorageKey); localStorage.removeItem(`${StorageKey}_scroll`);
-                renderApp(); window.scrollTo(0,0);
-            });
+        window.resetQuiz = function() {
+            if (confirm("Are you sure you want to reset all progress? This cannot be undone.")) {
+                for (let key in ANSWERS) delete ANSWERS[key];
+                STATE.bookmarks = [];
+                STATE.isSubmitted = false;
+                saveState();
+                renderCards();
+            }
+        };
 
-            document.getElementById('finish-btn').addEventListener('click', () => {
-                State.showFinalResults = true;
-                document.getElementById('finish-section').classList.add('hidden');
-                renderApp(); window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
+        // ==========================================
+        // 6. DASHBOARD & UI UPDATES
+        // ==========================================
+        function updateDashboard() {
+            const total = QUESTIONS.length;
+            const answeredIds = Object.keys(ANSWERS);
+            const answered = answeredIds.length;
+            
+            let correct = 0;
+            let incorrect = 0;
+            let rawScore = 0;
+            const topicStats = {};
 
-            const tooltip = document.getElementById('jargon-tooltip');
-            document.addEventListener('mouseover', (e) => {
-                if (e.target.classList.contains('jargon-term')) {
-                    const term = e.target.dataset.term;
-                    const actualKey = Object.keys(State.definitions).find(k => k.toLowerCase() === term.toLowerCase());
-                    if (actualKey) {
-                        document.getElementById('tooltip-title').textContent = actualKey;
-                        document.getElementById('tooltip-text').textContent = State.definitions[actualKey];
-                        const rect = e.target.getBoundingClientRect();
-                        tooltip.style.left = `${rect.left}px`; tooltip.style.top = `${rect.bottom + 10}px`;
-                        tooltip.classList.remove('hidden'); setTimeout(() => tooltip.classList.remove('opacity-0', 'scale-95'), 10);
+            QUESTIONS.forEach(q => {
+                if(!topicStats[q.topic]) topicStats[q.topic] = { total: 0, correct: 0, attempt: 0 };
+                topicStats[q.topic].total++;
+                
+                if (ANSWERS[q.id] !== undefined) {
+                    topicStats[q.topic].attempt++;
+                    if (ANSWERS[q.id] === q.isTrue) {
+                        correct++;
+                        rawScore += 1;
+                        topicStats[q.topic].correct++;
+                    } else {
+                        incorrect++;
+                        if (STATE.penaltyMode) rawScore -= 0.5;
                     }
                 }
             });
-            document.addEventListener('mouseout', (e) => {
+
+            const acc = answered > 0 ? Math.round((correct / answered) * 100) : 0;
+            const progressPct = total > 0 ? (answered / total) * 100 : 0;
+
+            document.getElementById('stat-answered').textContent = `${answered}/${total}`;
+            document.getElementById('stat-accuracy').textContent = `${acc}%`;
+            document.getElementById('stat-correct').textContent = correct;
+            document.getElementById('stat-incorrect').textContent = incorrect;
+            document.getElementById('progress-bar').style.width = `${progressPct}%`;
+
+            document.getElementById('dash-score').textContent = Math.max(0, rawScore).toFixed(1);
+            document.getElementById('dash-acc').textContent = `${acc}%`;
+
+            let topicsHtml = '';
+            for(let topic in topicStats) {
+                const stat = topicStats[topic];
+                if(stat.attempt === 0) continue;
+                
+                const tAcc = Math.round((stat.correct / stat.attempt) * 100);
+                let badge = '';
+                if(tAcc >= 80) badge = '<span class="text-green-400 text-[10px] uppercase font-black tracking-widest ml-1">🏆 Strong</span>';
+                else if(tAcc >= 50) badge = '<span class="text-yellow-400 text-[10px] uppercase font-black tracking-widest ml-1">📊 Average</span>';
+                else badge = '<span class="text-red-400 text-[10px] uppercase font-black tracking-widest ml-1">📚 Weak</span>';
+
+                topicsHtml += `
+                    <div class="bg-gray-800 p-3 rounded-lg border border-gray-700">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-sm font-bold text-gray-200 truncate pr-2">${topic} ${badge}</span>
+                            <span class="text-sm font-black text-white">${tAcc}%</span>
+                        </div>
+                        <div class="w-full bg-gray-900 rounded-full h-1.5">
+                            <div class="bg-indigo-500 h-1.5 rounded-full" style="width: ${tAcc}%"></div>
+                        </div>
+                    </div>
+                `;
+            }
+            document.getElementById('dash-topics').innerHTML = topicsHtml || '<div class="text-gray-500 italic text-sm p-2 text-center">Attempt questions to generate topic analytics.</div>';
+        }
+
+        function populateTopicFilter() {
+            const select = document.getElementById('topic-filter');
+            // Clear existing options except the first one
+            while (select.options.length > 1) select.remove(1);
+
+            const topics = [...new Set(QUESTIONS.map(q => q.topic))].sort();
+            topics.forEach(t => {
+                const opt = document.createElement('option');
+                opt.value = t;
+                opt.textContent = `📚 ${t}`;
+                select.appendChild(opt);
+            });
+            select.value = STATE.topicFilter;
+        }
+
+        function checkExamCompletion() {
+            const btn = document.getElementById('submit-btn');
+            if (STATE.mode === 'exam' && !STATE.isSubmitted && Object.keys(ANSWERS).length > 0) {
+                btn.classList.remove('hidden');
+            } else {
+                btn.classList.add('hidden');
+            }
+        }
+
+        // ==========================================
+        // 7. MENUS & EVENT LISTENERS
+        // ==========================================
+        window.toggleMenu = function() {
+            const drawer = document.getElementById('menu-drawer');
+            const overlay = document.getElementById('menu-overlay');
+            const isOpen = !drawer.classList.contains('translate-x-full');
+            
+            if (!isOpen) {
+                overlay.classList.remove('hidden');
+                setTimeout(() => {
+                    overlay.classList.remove('opacity-0');
+                    drawer.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                overlay.classList.add('opacity-0');
+                drawer.classList.add('translate-x-full');
+                setTimeout(() => overlay.classList.add('hidden'), 300);
+            }
+        };
+
+        window.shuffleQuestions = function() {
+            STATE._shuffleSeed = Math.random();
+            saveState();
+            renderCards();
+            toggleMenu();
+        };
+
+        window.exportData = function() {
+            const data = JSON.stringify({ answers: ANSWERS, state: STATE }, null, 2);
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Physiology_Test_Progress.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+        };
+
+        function setupEventListeners() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.filter-btn').forEach(b => {
+                        b.classList.remove('bg-indigo-600', 'text-white');
+                        b.classList.add('bg-gray-100', 'text-gray-700');
+                    });
+                    e.target.classList.add('bg-indigo-600', 'text-white');
+                    e.target.classList.remove('bg-gray-100', 'text-gray-700');
+                    STATE.filter = e.target.dataset.filter;
+                    saveState();
+                    renderCards();
+                    if(window.innerWidth < 640) toggleMenu();
+                });
+            });
+
+            document.getElementById('topic-filter').addEventListener('change', (e) => {
+                STATE.topicFilter = e.target.value;
+                saveState();
+                renderCards();
+            });
+
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                STATE.searchQuery = e.target.value;
+                renderCards();
+            });
+
+            document.querySelectorAll('input[name="mode"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    STATE.mode = e.target.value;
+                    if(STATE.mode === 'study') STATE.isSubmitted = false;
+                    saveState();
+                    applySettings();
+                    renderCards();
+                });
+            });
+
+            document.getElementById('penalty-mode').addEventListener('change', (e) => {
+                STATE.penaltyMode = e.target.checked;
+                saveState();
+                updateDashboard();
+            });
+
+            document.querySelectorAll('.font-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    STATE.fontSize = e.target.dataset.size;
+                    saveState();
+                    applySettings();
+                });
+            });
+
+            document.getElementById('import-file').addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    try {
+                        const data = JSON.parse(event.target.result);
+                        if (data.answers) Object.assign(ANSWERS, data.answers);
+                        if (data.state) Object.assign(STATE, data.state);
+                        saveState();
+                        applySettings();
+                        renderCards();
+                        alert('Progress restored successfully!');
+                    } catch (err) { alert('Invalid file format.'); }
+                };
+                reader.readAsText(file);
+            });
+
+            const tooltip = document.getElementById('jargon-tooltip');
+            const tTitle = document.getElementById('tooltip-title');
+            const tText = document.getElementById('tooltip-text');
+            
+            document.addEventListener('mouseover', (e) => {
                 if (e.target.classList.contains('jargon-term')) {
-                    tooltip.classList.add('opacity-0', 'scale-95'); setTimeout(() => tooltip.classList.add('hidden'), 200);
+                    const term = e.target.dataset.term;
+                    const defKey = Object.keys(DEFINITIONS).find(k => k.toLowerCase() === term.toLowerCase());
+                    if (defKey) {
+                        tTitle.textContent = defKey;
+                        tText.textContent = DEFINITIONS[defKey];
+                        const rect = e.target.getBoundingClientRect();
+                        
+                        let topPos = rect.bottom + 10;
+                        let leftPos = rect.left;
+                        if(leftPos + 300 > window.innerWidth) leftPos = window.innerWidth - 320;
+                        
+                        tooltip.style.left = `${leftPos}px`;
+                        tooltip.style.top = `${topPos}px`;
+                        
+                        tooltip.classList.remove('hidden');
+                        setTimeout(() => tooltip.classList.remove('opacity-0', 'scale-95'), 10);
+                    }
                 }
             });
-            
+
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.classList.contains('jargon-term')) {
+                    tooltip.classList.add('opacity-0', 'scale-95');
+                    setTimeout(() => tooltip.classList.add('hidden'), 200);
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (document.activeElement.tagName === 'INPUT') return;
+                const focused = document.activeElement;
+                const isCard = focused.classList.contains('question-card');
+                
+                if (isCard) {
+                    const id = focused.dataset.id;
+                    if (e.key.toLowerCase() === 't') window.handleAnswer(id, true);
+                    else if (e.key.toLowerCase() === 'f') window.handleAnswer(id, false);
+                    else if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        const next = focused.nextElementSibling;
+                        if (next && next.classList.contains('question-card')) {
+                            next.focus();
+                            next.scrollIntoView({ behavior: "smooth", block: "center" });
+                        }
+                    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                        e.preventDefault();
+                        const prev = focused.previousElementSibling;
+                        if (prev && prev.classList.contains('question-card')) {
+                            prev.focus();
+                            prev.scrollIntoView({ behavior: "smooth", block: "center" });
+                        }
+                    }
+                } else if (!isCard && (e.key === 'ArrowDown')) {
+                    const firstCard = document.querySelector('.question-card');
+                    if(firstCard) { e.preventDefault(); firstCard.focus(); }
+                }
+            });
+
             let scrollTimeout;
             window.addEventListener('scroll', () => {
-                clearTimeout(scrollTimeout); scrollTimeout = setTimeout(() => localStorage.setItem(`${StorageKey}_scroll`, window.pageYOffset), 200);
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    localStorage.setItem(`${STORAGE_KEY}_scroll`, window.pageYOffset);
+                }, 200);
             });
         }
+
         window.onload = initApp;
     </script>
 </body>
 </html>
+
+
