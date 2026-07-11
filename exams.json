@@ -1,4 +1,5 @@
-{
+[
+    {
     "2019": {
         "examYear": "2019",
         "title": "2019 Physiology Exam",
@@ -1198,7 +1199,1138 @@
                         "explanation": "Fever raises metabolic demand, which raises cardiac output and opens more lung capillaries, usually increasing total gas transfer capacity. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
                     }
                 ]
-            }
+            },
+            {i
+  "examYear": "2020",
+  "definitions": {
+    "Alkaline tide": "A temporary increase in blood pH following a meal, caused by the stomach secreting bicarbonate into the blood while pumping acid into the stomach cavity.",
+    "Oxyntic cells": "Another name for parietal cells in the stomach, responsible for producing hydrochloric acid (HCl).",
+    "Choleretics": "Substances that stimulate the liver to secrete more bile.",
+    "Rarefaction of bones": "A decrease in bone density, making them softer or more fragile, often related to poor calcium or vitamin D absorption.",
+    "Orad": "Moving towards the mouth (upwards).",
+    "Aborad": "Moving away from the mouth (downwards).",
+    "Enteropeptidase": "An enzyme produced by the small intestine that activates pancreatic enzymes (like converting trypsinogen to trypsin).",
+    "Preload": "The amount of stretch in the heart muscle at the end of filling, just before it contracts (related to blood volume entering the heart).",
+    "Afterload": "The resistance the heart must pump against to eject blood out into the arteries.",
+    "Foramen ovale": "A hole in the fetal heart between the right and left atria, allowing blood to bypass the uninflated lungs.",
+    "Ductus arteriosus": "A blood vessel in the fetus connecting the pulmonary artery directly to the aorta, bypassing the lungs.",
+    "P50": "The oxygen pressure at which hemoglobin is 50% saturated; a higher P50 means hemoglobin gives up oxygen more easily to tissues.",
+    "Physiological shunt": "Blood that passes from the right side of the heart to the left side without picking up oxygen in the lungs."
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The saliva:",
+      "statements": [
+        {
+          "id": "s1_a",
+          "text": "Is an alkaline hypertonic fluid",
+          "answer": false,
+          "explanation": "Saliva is hypotonic (less concentrated than blood) and its pH is slightly acidic to neutral (6.0 to 7.0) at resting flow rates, though it becomes more alkaline when flowing rapidly. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s1_b",
+          "text": "Contains no organic substances",
+          "answer": false,
+          "explanation": "Saliva contains many organic substances, including digestive enzymes (amylase), mucus, and antibacterial proteins (lysozyme). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s1_c",
+          "text": "Is markedly increased in amount after sympathetic stimulation",
+          "answer": false,
+          "explanation": "Parasympathetic stimulation causes a massive increase in watery saliva. Sympathetic stimulation causes a small amount of thick, viscous saliva. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        },
+        {
+          "id": "s1_d",
+          "text": "Secretion is increased after injection of atropine",
+          "answer": false,
+          "explanation": "Atropine is a drug that blocks parasympathetic nerve signals. Since parasympathetic signals stimulate saliva, atropine causes a severely dry mouth. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s1_e",
+          "text": "Secreted by the submandibular glands is about 70% of the total secretion",
+          "answer": true,
+          "explanation": "At rest, the submandibular glands produce the vast majority (around 70%) of the mouth's saliva. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Deglutition is accompanied by the following:",
+      "statements": [
+        {
+          "id": "s2_a",
+          "text": "Relaxation of the upper esophageal sphincter",
+          "answer": true,
+          "explanation": "During swallowing (deglutition), this muscular ring must relax to allow food to leave the throat and enter the esophagus. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s2_b",
+          "text": "Contraction of the pharyngeal wall muscles",
+          "answer": true,
+          "explanation": "The muscles of the throat (pharynx) contract strongly to push the food bolus downward into the esophagus. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s2_c",
+          "text": "Closure of the larynx by epiglottis",
+          "answer": true,
+          "explanation": "The vocal cords close tightly, and the epiglottis swings backward over the opening of the windpipe to prevent choking. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s2_d",
+          "text": "Pulling the soft palate downwards",
+          "answer": false,
+          "explanation": "The soft palate is pulled upwards, not downwards, to seal off the nasal cavity so food doesn't go up into the nose. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s2_e",
+          "text": "Inhibition of respiration",
+          "answer": true,
+          "explanation": "The swallowing center in the brain completely halts the breathing center for a fraction of a second (deglutition apnea) so you don't inhale food. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Gastric secretion is increased by...",
+      "statements": [
+        {
+          "id": "s3_a",
+          "text": "Sympathetic stimulation",
+          "answer": false,
+          "explanation": "Sympathetic stimulation (the 'fight or flight' response) decreases stomach acid secretion and slows down digestion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s3_b",
+          "text": "Acid in the duodenum",
+          "answer": false,
+          "explanation": "When acidic food enters the duodenum, it triggers hormones (like secretin) that strongly inhibit further stomach acid production. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s3_c",
+          "text": "Stimulation of stretch receptors in the wall of the stomach",
+          "answer": true,
+          "explanation": "Food stretching the stomach activates vagovagal nerve reflexes that command the stomach to produce more acid. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s3_d",
+          "text": "Hypertonicity of duodenum",
+          "answer": false,
+          "explanation": "Highly concentrated (hypertonic) food in the intestine triggers an enterogastric reflex that slows stomach emptying and decreases acid secretion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s3_e",
+          "text": "Secretin hormone",
+          "answer": false,
+          "explanation": "Secretin is nature's 'anti-acid' hormone; it is released from the intestine specifically to inhibit stomach acid secretion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Concerning HCl secretion:",
+      "statements": [
+        {
+          "id": "s4_a",
+          "text": "It is associated with increased pH of the gastric venous blood",
+          "answer": true,
+          "explanation": "When making acid (H+), the stomach pumps the leftover bicarbonate (base) into the blood, temporarily raising blood pH (alkaline tide). [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        },
+        {
+          "id": "s4_b",
+          "text": "It is stimulated by norepinephrine",
+          "answer": false,
+          "explanation": "It is stimulated by acetylcholine (parasympathetic), histamine, and gastrin. Norepinephrine (sympathetic) generally inhibits it. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s4_c",
+          "text": "The energy required is derived from ATP breakdown",
+          "answer": true,
+          "explanation": "The proton pump (H+/K+ ATPase) requires massive amounts of cellular energy (ATP) to pump acid against a million-fold concentration gradient. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s4_d",
+          "text": "There is an active transport of H+ from the oxyntic cells into the gastric lumen and K+ in the opposite direction",
+          "answer": true,
+          "explanation": "This is exactly how the gastric proton pump works; it swaps one potassium ion moving in for one hydrogen ion moving out. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s4_e",
+          "text": "H+ results from dissociation of water",
+          "answer": true,
+          "explanation": "Water (H2O) inside the cell splits into H+ (which gets pumped into the stomach) and OH- (which combines with CO2 to make bicarbonate). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Concerning pancreatic juice:",
+      "statements": [
+        {
+          "id": "s5_a",
+          "text": "Gastrin is an important stimulant of secretion of bicarbonate by the pancreas",
+          "answer": false,
+          "explanation": "The hormone secretin, not gastrin, is the powerful stimulant that causes the pancreas to release bicarbonate to neutralize acid. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s5_b",
+          "text": "Secretin inhibits the secretion of pancreatic juice",
+          "answer": false,
+          "explanation": "Secretin strongly stimulates the secretion of a watery, bicarbonate-rich pancreatic juice. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s5_c",
+          "text": "Cholecystokinin (CCK) stimulates the secretion of pancreatic enzymes",
+          "answer": true,
+          "explanation": "CCK is released when fats and proteins enter the intestine, and it signals the pancreas to release heavy amounts of digestive enzymes. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s5_d",
+          "text": "Sight or smell of food does not affect pancreatic secretion",
+          "answer": false,
+          "explanation": "Seeing or smelling food triggers the brain (cephalic phase) to send vagus nerve signals that start pancreatic secretion even before eating. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s5_e",
+          "text": "Vagotomy will cause decreased secretion",
+          "answer": true,
+          "explanation": "Cutting the vagus nerve (vagotomy) removes the parasympathetic nerve signals that normally help drive pancreatic secretion. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Bile salts:",
+      "statements": [
+        {
+          "id": "s6_a",
+          "text": "Are derived from hemolysed RBCs",
+          "answer": false,
+          "explanation": "Bile salts are synthesized from cholesterol. Bile *pigments* (like bilirubin) are derived from the breakdown of red blood cells. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s6_b",
+          "text": "Facilitates breakdown of fats to fatty acids",
+          "answer": false,
+          "explanation": "Bile salts do not chemically break down fats (lipase enzymes do this). Bile salts physically smash fat into smaller droplets (emulsification). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s6_c",
+          "text": "Are among the most important physiologic choleretics",
+          "answer": true,
+          "explanation": "Bile salts reabsorbed from the intestine go back to the liver and strongly stimulate the liver to secrete even more bile (choleretic effect). [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        },
+        {
+          "id": "s6_d",
+          "text": "Are essential in digestion of carbohydrates",
+          "answer": false,
+          "explanation": "Bile salts only act on lipids (fats). Carbohydrate digestion requires amylase and brush border enzymes. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s6_e",
+          "text": "Deficiency may lead to rarefaction of bones",
+          "answer": true,
+          "explanation": "Without bile salts, fat-soluble Vitamin D is not absorbed. Without Vitamin D, calcium isn't absorbed, causing weak, thin bones. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "In the colon:",
+      "statements": [
+        {
+          "id": "s7_a",
+          "text": "Bacterial synthesis of vitamin K is of vital importance",
+          "answer": true,
+          "explanation": "Good bacteria in the colon produce significant amounts of Vitamin K, which is absorbed and is essential for normal blood clotting. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s7_b",
+          "text": "More than half of the water that enters the colon is absorbed from the contents",
+          "answer": true,
+          "explanation": "The proximal half of the colon is highly efficient at absorbing most of the remaining water to form solid feces. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s7_c",
+          "text": "Sympathetic stimulation results in enhanced motility",
+          "answer": false,
+          "explanation": "Sympathetic 'fight or flight' signals freeze digestion, slowing down colon motility. Parasympathetic signals enhance it. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s7_d",
+          "text": "The secretion lacks significant digestive enzymes",
+          "answer": true,
+          "explanation": "The colon secretes mucus for lubrication and protection, but it does not secrete any enzymes for digestion. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s7_e",
+          "text": "Distension of distal colon initiate defecation",
+          "answer": false,
+          "explanation": "The defecation reflex is specifically initiated by the distension (stretching) of the rectum, not the colon above it. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The ileum is the principle site for the absorption of:",
+      "statements": [
+        {
+          "id": "s8_a",
+          "text": "The products of fat digestion",
+          "answer": false,
+          "explanation": "The majority of fat digestion products are absorbed earlier in the gut, specifically in the jejunum. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s8_b",
+          "text": "Bile salts",
+          "answer": true,
+          "explanation": "The terminal ileum has special active transporters that recover 95% of bile salts so they can be recycled to the liver. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s8_c",
+          "text": "Vitamin K",
+          "answer": false,
+          "explanation": "Dietary Vitamin K is absorbed in the jejunum, and bacterially produced Vitamin K is absorbed in the colon. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        },
+        {
+          "id": "s8_d",
+          "text": "Iron",
+          "answer": false,
+          "explanation": "Iron is almost exclusively absorbed in the very first part of the small intestine, the duodenum. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s8_e",
+          "text": "Vitamin B 12",
+          "answer": true,
+          "explanation": "Vitamin B12 (bound to intrinsic factor) can only be absorbed by specialized receptors located in the terminal ileum. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Primary oesophageal peristalsis:",
+      "statements": [
+        {
+          "id": "s9_a",
+          "text": "Is initiated by the swallowing center in the medulla",
+          "answer": true,
+          "explanation": "Primary peristalsis is the initial wave triggered directly by the brainstem swallowing center when you voluntarily swallow. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s9_b",
+          "text": "Involves contraction of lower oesophageal sphincter (LES)",
+          "answer": false,
+          "explanation": "As the peristaltic wave travels down, it commands the LES to relax (open) ahead of the food, not contract. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s9_c",
+          "text": "Causes orad propulsion of a bolus",
+          "answer": false,
+          "explanation": "Peristalsis always pushes food aborad (downwards towards the stomach), not orad (upwards towards the mouth). [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        },
+        {
+          "id": "s9_d",
+          "text": "Is influenced by the enteric nervous system",
+          "answer": true,
+          "explanation": "While triggered by the brain, the local gut nervous system (myenteric plexus) is crucial for coordinating the muscular wave. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s9_e",
+          "text": "Is also referred to as secondary peristalsis",
+          "answer": false,
+          "explanation": "Secondary peristalsis is a backup reflex triggered by stuck food stretching the esophagus, distinct from the primary brain-initiated swallow. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The ileo-cecal sphincter",
+      "statements": [
+        {
+          "id": "s10_a",
+          "text": "Maintain a negative resting pressure",
+          "answer": false,
+          "explanation": "The sphincter maintains a positive resting pressure (it is tonically constricted) to prevent bacteria-rich colon contents from washing backwards. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s10_b",
+          "text": "Contracts when the ileum is distended",
+          "answer": false,
+          "explanation": "When food stretches the ileum, it triggers reflexes that relax the sphincter to let the food squirt into the colon. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s10_c",
+          "text": "Relaxes when the ascending colon is distended",
+          "answer": false,
+          "explanation": "When the colon is full and stretched, reflexes cause the sphincter to contract tighter to prevent backflow into the small intestine. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s10_d",
+          "text": "Prevents colonic content from entering the ileum",
+          "answer": true,
+          "explanation": "This is its main job; acting as a one-way valve to keep colon bacteria out of the sterile small intestine. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s10_e",
+          "text": "Is controlled by both intrinsic and extrinsic innervations",
+          "answer": true,
+          "explanation": "It is controlled by local gut reflexes (myenteric plexus) and central reflexes via sympathetic and parasympathetic nerves. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Regarding the enzyme component of pancreatic juice:",
+      "statements": [
+        {
+          "id": "s11_a",
+          "text": "Is secreted by acinar cells",
+          "answer": true,
+          "explanation": "The grape-like clusters of cells (acini) in the pancreas are the factories that synthesize and secrete digestive enzymes. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s11_b",
+          "text": "Is chiefly stimulated by acetylcholine and CCK",
+          "answer": true,
+          "explanation": "Parasympathetic nerves (ACh) and the hormone cholecystokinin (CCK) are the two major triggers for enzyme release from acinar cells. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s11_c",
+          "text": "When absent results in the malabsorption of lipids and proteins only",
+          "answer": false,
+          "explanation": "The pancreas also secretes amylase for carbohydrate digestion. Absence of juice causes malabsorption of carbs, fats, and proteins. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s11_d",
+          "text": "Trypsinogen is specifically activated by enteropeptidase",
+          "answer": true,
+          "explanation": "Enteropeptidase (enterokinase), fixed to the intestinal wall, activates trypsinogen into trypsin, which then activates all other enzymes. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s11_e",
+          "text": "Trypsin inhibitor prevents the activation of proteolytic enzymes in the pancreatic ducts",
+          "answer": true,
+          "explanation": "The pancreas secretes a small protein called trypsin inhibitor along with the enzymes to ensure they don't activate prematurely and digest the pancreas itself. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "topic": "Cardiovascular Physiology",
+      "stem": "Regarding the systemic circulation:",
+      "statements": [
+        {
+          "id": "s12_a",
+          "text": "The kidneys have poor autoregulation mechanisms",
+          "answer": false,
+          "explanation": "The kidneys have incredibly powerful autoregulation to keep blood flow and filtration perfectly constant despite blood pressure swings. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s12_b",
+          "text": "During resting, about 67% of blood is in veins",
+          "answer": true,
+          "explanation": "Veins are very stretchy (compliant) and act as the body's main blood reservoir, holding over 60% of the blood at any given time. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s12_c",
+          "text": "The brain gets more blood than the liver",
+          "answer": false,
+          "explanation": "At rest, the liver receives the highest blood flow (about 27% of cardiac output) compared to the brain (about 14%). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s12_d",
+          "text": "Capillaries are the vessels with the lowest hydrostatic pressure",
+          "answer": false,
+          "explanation": "Pressure drops continuously from arteries to capillaries to veins. The great veins (venae cavae) near the heart have the absolute lowest pressure (near zero). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s12_e",
+          "text": "The skeletal muscles get more than 50% of cardiac output during exercises",
+          "answer": true,
+          "explanation": "During heavy exercise, blood is shunted massively, and working skeletal muscles can receive 80-85% of the total cardiac output. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "topic": "Cardiovascular Physiology",
+      "stem": "The following may cause a decrease in cardiac output:",
+      "statements": [
+        {
+          "id": "s13_a",
+          "text": "Increased preload",
+          "answer": false,
+          "explanation": "According to the Frank-Starling law, more blood entering the heart (preload) stretches the muscle, making it pump harder, increasing output. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s13_b",
+          "text": "Increased afterload",
+          "answer": true,
+          "explanation": "Afterload is the pressure the heart must fight against. If resistance is too high, the heart can't push out as much blood. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s13_c",
+          "text": "Aortic stenosis",
+          "answer": true,
+          "explanation": "A narrowed, stiff aortic valve acts as a massive physical barrier, severely reducing the amount of blood the heart can eject. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s13_d",
+          "text": "Increased arterial pressure",
+          "answer": true,
+          "explanation": "High blood pressure is essentially increased afterload, which forces the heart to work harder and can depress cardiac output. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s13_e",
+          "text": "Reduced cardiac contractility",
+          "answer": true,
+          "explanation": "If the heart muscle is weak (e.g., failing heart or heart attack), it beats with less force, naturally reducing output. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "topic": "Cardiovascular Physiology",
+      "stem": "The baroreceptors:",
+      "statements": [
+        {
+          "id": "s14_a",
+          "text": "When stimulated leads to reduced heart rate",
+          "answer": true,
+          "explanation": "Baroreceptors fire when stretched by high pressure. The brain responds by activating the vagus nerve to slow the heart and bring pressure down. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s14_b",
+          "text": "Are stimulated by reduction in oxygen tension",
+          "answer": false,
+          "explanation": "Baroreceptors sense mechanical stretch (blood pressure). Chemoreceptors are the ones that sense low oxygen. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s14_c",
+          "text": "Are important in postural changes",
+          "answer": true,
+          "explanation": "When you stand up, blood drops to your legs. Baroreceptors instantly detect this pressure drop and fire reflexes to prevent fainting. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s14_d",
+          "text": "Are peripheral chemoreceptors",
+          "answer": false,
+          "explanation": "They are mechanoreceptors (stretch receptors), entirely distinct from the carotid and aortic chemoreceptors. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s14_e",
+          "text": "Do not discharge signals at normal blood pressure",
+          "answer": false,
+          "explanation": "They maintain a constant, baseline rate of firing at normal blood pressure, creating a background 'brake' on the sympathetic system. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "topic": "Cardiovascular Physiology",
+      "stem": "Regarding blood flow in the fetus:",
+      "statements": [
+        {
+          "id": "s15_a",
+          "text": "Blood flowing to the lungs is poor in oxygen",
+          "answer": true,
+          "explanation": "Most oxygenated blood bypasses the lungs. The small amount that goes to the fetal lungs is mostly deoxygenated blood from the superior vena cava. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s15_b",
+          "text": "Blood from the placenta is about 52% saturated with oxygen",
+          "answer": false,
+          "explanation": "Blood returning from the placenta in the umbilical vein is actually highly oxygenated, sitting around 80% saturated. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s15_c",
+          "text": "Most of the blood pumped by the right ventricle flows into the aorta through ductus arteriosus",
+          "answer": true,
+          "explanation": "Because fetal lungs are collapsed and resistant to flow, the right ventricle pumps blood straight into the aorta via this bypass vessel. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s15_d",
+          "text": "Most of the blood from inferior vena cava passes directly into the left atrium",
+          "answer": true,
+          "explanation": "Oxygen-rich blood from the umbilical vein shoots up the IVC and crosses directly through the foramen ovale into the left heart to supply the brain. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s15_e",
+          "text": "Increased pressure in the left atrium causes closure of ductus arteriosus after birth",
+          "answer": false,
+          "explanation": "Increased left atrial pressure closes the *foramen ovale*. The ductus arteriosus closes due to high blood oxygen levels and a drop in prostaglandins. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "topic": "Cardiovascular Physiology",
+      "stem": "The first heart sound:",
+      "statements": [
+        {
+          "id": "s16_a",
+          "text": "Is due to rapid ventricular filling",
+          "answer": false,
+          "explanation": "Rapid filling causes the faint 3rd heart sound. The loud 1st heart sound 'lub' is caused by the snapping shut of the AV valves. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s16_b",
+          "text": "Has longer duration than second heart sound",
+          "answer": true,
+          "explanation": "The first heart sound ('lub') is longer, lower, and more booming, while the second ('dub') is shorter and sharper. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s16_c",
+          "text": "Is high pitched than second heart sound",
+          "answer": false,
+          "explanation": "It is lower pitched. The second heart sound (closure of the stiff aortic/pulmonary valves) produces a much higher pitch. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s16_d",
+          "text": "Is caused by stiff ventricular muscles",
+          "answer": false,
+          "explanation": "Stiff ventricles resisting filling cause the 4th heart sound, not the 1st. The 1st is entirely due to valve closure vibrations. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s16_e",
+          "text": "Signals the onset of ventricular diastole",
+          "answer": false,
+          "explanation": "It signals the onset of ventricular systole (contraction), as the rising pressure forces the AV valves closed. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "topic": "Cardiovascular Physiology",
+      "stem": "The following may occur subsequent to a fall in blood pressure below normal:",
+      "statements": [
+        {
+          "id": "s17_a",
+          "text": "Increased heart rate",
+          "answer": true,
+          "explanation": "Low blood pressure unloads baroreceptors, triggering the sympathetic nervous system to speed up the heart to restore pressure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s17_b",
+          "text": "Stimulation of carotid chemoreceptors",
+          "answer": true,
+          "explanation": "If blood pressure falls so low (usually <80 mmHg) that blood flow stagnates, oxygen drops locally, firing the chemoreceptors. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s17_c",
+          "text": "Venous vasoconstriction",
+          "answer": true,
+          "explanation": "The sympathetic response constricts veins to squeeze stored blood back into the heart, increasing volume and pressure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s17_d",
+          "text": "Increased catecholamine release",
+          "answer": true,
+          "explanation": "The adrenal glands release massive amounts of epinephrine and norepinephrine to constrict vessels and stimulate the heart. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s17_e",
+          "text": "Increased Aldosterone secretion",
+          "answer": true,
+          "explanation": "Low pressure activates the renin-angiotensin system, causing aldosterone release to help the kidneys retain salt and water. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "topic": "Cardiovascular Physiology",
+      "stem": "Cardiac arrhythmias may arise due to:",
+      "statements": [
+        {
+          "id": "s18_a",
+          "text": "Cardiac injury",
+          "answer": true,
+          "explanation": "Damaged tissue (like after a heart attack) creates erratic electrical pathways or dead zones that cause dangerous arrhythmias. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s18_b",
+          "text": "Altered automaticity of the SA node",
+          "answer": true,
+          "explanation": "If the natural pacemaker fires too fast (tachycardia) or irregularly due to disease, it directly causes an abnormal rhythm. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s18_c",
+          "text": "Suppression of latent pacemakers",
+          "answer": false,
+          "explanation": "Latent (backup) pacemakers are normally suppressed. It is their un-suppression (escape or ectopic firing) that creates arrhythmias. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s18_d",
+          "text": "Drug toxicity",
+          "answer": true,
+          "explanation": "Drugs like digitalis or excess caffeine can irritate the heart muscle, lowering the electrical threshold and causing ectopic beats. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s18_e",
+          "text": "Altered impulse conduction",
+          "answer": true,
+          "explanation": "Blocks in the conduction system or re-entry circuits (where signals loop around endlessly) are primary causes of arrhythmias. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "topic": "Cardiovascular Physiology",
+      "stem": "The following may cause development of systemic hypertension:",
+      "statements": [
+        {
+          "id": "s19_a",
+          "text": "Hypothyroidism",
+          "answer": true,
+          "explanation": "It can cause diastolic hypertension because it makes blood vessels stiffen and increases total peripheral resistance. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        },
+        {
+          "id": "s19_b",
+          "text": "Hyperthyroidism",
+          "answer": true,
+          "explanation": "It causes systolic hypertension by drastically increasing heart rate and cardiac output to meet high metabolic demands. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        },
+        {
+          "id": "s19_c",
+          "text": "Left ventricular hypertrophy",
+          "answer": false,
+          "explanation": "A thickened left ventricle is a *result* or complication of long-standing high blood pressure, not the root cause of it. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s19_d",
+          "text": "High levels of cortisol",
+          "answer": true,
+          "explanation": "Cortisol (as seen in Cushing's syndrome) causes salt and water retention and makes vessels hyper-sensitive to constrictors, raising BP. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s19_e",
+          "text": "Severe anaemia",
+          "answer": false,
+          "explanation": "Anemia massively dilates blood vessels to increase flow to starved tissues. This lowers resistance so much that mean pressure drops or stays normal. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "topic": "Cardiovascular Physiology",
+      "stem": "The following mechanisms may be responsible for progression of shock to irreversible stage:",
+      "statements": [
+        {
+          "id": "s20_a",
+          "text": "Increased sympathetic activity",
+          "answer": false,
+          "explanation": "This is a compensatory mechanism that tries to save the patient. It does not cause the lethal downward spiral of irreversible shock. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s20_b",
+          "text": "Fluid retention by kidneys",
+          "answer": false,
+          "explanation": "Fluid retention is the body's helpful attempt to rebuild blood volume. It is a defense, not a cause of deterioration. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s20_c",
+          "text": "Failure of vasomotor center",
+          "answer": true,
+          "explanation": "If shock lasts too long, the brainstem itself loses blood flow, leading to total collapse of the sympathetic drive keeping vessels constricted. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s20_d",
+          "text": "Release of toxins by ischaemic tissues",
+          "answer": true,
+          "explanation": "Dying tissues release acidic and toxic factors (like myocardial toxic factor) that further depress the heart, sealing the vicious cycle. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s20_e",
+          "text": "Increased capillary permeability",
+          "answer": true,
+          "explanation": "Starved capillary walls die and break open, allowing the last bit of blood volume to weep into tissues, making recovery impossible. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "topic": "Respiratory Physiology",
+      "stem": "During expiration",
+      "statements": [
+        {
+          "id": "s21_a",
+          "text": "The diaphragm contracts",
+          "answer": false,
+          "explanation": "Expiration is normally a passive process caused by the diaphragm *relaxing* and pushing back up into a dome shape. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s21_b",
+          "text": "Intra-pleural pressure becomes more negative",
+          "answer": false,
+          "explanation": "As the chest wall falls inward, it compresses the lungs, making the intra-pleural pressure less negative (closer to zero). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s21_c",
+          "text": "Airways tend to close",
+          "answer": true,
+          "explanation": "The rising pressure inside the chest pushes on the outside of small airways, tending to compress and close them (dynamic compression). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s21_d",
+          "text": "Alveolar pressure is greater than atmospheric",
+          "answer": true,
+          "explanation": "To push air out of the lungs against atmospheric pressure, the pressure inside the alveoli must mathematically be higher than the outside room. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s21_e",
+          "text": "Highest gas flow occur at the end of expiration",
+          "answer": false,
+          "explanation": "Flow is highest at the very beginning of forced expiration when lung volume is largest, and it drops to zero at the end. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "topic": "Respiratory Physiology",
+      "stem": "Alveolar ventilation",
+      "statements": [
+        {
+          "id": "s22_a",
+          "text": "Is increased by a reduction in arterial PO2",
+          "answer": true,
+          "explanation": "Low blood oxygen triggers the peripheral chemoreceptors to send signals that rapidly increase breathing rate and depth. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s22_b",
+          "text": "Becomes zero when anatomical dead space equals tidal volume",
+          "answer": true,
+          "explanation": "If you take a shallow breath that is entirely stuck in the windpipe (dead space), zero fresh air actually reaches the alveoli. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s22_c",
+          "text": "Would increase by increasing impulse discharge from the respiratory centers",
+          "answer": true,
+          "explanation": "More nerve impulses from the brainstem command the diaphragm to work faster and harder, drawing in more air. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s22_d",
+          "text": "Is relatively lower in males than females",
+          "answer": false,
+          "explanation": "Males generally have larger lung capacities and tidal volumes due to body size, making absolute alveolar ventilation higher. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s22_e",
+          "text": "Is influenced by individual's activity",
+          "answer": true,
+          "explanation": "Exercise vastly increases oxygen demand and CO2 production, which directly drives up alveolar ventilation to compensate. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "topic": "Respiratory Physiology",
+      "stem": "The carotid bodies",
+      "statements": [
+        {
+          "id": "s23_a",
+          "text": "Are stretch receptors in the walls of internal carotid arteries",
+          "answer": false,
+          "explanation": "The carotid *bodies* are chemoreceptors. The stretch receptors (baroreceptors) are located in the nearby carotid *sinus*. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s23_b",
+          "text": "Have a blood flow per unit weight similar to the brain",
+          "answer": false,
+          "explanation": "They have the highest blood flow per gram of tissue of any organ in the body, far exceeding the brain, to sample arterial blood instantly. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s23_c",
+          "text": "Are influenced more by blood PO2 than by oxygen content",
+          "answer": true,
+          "explanation": "They sense the dissolved partial pressure of oxygen (PO2). Anemic patients have low oxygen content but normal PO2, so the bodies do not fire. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s23_d",
+          "text": "Generate more afferent impulses when blood H+ concentration rises",
+          "answer": true,
+          "explanation": "High acid levels (H+) directly stimulate these receptors to increase firing, forcing the lungs to blow off acidic CO2. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s23_e",
+          "text": "And the aortic bodies are mainly responsible for the increase in ventilation in hypoxia",
+          "answer": true,
+          "explanation": "The central brain chemoreceptors do not sense low oxygen. Only these peripheral bodies sound the alarm for hypoxia. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "topic": "Respiratory Physiology",
+      "stem": "A rise in the arterial PCO2 leads to an increase in",
+      "statements": [
+        {
+          "id": "s24_a",
+          "text": "Ventilation due to stimulation of peripheral chemoreceptors",
+          "answer": true,
+          "explanation": "While they primarily sense oxygen, peripheral chemoreceptors also react quickly to high CO2, aiding the breathing drive. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s24_b",
+          "text": "Arterial blood pressure",
+          "answer": true,
+          "explanation": "High CO2 strongly stimulates the brain's vasomotor center, creating massive sympathetic outflow that spikes blood pressure. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s24_c",
+          "text": "Cerebral blood pressure",
+          "answer": true,
+          "explanation": "CO2 is the most potent dilator of brain blood vessels. Dilating them floods the brain with blood, raising local pressure and flow. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s24_d",
+          "text": "Ventilation due to stimulation of central chemoreceptors",
+          "answer": true,
+          "explanation": "This is the primary and most powerful control mechanism; CO2 crosses into the brain fluid, forms acid, and commands heavy breathing. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s24_e",
+          "text": "The plasma bicarbonate levels",
+          "answer": true,
+          "explanation": "CO2 reacts with water in the blood to create carbonic acid, which dissociates slightly, creating a measurable rise in bicarbonate ions. [Source: Ganong’s Review of Medical Physiology, 26th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "topic": "Respiratory Physiology",
+      "stem": "As blood passes through the systemic capillaries:",
+      "statements": [
+        {
+          "id": "s25_a",
+          "text": "pH rises",
+          "answer": false,
+          "explanation": "Tissues dump acidic CO2 into the blood, making the blood more acidic, which means the pH falls, not rises. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s25_b",
+          "text": "HCO3- ions pass from the red blood cells to plasma",
+          "answer": true,
+          "explanation": "CO2 enters the red cell, turns into bicarbonate, and is pumped out into the plasma in exchange for chloride (the chloride shift). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s25_c",
+          "text": "Cl- ions concentration in the red blood cells falls",
+          "answer": false,
+          "explanation": "Because bicarbonate leaves the cell, chloride rushes IN to balance the electrical charge (chloride shift). So Cl- concentration rises. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s25_d",
+          "text": "Its oxygen dissociation curve shifts to the right",
+          "answer": true,
+          "explanation": "The acidic CO2 entering the blood weakens hemoglobin's grip on oxygen (the Bohr effect), shifting the curve right to unload oxygen. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s25_e",
+          "text": "Its ability to deliver oxygen to tissues is enhanced",
+          "answer": true,
+          "explanation": "The rightward shift of the curve (Bohr effect) is exactly what allows hemoglobin to easily dump its oxygen into the needy tissues. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "topic": "Respiratory Physiology",
+      "stem": "With respect to oxygen - haemoglobin dissociation/association:",
+      "statements": [
+        {
+          "id": "s26_a",
+          "text": "A high P50 may represent an increased carbon dioxide uptake from tissue",
+          "answer": true,
+          "explanation": "A high P50 means a rightward shift. High CO2 in tissues causes this shift (Bohr effect), forcing oxygen off and taking CO2 on. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s26_b",
+          "text": "A rise in 2:3 DPG in RBCs increases oxygen off-loading",
+          "answer": true,
+          "explanation": "2,3-DPG wedges itself into hemoglobin, forcing it into a shape that hates oxygen, causing it to dump oxygen into tissues. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s26_c",
+          "text": "A fall in temperature would increase haemoglobin affinity to oxygen",
+          "answer": true,
+          "explanation": "Cold temperatures make hemoglobin hold onto oxygen very tightly (left shift), which is why cold tissues can become hypoxic. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s26_d",
+          "text": "A rise in pH increases haemoglobin affinity for oxygen",
+          "answer": true,
+          "explanation": "A high pH (alkalosis) means low acid. Without acid forcing oxygen off, hemoglobin holds onto it tightly (left shift). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s26_e",
+          "text": "A fall in the alveolar PO2 to 80 mm Hg would greatly affect Hb saturation",
+          "answer": false,
+          "explanation": "The top of the oxygen curve is very flat. A drop from 100 to 80 mmHg barely changes saturation (it stays above 95%). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "topic": "Respiratory Physiology",
+      "stem": "The following are features of acclimatization to high altitude:",
+      "statements": [
+        {
+          "id": "s27_a",
+          "text": "Increased levels of erythropoietin",
+          "answer": true,
+          "explanation": "Low oxygen stimulates the kidneys to release EPO, which builds more red blood cells to carry oxygen in the thin air. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s27_b",
+          "text": "Hyperventilation",
+          "answer": true,
+          "explanation": "The peripheral chemoreceptors sense the low oxygen and immediately force you to breathe faster and deeper. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s27_c",
+          "text": "Increased plasma 2-3 DPG",
+          "answer": true,
+          "explanation": "The red blood cells produce more 2,3-DPG, which shifts the oxygen curve right, helping deliver what little oxygen there is to the tissues. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s27_d",
+          "text": "Increased mitochondria density",
+          "answer": true,
+          "explanation": "Cells adapt to chronic low oxygen by building more energy factories (mitochondria) to use oxygen more efficiently. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s27_e",
+          "text": "Pulmonary vasoconstriction",
+          "answer": true,
+          "explanation": "Hypoxic air in the lungs causes lung blood vessels to tightly constrict. At high altitude, this happens everywhere, causing pulmonary hypertension. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "topic": "Respiratory Physiology",
+      "stem": "Transport of:",
+      "statements": [
+        {
+          "id": "s28_a",
+          "text": "CO2 in blood is associated with a shift of chloride ions from RBC into plasma",
+          "answer": false,
+          "explanation": "It is the opposite; bicarbonate leaves the RBC into the plasma, and chloride shifts FROM the plasma INTO the RBC to replace it. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s28_b",
+          "text": "O2 in physical state is about 15 ml O2 /dl of blood",
+          "answer": false,
+          "explanation": "Only about 0.3 ml of oxygen is physically dissolved in a deciliter of plasma. Hemoglobin carries the massive 15-20 ml load. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s28_c",
+          "text": "O2 requires combination with iron atom in haemoglobin",
+          "answer": true,
+          "explanation": "Oxygen binds reversibly to the central iron atom (in the Fe2+ state) located inside each heme group of the hemoglobin molecule. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s28_d",
+          "text": "CO2 is mainly as bicarbonate",
+          "answer": true,
+          "explanation": "About 70% of all carbon dioxide transported in the blood is carried in the form of dissolved bicarbonate ions (HCO3-). [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s28_e",
+          "text": "CO2 carbamino compound may occur in plasma",
+          "answer": true,
+          "explanation": "CO2 can bind to the amino ends of plasma proteins (like albumin), forming small amounts of carbamino compounds in the plasma itself. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q29",
+      "topic": "Respiratory Physiology",
+      "stem": "The Peripheral chemoreceptor responses to:",
+      "statements": [
+        {
+          "id": "s29_a",
+          "text": "Raised body temperature results in a decrease in the breathing frequency",
+          "answer": false,
+          "explanation": "A fever increases the body's metabolic demand, which triggers an increase in breathing rate (panting/tachypnea), not a decrease. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s29_b",
+          "text": "Raised blood pH is associated with hyperventilation",
+          "answer": false,
+          "explanation": "Raised pH (alkalosis) tells the brain there is too little acid. The body responds by hypoventilating (breathing less) to hold onto acidic CO2. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s29_c",
+          "text": "Reduced blood perfusion results in reduced heart rate",
+          "answer": false,
+          "explanation": "Poor blood flow causes local hypoxia in the chemoreceptors, which triggers a massive sympathetic response that speeds up, not slows, the heart. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s29_d",
+          "text": "Raised PaCO2 increases the depth of breathing",
+          "answer": true,
+          "explanation": "High carbon dioxide is the strongest trigger to breathe; it forces deep, rapid breaths to blow the toxic gas out. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s29_e",
+          "text": "Lowered PaO2 would result in hypoventilation",
+          "answer": false,
+          "explanation": "Low oxygen causes a panic response from the peripheral chemoreceptors, resulting in hyperventilation to get more air in. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    },
+    {
+      "id": "q30",
+      "topic": "Respiratory Physiology",
+      "stem": "Shunted blood in pulmonary capillaries:",
+      "statements": [
+        {
+          "id": "s30_a",
+          "text": "Have PO2 of 100mm Hg",
+          "answer": false,
+          "explanation": "Shunted blood skips the alveoli and never picks up oxygen, so its PO2 stays at the low venous level of about 40 mmHg. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s30_b",
+          "text": "Have PCO2 less than 45mm Hg",
+          "answer": false,
+          "explanation": "Since it doesn't get to exhale its CO2, the blood keeps its high venous PCO2 level, which is usually 45-46 mmHg. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s30_c",
+          "text": "Normal oxygen saturation",
+          "answer": false,
+          "explanation": "Because it didn't get oxygenated, its saturation stays at the deoxygenated venous level, which is roughly 75%. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s30_d",
+          "text": "Have PO2 of 40mm Hg",
+          "answer": true,
+          "explanation": "Because it is essentially just venous blood that bypassed the lungs without touching fresh air, it retains the venous PO2 of 40 mmHg. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        },
+        {
+          "id": "s30_e",
+          "text": "Have PCO2 of 40 mmHg",
+          "answer": false,
+          "explanation": "A PCO2 of 40 mmHg is normal *arterial* blood. Shunted venous blood has a higher PCO2, around 45-46 mmHg. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
+        }
+      ]
+    }
+  ]
+        }
         ]
     }
-}
+}!
+]
