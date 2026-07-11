@@ -371,9 +371,8 @@
             }
 
             try {
-                // EXPLICIT RELATIVE PATH AND CACHE BUSTER ADDED HERE
-                // The '?v=' + new Date().getTime() ensures GitHub Pages doesn't serve a broken cached version
-                const response = await fetch('./exams.json?v=' + new Date().getTime());
+                // Ensure GitHub Pages doesn't serve a broken cached version
+                const response = await fetch('exams.json?v=' + new Date().getTime());
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -407,7 +406,6 @@
             } catch (error) {
                 console.error('Error fetching questions:', error);
                 
-                // IMPROVED ERROR HANDLING UI
                 document.getElementById('loading-spinner').innerHTML = `
                     <div class="bg-red-50 p-6 rounded-xl border border-red-200 text-left max-w-lg shadow-sm">
                         <div class="text-red-700 font-bold mb-3 flex items-center gap-2">
@@ -415,22 +413,34 @@
                             Failed to load 'exams.json'
                         </div>
                         <p class="text-gray-800 text-sm mb-4 font-medium">Error details: <span class="font-mono bg-white px-1 py-0.5 border rounded">${error.message}</span></p>
-                        <p class="text-sm font-bold text-gray-700 mb-2">Checklist for GitHub Pages:</p>
-                        <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
-                            <li>Is your file named exactly <strong class="text-gray-900">exams.json</strong>? (GitHub is strictly case-sensitive. "Exams.json" will fail).</li>
-                            <li>Is the file uploaded to the exact same folder as <strong class="text-gray-900">quiz.html</strong>?</li>
-                            <li>Did you just upload it? It can sometimes take 2-5 minutes for GitHub servers to clear their cache.</li>
-                        </ul>
                     </div>
                 `;
             }
         }
 
-        // Break down the fetched JSON into independent T/F questions
+        // Breaks down the fetched JSON into independent T/F questions
         function processRawData(data) {
             const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+            let allQuestions = [];
+
+            // Handle the nested structure of your JSON (e.g. data["2019"].questions)
+            if (Array.isArray(data)) {
+                allQuestions = data;
+            } else if (data && typeof data === 'object') {
+                for (const yearKey in data) {
+                    const yearData = data[yearKey];
+                    // Add the questions
+                    if (yearData.questions && Array.isArray(yearData.questions)) {
+                        allQuestions = allQuestions.concat(yearData.questions);
+                    }
+                    // Extract custom definitions dynamically if they exist in the JSON
+                    if (yearData.definitions) {
+                        Object.assign(DEFINITIONS, yearData.definitions);
+                    }
+                }
+            }
             
-            data.forEach(q => {
+            allQuestions.forEach(q => {
                 if (!q.statements || !Array.isArray(q.statements)) return;
 
                 q.statements.forEach((stmt, idx) => {
@@ -447,19 +457,24 @@
                         topic: topic
                     });
 
-                    // Construct physiological explanation based on requested references
+                    // Constructs explanation dynamically taking the exact text written in exams.json
+                    const dynamicExplanation = stmt.explanation 
+                        ? stmt.explanation 
+                        : `This statement is evaluated as <strong>${stmt.answer.toString().toUpperCase()}</strong> based on physiological principles.`;
+
                     EXPLANATIONS[id] = `
                         <div class="font-bold flex items-center gap-2 mb-3 ${stmt.answer ? 'text-green-700' : 'text-red-700'} text-sm sm:text-base border-b ${stmt.answer ? 'border-green-200' : 'border-red-200'} pb-2">
-                            ${stmt.answer ? '✅ Why You\'re Right' : '📖 Explanation'} 
+                            ${stmt.answer ? '✅ Why You\\'re Right' : '📖 Explanation'} 
                             <span class="text-xs text-gray-500 font-normal ml-auto text-right bg-white px-2 py-1 rounded border">Reference Answer: <strong>${stmt.answer ? 'TRUE' : 'FALSE'}</strong></span>
                         </div>
                         <p class="text-sm sm:text-base text-gray-800 leading-relaxed font-medium">
-                            This statement is evaluated as <strong>${stmt.answer.toString().toUpperCase()}</strong> based on physiological principles. 
+                            ${dynamicExplanation}
                             <br><br>
                             <span class="block bg-gray-50 p-3 rounded-lg border border-gray-100 text-xs sm:text-sm text-gray-600">
                                 <strong>Preferred References:</strong><br>
                                 1. Guyton and Hall Textbook of Medical Physiology, 15th edition, by John E. Hall and Michael E. Hall.<br>
-                                2. Ganong’s Review of Medical Physiology, 26th edition by Kim E. Barret et al.
+                                2. Ganong’s Review of Medical Physiology, 26th edition by Kim E. Barret et al.<br>
+                                3. Human Physiology, by Vander, Sherman, & Luciano, 6th edition.
                             </span>
                         </p>
                     `;
@@ -817,7 +832,6 @@
 
         function populateTopicFilter() {
             const select = document.getElementById('topic-filter');
-            // Clear existing options except the first one
             while (select.options.length > 1) select.remove(1);
 
             const topics = [...new Set(QUESTIONS.map(q => q.topic))].sort();
@@ -1023,4 +1037,5 @@
     </script>
 </body>
 </html>
+
 
