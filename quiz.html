@@ -360,19 +360,19 @@
         // 2. INITIALIZATION & DATA FETCHING
         // ==========================================
         async function initApp() {
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-            
-            // Set title from query parameter if present
-            const params = new URLSearchParams(window.location.search);
-            const year = params.get('year');
-            if (year) {
-                document.title = `Physiology Test ${year}`;
-                document.getElementById('page-title').textContent = `Physiology Exam ${year}`;
-            }
-
             try {
-                // Ensure GitHub Pages doesn't serve a broken cached version
-                const response = await fetch('exams.json?v=' + new Date().getTime());
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+                
+                // Set title from query parameter if present
+                const params = new URLSearchParams(window.location.search);
+                const year = params.get('year');
+                if (year) {
+                    document.title = `Physiology Test ${year}`;
+                    document.getElementById('page-title').textContent = `Physiology Exam ${year}`;
+                }
+
+                // Bulletproof Cloudflare Pages Fetch
+                const response = await fetch('./exams.json?t=' + new Date().getTime());
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -413,6 +413,7 @@
                             Failed to load 'exams.json'
                         </div>
                         <p class="text-gray-800 text-sm mb-4 font-medium">Error details: <span class="font-mono bg-white px-1 py-0.5 border rounded">${error.message}</span></p>
+                        <p class="text-sm font-bold text-gray-700 mt-2">Please ensure the files are in the same folder on your server.</p>
                     </div>
                 `;
             }
@@ -462,9 +463,10 @@
                         ? stmt.explanation 
                         : `This statement is evaluated as <strong>${stmt.answer.toString().toUpperCase()}</strong> based on physiological principles.`;
 
+                    // SYNTAX FIX: Removed apostrophe in "Why You Are Right" to prevent code breakage
                     EXPLANATIONS[id] = `
                         <div class="font-bold flex items-center gap-2 mb-3 ${stmt.answer ? 'text-green-700' : 'text-red-700'} text-sm sm:text-base border-b ${stmt.answer ? 'border-green-200' : 'border-red-200'} pb-2">
-                            ${stmt.answer ? '✅ Why You\\'re Right' : '📖 Explanation'} 
+                            ${stmt.answer ? '✅ Why You Are Right' : '📖 Explanation'} 
                             <span class="text-xs text-gray-500 font-normal ml-auto text-right bg-white px-2 py-1 rounded border">Reference Answer: <strong>${stmt.answer ? 'TRUE' : 'FALSE'}</strong></span>
                         </div>
                         <p class="text-sm sm:text-base text-gray-800 leading-relaxed font-medium">
