@@ -71,18 +71,51 @@
             const grid = document.getElementById('exam-grid');
             try {
                 const response = await fetch('exams.json');
-                if (!response.ok) throw new Error("HTTP error");
-                const rawData = await response.json();
                 
-                // Bulletproof normalization
-                let examsArray = Array.isArray(rawData) ? rawData : Object.values(rawData);
+                // Error 1: File is missing completely
+                if (!response.ok) throw new Error("HTTP_ERROR");
+                
+                let rawData;
+                try {
+                    rawData = await response.json();
+                } catch (jsonError) {
+                    // Error 2: File exists but has bad formatting (like a missing comma or bracket)
+                    console.error("JSON Parsing Error:", jsonError);
+                    throw new Error("JSON_FORMAT_ERROR");
+                }
+                
+                // Extremely robust normalization:
+                // Allows seamless interaction whether it's an array of exams, or a nested object
+                let examsArray = [];
+                if (Array.isArray(rawData)) {
+                    rawData.forEach(item => {
+                        if (item.examYear || item.year) {
+                            examsArray.push(item);
+                        } else {
+                            Object.values(item).forEach(innerItem => examsArray.push(innerItem));
+                        }
+                    });
+                } else if (typeof rawData === 'object' && rawData !== null) {
+                    examsArray = Object.values(rawData);
+                }
+
                 renderExams(examsArray, grid);
+
             } catch (error) {
+                // Dynamic error display to help you debug easily
+                let errorTitle = "Database Not Found";
+                let errorDesc = "Please ensure 'exams.json' is saved in the same folder as this file.";
+                
+                if (error.message === "JSON_FORMAT_ERROR") {
+                    errorTitle = "Database Format Error";
+                    errorDesc = "Your 'exams.json' file has a syntax typo (like a missing comma, quote, or bracket). Please run it through a free online JSON validator.";
+                }
+
                 grid.innerHTML = `
                     <div class="col-span-full text-center py-12 bg-white rounded-2xl border border-dashed border-rose-300 shadow-sm">
                         <div class="text-rose-500 mb-2"><svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                        <p class="text-rose-600 font-bold text-lg">Database Not Found</p>
-                        <p class="text-rose-500 text-sm mt-1">Please ensure 'exams.json' is saved in the same folder as this file.</p>
+                        <p class="text-rose-600 font-bold text-lg">${errorTitle}</p>
+                        <p class="text-rose-500 text-sm mt-1">${errorDesc}</p>
                     </div>`;
             }
         }
