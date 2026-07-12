@@ -1139,7 +1139,8 @@
             const storedKey = localStorage.getItem('gemini_api_key');
             const key = storedKey !== null ? storedKey : ""; 
             
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${key}`;
+            // FIX: Updated the model name to the stable 'gemini-1.5-flash' to resolve the HTTP 404 error
+            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${key}`;
             const payload = {
                 contents: [{ parts: [{ text: prompt }] }],
                 systemInstruction: { parts: [{ text: "You are an expert, friendly medical physiology tutor. Keep your answers concise, highly accurate, and easy to understand for medical students. Rely heavily on Guyton and Hall, Ganong's, and Vander's Physiology." }] }
