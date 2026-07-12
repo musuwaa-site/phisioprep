@@ -1129,52 +1129,61 @@
             });
         }
 
-        // ==========================================
-        // 8. GEMINI AI API INTEGRATION
+        
+            // ==========================================
+        // 8. GROQ FREE AI API INTEGRATION
         // ==========================================
         
-        // Robust fetch wrapper with Exponential Backoff and Error Handling for invalid/missing keys
-        async function fetchGeminiWithRetry(prompt, retries = 3) {
-            // It will check local storage first. If it's running in my chat editor, the empty string magically works.
-            const storedKey = localStorage.getItem('gemini_api_key');
-            const key = storedKey !== null ? storedKey : ""; 
-            
-            // FIX: Updated the model name to the 'gemini-2.5-flash-lite' model as requested
-            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${key}`;
+        async function fetchGroqWithRetry(prompt, retries = 3) {
+            // Read key from your UI input element
+            const inputEl = document.getElementById('api-key-input'); 
+            const apiKey = inputEl ? inputEl.value.trim() : "";
+
+            if (!apiKey) {
+                return "🔑 AI Tutor Key Missing: Please open the Menu/Settings drawer and paste your free Groq API key to activate the tutor!";
+            }
+
+            const endpoint = "https://api.groq.com/openai/v1/chat/completions";
             const payload = {
-                contents: [{ parts: [{ text: prompt }] }],
-                systemInstruction: { parts: [{ text: "You are an expert, friendly medical physiology tutor. Keep your answers concise, highly accurate, and easy to understand for medical students. Rely heavily on Guyton and Hall, Ganong's, and Vander's Physiology." }] }
+                model: "llama-3.1-8b-instant", // Verified 2026 Free Tier Model
+                messages: [
+                    { 
+                        role: "system", 
+                        content: "You are an expert, friendly medical physiology tutor. Keep your answers concise, highly accurate, and easy to understand for medical students. Rely heavily on principles found in Guyton & Hall and Ganong's Medical Physiology." 
+                    },
+                    { 
+                        role: "user", 
+                        content: prompt 
+                    }
+                ],
+                temperature: 0.5,
+                max_tokens: 300
             };
 
             let delay = 1000;
             for (let i = 0; i < retries; i++) {
                 try {
-                    // Check if it's completely empty on a real server
-                    if (!key && window.location.hostname !== "") {
-                         throw new Error("MISSING_API_KEY");
-                    }
-                    
                     const res = await fetch(endpoint, {
                         method: "POST",
-                        headers: { "Content-Type": "application/json" },
+                        headers: { 
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${apiKey}`
+                        },
                         body: JSON.stringify(payload)
                     });
                     
-                    if (res.status === 403 || res.status === 400) {
-                        throw new Error("INVALID_API_KEY");
+                    if (!res.ok) {
+                        const errData = await res.json().catch(() => ({}));
+                        const errMsg = errData?.error?.message || `HTTP ${res.status}`;
+                        throw new Error(errMsg);
                     }
-                    if (!res.ok) throw new Error(`HTTP ${res.status}`);
                     
                     const data = await res.json();
-                    return data.candidates?.[0]?.content?.parts?.[0]?.text || "No response generated.";
+                    return data.choices?.[0]?.message?.content || "No response generated.";
                 } catch (error) {
-                    if (error.message === "INVALID_API_KEY" || error.message === "MISSING_API_KEY") {
-                        return `<span class="text-rose-600 font-bold">Oops! The AI Tutor is asleep.</span><br>To wake it up, please open the ⚙️ Menu (top right) and paste your free Google Gemini API Key in the Settings section.`;
-                    }
-                    
-                    if (i === retries - 1) return `Oops! The AI Tutor is currently unavailable. Please try again later. (${error.message})`;
+                    if (i === retries - 1) return `Oops! The AI Tutor hit a snag: (${error.message})`;
                     await new Promise(r => setTimeout(r, delay));
-                    delay *= 2; // Delays: 1s, 2s, 4s
+                    delay *= 2; 
                 }
             }
         }
@@ -1185,26 +1194,22 @@
             const respDiv = document.getElementById(`ai-resp-${questionId}`);
             if (!btn || !respDiv) return;
 
-            // Find question context
             const q = QUESTIONS.find(q => q.id === questionId);
             if (!q) return;
 
-            // Update UI to Loading state
             btn.innerHTML = `<svg class="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Analyzing...`;
             btn.classList.add('opacity-70', 'cursor-not-allowed');
             respDiv.classList.add('hidden');
 
-            const prompt = `I am a medical student studying physiology. I just answered a True/False question:\n\nStatement: "${q.stem} ${q.statement}"\nThe correct answer is ${q.isTrue}.\n\nCan you explain WHY this is the answer in a very simple, intuitive way? Use a brief analogy if it makes it easier to understand.`;
+            const prompt = `I am a medical student studying physiology. I just answered a True/False question:\n\nStatement: "${q.stem} ${q.statement}"\nThe correct answer is ${q.isTrue}.\n\nCan you explain WHY this is the answer in a very simple, intuitive way? Use a brief, logical medical analogy if it helps make the concept easy to understand.`;
 
-            const aiText = await fetchGeminiWithRetry(prompt);
+            const aiText = await fetchGroqWithRetry(prompt);
 
-            // Light markdown formatting (bold and line breaks)
             const formattedText = aiText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
             
             respDiv.innerHTML = `<strong>✨ AI Tutor:</strong><br><br>${formattedText}`;
             respDiv.classList.remove('hidden');
             
-            // Restore button
             btn.innerHTML = `✨ Explain Again`;
             btn.classList.remove('opacity-70', 'cursor-not-allowed');
         }
@@ -1217,12 +1222,11 @@
             const text = selection.toString().trim();
             const btn = document.getElementById('ai-define-btn');
             
-            // If they selected a good chunk of text and didn't click inside the modal itself
             if (text.length > 2 && text.length < 50 && !e.target.closest('#ai-def-modal')) {
                 selectedTextToDefine = text;
                 const rect = selection.getRangeAt(0).getBoundingClientRect();
-                btn.style.top = `${rect.top - 40}px`;
-                btn.style.left = `${rect.left + (rect.width / 2) - 40}px`;
+                btn.style.top = `${rect.top - 40}px` ;
+                btn.style.left = `${rect.left + (rect.width / 2) - 40}px` ;
                 btn.classList.remove('hidden');
             } else if (e.target.id !== 'ai-define-btn') {
                 btn.classList.add('hidden');
@@ -1253,7 +1257,7 @@
             }, 10);
 
             const prompt = `Define the medical/physiological term "${selectedTextToDefine}" in exactly 2 or 3 sentences. Keep it extremely clear, simple, and highly accurate for a medical student studying for an exam.`;
-            const aiText = await fetchGeminiWithRetry(prompt);
+            const aiText = await fetchGroqWithRetry(prompt);
             
             contentEl.innerHTML = aiText;
         }
