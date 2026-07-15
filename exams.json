@@ -2327,10 +2327,13 @@
             "text": "Have PCO2 of 40 mmHg",
             "answer": false,
             "explanation": "A PCO2 of 40 mmHg is normal *arterial* blood. Shunted venous blood has a higher PCO2, around 45-46 mmHg. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
-          },
-          
-{
-  "examYear": "2024",
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "examYear": "2024",
   "title": "2024 Physiology Exam",
   "definitions": {
     "Atropine": "A medication that acts as a competitive antagonist for muscarinic acetylcholine receptors, blocking the parasympathetic nervous system.",
@@ -5690,15 +5693,8 @@
           "answer": false,
           "explanation": "Immunoglobulins (antibodies) are primarily produced by immune plasma cells, not the liver. In chronic liver disease, immunoglobulin levels actually tend to rise significantly. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
         }
-      ]
-    }
-  ]
-}
-
-
-
         ]
       }
     ]
   }
-]
+            ]
