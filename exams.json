@@ -2327,7 +2327,3376 @@
             "text": "Have PCO2 of 40 mmHg",
             "answer": false,
             "explanation": "A PCO2 of 40 mmHg is normal *arterial* blood. Shunted venous blood has a higher PCO2, around 45-46 mmHg. [Source: Guyton and Hall Textbook of Medical Physiology, 15th edition]"
-          }
+          },
+          
+{
+  "examYear": "2024",
+  "title": "2024 Physiology Exam",
+  "definitions": {
+    "Atropine": "A medication that acts as a competitive antagonist for muscarinic acetylcholine receptors, blocking the parasympathetic nervous system.",
+    "Choleretics": "Substances that stimulate the liver to increase the production and secretion of bile.",
+    "Steatorrhea": "The excretion of abnormal quantities of fat with the feces owing to reduced absorption of fat by the intestine.",
+    "Oxyntic cells": "Also known as parietal cells, these are the epithelial cells in the stomach that secrete hydrochloric acid (HCl) and intrinsic factor.",
+    "Vagotomy": "A surgical operation in which one or more branches of the vagus nerve are cut, typically to reduce the rate of gastric secretion.",
+    "Aquaporin-1 (AQP1)": "A water channel protein that facilitates the rapid transport of water across cell membranes, abundantly found in the proximal tubule and descending limb of the loop of Henle.",
+    "Pneumotaxic center": "A neural center in the upper pons of the brainstem that helps regulate the rate and depth of respiration by sending inhibitory signals to the inspiratory center.",
+    "2,3-DPG": "2,3-Diphosphoglycerate is a molecule in red blood cells that binds to hemoglobin and decreases its affinity for oxygen, promoting oxygen release to tissues."
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Salivary secretion:",
+      "statements": [
+        {
+          "id": "s1_a",
+          "text": "Is entirely under neural control.",
+          "answer": true,
+          "explanation": "Unlike most of the GI tract, the salivary glands are not primarily regulated by hormones; their secretion is controlled almost exclusively by the autonomic nervous system. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s1_b",
+          "text": "Has a constant composition regardless of the rate of secretion.",
+          "answer": false,
+          "explanation": "As the rate of saliva flow increases, the salivary ducts have less time to reabsorb sodium and chloride, causing the ionic composition to change and become closer to plasma. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s1_c",
+          "text": "Is increased after injection of atropine.",
+          "answer": false,
+          "explanation": "Atropine blocks the parasympathetic nervous system, which severely inhibits salivary secretion and causes dry mouth. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s1_d",
+          "text": "is markedly increased in amount after sympathetic stimulation.",
+          "answer": false,
+          "explanation": "Sympathetic stimulation typically produces a very small volume of thick, viscous saliva, whereas parasympathetic stimulation produces a large volume of watery saliva. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s1_e",
+          "text": "By the parotid gland is about 70% of the total secretion",
+          "answer": false,
+          "explanation": "The submandibular glands, not the parotid glands, produce the majority (about 70%) of the total resting salivary secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Constituents of saliva include:",
+      "statements": [
+        {
+          "id": "s2_a",
+          "text": "Ammonia",
+          "answer": true,
+          "explanation": "Saliva contains various metabolic waste products in small amounts, including ammonia and urea. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s2_b",
+          "text": "HCL",
+          "answer": false,
+          "explanation": "Hydrochloric acid (HCl) is secreted by the stomach, not the salivary glands; saliva is typically slightly alkaline or neutral to protect teeth. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s2_c",
+          "text": "Prostaglandins",
+          "answer": false,
+          "explanation": "While present in trace amounts in many bodily fluids, prostaglandins are not considered a primary functional constituent of saliva for digestion. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s2_d",
+          "text": "Immunoglobulins",
+          "answer": true,
+          "explanation": "Saliva contains Immunoglobulin A (IgA), which helps destroy bacteria and protects the oral cavity from infection. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s2_e",
+          "text": "Calcium",
+          "answer": true,
+          "explanation": "Saliva contains calcium and phosphate, which are essential for preventing the dissolution of tooth enamel and promoting remineralization. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "With regard to electrolyte present in the saliva",
+      "statements": [
+        {
+          "id": "s3_a",
+          "text": "Sodium decreases when the rate of saliva secretion increases",
+          "answer": false,
+          "explanation": "When the secretion rate is high, ductal cells have less time to reabsorb sodium, so the concentration of sodium in the saliva actually increases. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s3_b",
+          "text": "Chloride ion does not change with the rate of secretion",
+          "answer": false,
+          "explanation": "Chloride mirrors sodium; at higher flow rates, less chloride is reabsorbed by the ducts, leading to a higher chloride concentration in final saliva. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s3_c",
+          "text": "Calcium is present in saliva at a higher concentration than the plasma",
+          "answer": false,
+          "explanation": "The concentration of free ionized calcium in saliva is generally lower than that found in blood plasma. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s3_d",
+          "text": "Magnesium is present at lower concentration than the plasma",
+          "answer": true,
+          "explanation": "Like calcium, magnesium is maintained at lower concentrations in the saliva compared to the blood plasma. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s3_e",
+          "text": "Potassium level decreases during ductal modification of saliva",
+          "answer": false,
+          "explanation": "The salivary ducts actively secrete potassium into the saliva; therefore, ductal modification increases the potassium level relative to plasma. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The appetite for food is lost when",
+      "statements": [
+        {
+          "id": "s4_a",
+          "text": "Satiety center in the hypothalamus is stimulated",
+          "answer": true,
+          "explanation": "Stimulation of the ventromedial nuclei of the hypothalamus (the satiety center) induces a feeling of fullness and suppresses the desire for food. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s4_b",
+          "text": "Appetite center in the hypothalamus is destroyed",
+          "answer": true,
+          "explanation": "Destruction of the lateral hypothalamic area (the feeding center) eliminates the drive to eat, leading to severe anorexia. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s4_c",
+          "text": "The stomach is distended",
+          "answer": true,
+          "explanation": "Stretch receptors in the stomach wall send inhibitory signals via the vagus nerve to the feeding center, reducing appetite. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s4_d",
+          "text": "The stomach is surgically removed",
+          "answer": false,
+          "explanation": "While ghrelin (a hunger hormone) levels drop after a gastrectomy, appetite is regulated by many other factors (like glucose, leptin, and intestinal hormones) and is not completely lost. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s4_e",
+          "text": "Blood glucose level falls",
+          "answer": false,
+          "explanation": "A drop in blood glucose (hypoglycemia) activates the hunger center, powerfully stimulating the appetite rather than causing its loss. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Swallowing is accompanied by the following:",
+      "statements": [
+        {
+          "id": "s5_a",
+          "text": "Relaxation of the upper esophageal sphincter.",
+          "answer": true,
+          "explanation": "The upper esophageal sphincter relaxes to allow the food bolus to pass from the pharynx into the esophagus. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s5_b",
+          "text": "Contraction of the pharyngeal wall muscles.",
+          "answer": true,
+          "explanation": "The superior, middle, and inferior pharyngeal constrictor muscles contract in sequence to push the food downward. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s5_c",
+          "text": "Opening of the larynx by epiglottis.",
+          "answer": false,
+          "explanation": "During swallowing, the epiglottis swings backward to cover and firmly close the opening of the larynx, preventing aspiration into the airway. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s5_d",
+          "text": "Pulling the soft palate downwards.",
+          "answer": false,
+          "explanation": "The soft palate is pulled upward to close off the posterior nares, preventing food from entering the nasal cavity. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s5_e",
+          "text": "Inhibition of respiration",
+          "answer": true,
+          "explanation": "The swallowing center in the medulla briefly halts the respiratory center (deglutition apnea) so that breathing stops during the swallow. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Gastric secretion is increased by:",
+      "statements": [
+        {
+          "id": "s6_a",
+          "text": "Sympathetic stimulation.",
+          "answer": false,
+          "explanation": "Sympathetic nervous system stimulation generally decreases overall gastrointestinal motility and secretion, including gastric acid. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s6_b",
+          "text": "Acid in the duodenum.",
+          "answer": false,
+          "explanation": "Acid entering the duodenum stimulates the release of secretin, which inhibits gastric acid secretion and stomach emptying. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s6_c",
+          "text": "Stimulation of stretch receptors in the wall of the stomach.",
+          "answer": true,
+          "explanation": "Stretching the stomach wall activates local enteric reflexes and long vagovagal reflexes that stimulate gastric juice secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s6_d",
+          "text": "Hypertonicity of duodenum.",
+          "answer": false,
+          "explanation": "Hypertonic fluids in the duodenum trigger enterogastric reflexes that inhibit gastric secretion and slow down stomach emptying. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s6_e",
+          "text": "Secretin hormone",
+          "answer": false,
+          "explanation": "Secretin, released by the duodenum in response to low pH, acts to inhibit gastric acid secretion from the stomach parietal cells. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following can cause delayed gastric emptying:",
+      "statements": [
+        {
+          "id": "s7_a",
+          "text": "Vagotomy",
+          "answer": true,
+          "explanation": "The vagus nerve is responsible for coordinating the strong stomach contractions needed for emptying; cutting it (vagotomy) severely delays gastric emptying. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s7_b",
+          "text": "Fat in the duodenum",
+          "answer": true,
+          "explanation": "Fats trigger the release of Cholecystokinin (CCK), which strongly inhibits gastric emptying to allow time for fat digestion. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s7_c",
+          "text": "Secretin",
+          "answer": true,
+          "explanation": "Secretin responds to acid in the duodenum and acts to decrease stomach motility and delay gastric emptying. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s7_d",
+          "text": "Increased fluidity of the chyme",
+          "answer": false,
+          "explanation": "Liquids and highly fluid chyme empty from the stomach much faster than solid or highly viscous meals. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s7_e",
+          "text": "Gastric inhibitory peptide",
+          "answer": true,
+          "explanation": "Gastric Inhibitory Peptide (GIP), released in response to fats and carbohydrates in the duodenum, mildly inhibits gastric motility and delays emptying. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Concerning HCl secretion:",
+      "statements": [
+        {
+          "id": "s8_a",
+          "text": "It is associated with increased pH of the blood",
+          "answer": true,
+          "explanation": "As parietal cells secrete H+ into the stomach lumen, they simultaneously transport bicarbonate into the blood, leading to a temporary increase in blood pH known as the 'alkaline tide'. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s8_b",
+          "text": "It is stimulated by norepinephrine.",
+          "answer": false,
+          "explanation": "Norepinephrine is a sympathetic neurotransmitter that generally inhibits digestive secretions, whereas acetylcholine (parasympathetic) stimulates HCl secretion. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s8_c",
+          "text": "The energy required is derived from ATP breakdown.",
+          "answer": true,
+          "explanation": "The secretion of hydrogen ions is driven against a massive concentration gradient by the H+/K+ ATPase pump, which heavily consumes ATP. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s8_d",
+          "text": "There is an active transport of H+ from the oxyntic cells into the gastric lumen and K+ in the opposite direction.",
+          "answer": true,
+          "explanation": "The proton pump on the luminal membrane exchanges intracellular H+ for luminal K+ using primary active transport. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s8_e",
+          "text": "H+ results from dissociation of water",
+          "answer": true,
+          "explanation": "Inside the parietal cell, water dissociates into H+ and OH-. The H+ is pumped into the lumen, and OH- combines with CO2 to form bicarbonate. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following may lead to an increased gastric acid secretion",
+      "statements": [
+        {
+          "id": "s9_a",
+          "text": "Increased D cell activity",
+          "answer": false,
+          "explanation": "D cells secrete somatostatin, which exerts a strong inhibitory effect on parietal cells and reduces gastric acid secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s9_b",
+          "text": "Increased G cell activity",
+          "answer": true,
+          "explanation": "G cells secrete gastrin, a hormone that travels through the blood to powerfully stimulate the parietal cells to secrete more acid. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s9_c",
+          "text": "Increased vagal discharge",
+          "answer": true,
+          "explanation": "Vagal stimulation releases acetylcholine directly onto parietal cells and stimulates G cells, resulting in a large increase in acid secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s9_d",
+          "text": "H. pylori infection",
+          "answer": true,
+          "explanation": "H. pylori can inflame the gastric mucosa, suppress inhibitory D cells, and hyperstimulate G cells, leading to excess acid production. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s9_e",
+          "text": "Fresh Milk uptake",
+          "answer": true,
+          "explanation": "Although milk temporarily buffers acid, its high protein and calcium content strongly stimulate gastrin release, causing a rebound increase in gastric acid. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Gastric mucosal barrier is maintained by the following:",
+      "statements": [
+        {
+          "id": "s10_a",
+          "text": "The nature of surface membrane of the gastric mucosal cells and the tight junctions between these cells",
+          "answer": true,
+          "explanation": "Tight junctions physically lock the epithelial cells together, creating an impermeable barrier that prevents acid from leaking into underlying tissue. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s10_b",
+          "text": "Certain prostaglandins",
+          "answer": true,
+          "explanation": "Prostaglandins (like PGE2) are crucial for maintaining blood flow to the mucosa and stimulating the production of protective mucus and bicarbonate. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s10_c",
+          "text": "The mucous gel-like membrane that coats the gastric mucous membrane",
+          "answer": true,
+          "explanation": "Surface mucous cells secrete a thick, alkaline gel that blankets the stomach lining, acting as a physical shield against pepsin and acid. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s10_d",
+          "text": "Excessive amount of bile salts",
+          "answer": false,
+          "explanation": "Bile salts refluxed into the stomach act as detergents that strip away the lipid layer of the mucosa, severely disrupting and breaking the barrier. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s10_e",
+          "text": "Decreased blood flow to the GIT",
+          "answer": false,
+          "explanation": "Ischemia (decreased blood flow) deprives the mucosa of the oxygen and nutrients needed to produce mucus and rapidly turnover cells, leading to barrier breakdown and ulcers. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Concerning pancreatic juice:",
+      "statements": [
+        {
+          "id": "s11_a",
+          "text": "Gastrin is an important stimulant for secretion of bicarbonate by the pancreas.",
+          "answer": false,
+          "explanation": "The hormone secretin, not gastrin, is the primary stimulant that causes the pancreatic ducts to secrete a massive volume of bicarbonate-rich fluid. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s11_b",
+          "text": "Somatostatin inhibits secretion of pancreatic juice.",
+          "answer": true,
+          "explanation": "Somatostatin is a universal inhibitory hormone in the GI tract that acts to reduce both endocrine and exocrine pancreatic secretions. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s11_c",
+          "text": "Contains enzymes for digestion of carbohydrate.",
+          "answer": true,
+          "explanation": "Pancreatic juice contains copious amounts of pancreatic alpha-amylase, which digests starches into smaller sugars. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s11_d",
+          "text": "Sight or smell of food does not affect pancreatic secretion.",
+          "answer": false,
+          "explanation": "The cephalic phase of digestion, triggered by the sight or smell of food, stimulates pancreatic enzyme secretion via the vagus nerve. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s11_e",
+          "text": "Vagotomy will cause decreased secretion",
+          "answer": true,
+          "explanation": "Because the vagus nerve provides significant stimulatory input to the pancreas during the cephalic and gastric phases, cutting it decreases enzyme output. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Regarding the physiology of pancreas",
+      "statements": [
+        {
+          "id": "s12_a",
+          "text": "CCK stimulates secretion of pancreatic juice rich in bicarbonate",
+          "answer": false,
+          "explanation": "Cholecystokinin (CCK) primarily stimulates the pancreatic acinar cells to secrete digestive enzymes, whereas secretin stimulates bicarbonate. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s12_b",
+          "text": "CCK stimulates the contraction of gall bladder and relaxation of sphincter of Oddi",
+          "answer": true,
+          "explanation": "CCK is the key physiological hormone that forces the gallbladder to empty bile into the intestine by contracting the bladder wall and relaxing the sphincter. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s12_c",
+          "text": "Trypsinogen is activated to trypsin by enterokinase",
+          "answer": true,
+          "explanation": "The brush-border enzyme enterokinase (enteropeptidase) snips the inactive trypsinogen into active trypsin, which then kicks off a cascade activating all other pancreatic enzymes. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s12_d",
+          "text": "Enterokinase is a hormone secreted by pancreas",
+          "answer": false,
+          "explanation": "Enterokinase is an enzyme, not a hormone, and it is located on the mucosal lining of the duodenum, not secreted by the pancreas. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s12_e",
+          "text": "Secretin stimulates secretion of pancreatic juice rich in enzymes",
+          "answer": false,
+          "explanation": "Secretin stimulates the duct cells of the pancreas to secrete a watery fluid rich in bicarbonate, not enzymes. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following enzymes and their functions are correctly paired",
+      "statements": [
+        {
+          "id": "s13_a",
+          "text": "Chymotrypsin: hydrolyses cholesterol esters.",
+          "answer": false,
+          "explanation": "Chymotrypsin is a protease that digests proteins into peptides. Cholesterol ester hydrolase is the enzyme that breaks down cholesterol esters. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s13_b",
+          "text": "Lactase: hydrolyses maltose to glucose molecule",
+          "answer": false,
+          "explanation": "Lactase hydrolyzes lactose into glucose and galactose. Maltase is the enzyme responsible for hydrolyzing maltose into glucose. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s13_c",
+          "text": "salivary alpha-amylase: hydrolyses starch to maltose",
+          "answer": true,
+          "explanation": "Salivary amylase acts on dietary starch and breaks it down primarily into the disaccharide maltose. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s13_d",
+          "text": "Lipase: emulsifies fats.",
+          "answer": false,
+          "explanation": "Lipase chemically digests fats by cleaving triglyceride bonds; it is the bile salts and lecithin that physically emulsify the fats into smaller droplets. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s13_e",
+          "text": "Deoxyribonuclease: hydrolyses protein to amino acids",
+          "answer": false,
+          "explanation": "Deoxyribonuclease (DNase) breaks down DNA molecules. Proteases (like pepsin, trypsin, and peptidases) hydrolyze proteins into amino acids. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following substances must further be digested before they can be absorbed by specific carriers in intestinal cells",
+      "statements": [
+        {
+          "id": "s14_a",
+          "text": "Fructose",
+          "answer": false,
+          "explanation": "Fructose is a monosaccharide and is fully digested; it is absorbed directly across the intestinal membrane by facilitated diffusion via GLUT5. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s14_b",
+          "text": "Sucrose",
+          "answer": true,
+          "explanation": "Sucrose is a disaccharide that must be broken down by the brush-border enzyme sucrase into glucose and fructose before it can be absorbed. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s14_c",
+          "text": "Lactose",
+          "answer": true,
+          "explanation": "Lactose is a disaccharide that must be split by lactase into glucose and galactose before absorption can occur. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s14_d",
+          "text": "Alanine",
+          "answer": false,
+          "explanation": "Alanine is a single amino acid, the final product of protein digestion, and is absorbed directly by specific amino acid transporters. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s14_e",
+          "text": "Tripeptides",
+          "answer": false,
+          "explanation": "Unlike larger carbohydrates, short peptide chains of two or three amino acids (tripeptides) do not need to be broken down to single amino acids; they are absorbed directly by the PepT1 transporter. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Regarding GIT",
+      "statements": [
+        {
+          "id": "s15_a",
+          "text": "Stomach contain content with highest pH",
+          "answer": false,
+          "explanation": "Due to hydrochloric acid secretion, the stomach contains the most acidic environment in the body, meaning it has the lowest pH, not the highest. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s15_b",
+          "text": "Jejunum is the main site of Vitamin B12 absorption",
+          "answer": false,
+          "explanation": "Vitamin B12, bound to intrinsic factor, bypasses the jejunum and is absorbed exclusively in the terminal ileum. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s15_c",
+          "text": "Colon is the site of action of aldosterone",
+          "answer": true,
+          "explanation": "Similar to the kidney tubules, the epithelial cells of the colon respond to aldosterone by increasing sodium reabsorption and potassium secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s15_d",
+          "text": "Duodenum is the main site of iron absorption",
+          "answer": true,
+          "explanation": "Most dietary iron is absorbed in the proximal small intestine, primarily the duodenum. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s15_e",
+          "text": "Large intestine is the site where major proportion of water is absorbed",
+          "answer": false,
+          "explanation": "While the large intestine is crucial for final water desiccation to form feces, the small intestine absorbs the vast majority (about 8.5 of the 9 liters) of daily fluid. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Bile salts:",
+      "statements": [
+        {
+          "id": "s16_a",
+          "text": "Are derived from hemolyzed RBCs.",
+          "answer": false,
+          "explanation": "Bile pigments (like bilirubin) are derived from hemolyzed RBCs, but bile salts are synthesized in the liver directly from cholesterol. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s16_b",
+          "text": "Facilitates breakdown of fats to fatty acids.",
+          "answer": false,
+          "explanation": "Bile salts physically emulsify fats to increase surface area; it is the enzyme pancreatic lipase that chemically breaks down the fats into fatty acids. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s16_c",
+          "text": "Are among the most important physiologic choleretics.",
+          "answer": true,
+          "explanation": "Recycled bile salts returning to the liver via the portal vein are the most powerful stimulants (choleretics) for the liver to secrete more bile. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s16_d",
+          "text": "Are actively absorbed at the terminal ileum.",
+          "answer": true,
+          "explanation": "About 95% of bile salts are actively reabsorbed by specific transporters located in the terminal ileum to be recycled by the liver. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s16_e",
+          "text": "Deficiency may lead to rarefaction of bones",
+          "answer": true,
+          "explanation": "Bile salt deficiency causes fat malabsorption, leading to poor absorption of fat-soluble vitamins, including Vitamin D, which can cause bone rarefaction (osteomalacia/rickets). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Concerning absorption:",
+      "statements": [
+        {
+          "id": "s17_a",
+          "text": "Short-chain fatty acids are absorbed through lacteals.",
+          "answer": false,
+          "explanation": "Short- and medium-chain fatty acids are water-soluble enough to enter the portal blood directly, unlike long-chain fatty acids which must be packaged into chylomicrons and enter the lacteals. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s17_b",
+          "text": "Bile salts are essential for digestion and absorption of carbohydrates.",
+          "answer": false,
+          "explanation": "Bile salts are strictly necessary for the digestion and absorption of lipids (fats), not carbohydrates. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s17_c",
+          "text": "Steatorrhea means increased protein content in stool.",
+          "answer": false,
+          "explanation": "Steatorrhea refers specifically to the presence of excess, unabsorbed fat in the stool, making it bulky and foul-smelling. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s17_d",
+          "text": "Steatorrhea occurs in obstructive jaundice.",
+          "answer": true,
+          "explanation": "In obstructive jaundice, bile is blocked from reaching the intestine, preventing fat digestion and resulting in severe steatorrhea. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s17_e",
+          "text": "Vitamin B12 is absorbed at the terminal ileum",
+          "answer": true,
+          "explanation": "The terminal ileum contains the specific receptors required to bind and absorb the Vitamin B12-intrinsic factor complex. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "In the colon:",
+      "statements": [
+        {
+          "id": "s18_a",
+          "text": "Bacterial synthesis of vitamin K is of vital importance.",
+          "answer": true,
+          "explanation": "The normal colonic flora synthesizes significant amounts of Vitamin K, which is essential for blood clotting and provides a crucial supplement to dietary intake. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s18_b",
+          "text": "More than half of the water that enters the colon is absorbed from the contents.",
+          "answer": true,
+          "explanation": "The colon receives about 1.5 liters of chyme per day and absorbs almost all of it, leaving less than 100-200 ml of fluid in the feces. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s18_c",
+          "text": "Sympathetic stimulation results in enhanced motility.",
+          "answer": false,
+          "explanation": "Sympathetic nervous system stimulation universally inhibits gastrointestinal motility, whereas parasympathetic stimulation enhances it. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s18_d",
+          "text": "The secretion lacks significant digestive enzymes.",
+          "answer": true,
+          "explanation": "The large intestine mucosa secretes alkaline mucus to lubricate feces and protect the lining, but it produces virtually no digestive enzymes. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s18_e",
+          "text": "Distension of distal colon initiate defecation",
+          "answer": true,
+          "explanation": "As feces move into and stretch the walls of the rectum (distal colon), stretch receptors are triggered, initiating the defecation reflex. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "With respect to defecation reflex action",
+      "statements": [
+        {
+          "id": "s19_a",
+          "text": "It is coordinated by the reflex centers in the sacral cord",
+          "answer": true,
+          "explanation": "The parasympathetic defecation reflex is integrated in the sacral segments of the spinal cord (S2-S4). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s19_b",
+          "text": "The afferent limb carries impulses from stretch receptors in the colon",
+          "answer": true,
+          "explanation": "Afferent signals are generated when stretch receptors in the rectum and descending colon are distended by feces. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s19_c",
+          "text": "The efferent limb travels mainly in sympathetic autonomic nerves",
+          "answer": false,
+          "explanation": "The powerful efferent motor signals that drive defecation travel via parasympathetic fibers in the pelvic splanchnic nerves, not sympathetic nerves. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s19_d",
+          "text": "it is more likely to be initiated just after a meal than just before it",
+          "answer": true,
+          "explanation": "Filling the stomach triggers the gastrocolic and duodenocolic reflexes, which cause mass movements in the colon that often initiate defecation right after eating. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s19_e",
+          "text": "Can voluntarily be inhibited or facilitated",
+          "answer": true,
+          "explanation": "Through conscious control of the external anal sphincter and the Valsalva maneuver, a person can either delay or aid the defecation reflex. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Liver functions include",
+      "statements": [
+        {
+          "id": "s20_a",
+          "text": "Haemopoiesis in adults",
+          "answer": false,
+          "explanation": "While the liver is a primary site of blood cell formation (hemopoiesis) in the fetus, this function shifts entirely to the bone marrow in healthy adults. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s20_b",
+          "text": "Formation of lymph",
+          "answer": true,
+          "explanation": "Because the hepatic sinusoids are highly permeable, the liver produces a massive amount of lymph, accounting for nearly half of all lymph formed in the body at rest. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s20_c",
+          "text": "Synthesis of bile",
+          "answer": true,
+          "explanation": "Hepatocytes constantly synthesize bile, which is essential for the emulsification and absorption of dietary lipids. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s20_d",
+          "text": "Glycogenesis",
+          "answer": true,
+          "explanation": "The liver plays a central role in glucose metabolism by storing excess blood glucose as glycogen (glycogenesis). (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s20_e",
+          "text": "Synthesis of immunoglobulin",
+          "answer": false,
+          "explanation": "The liver synthesizes almost all plasma proteins (like albumin and clotting factors), but immunoglobulins (antibodies) are produced by plasma cells of the immune system. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "topic": "Renal Physiology",
+      "stem": "The following is correct regarding the thick ascending limb (TAL)",
+      "statements": [
+        {
+          "id": "s21_a",
+          "text": "There is passive absorption of salts",
+          "answer": false,
+          "explanation": "Reabsorption of salts in the thick ascending limb is primarily an active process driven by the Na+/K+ ATPase pump and the Na-K-2Cl cotransporter. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s21_b",
+          "text": "There is high concentration of aquaporin 2 channels",
+          "answer": false,
+          "explanation": "The thick ascending limb is virtually impermeable to water; aquaporin 2 channels are found exclusively in the late distal tubule and collecting ducts under ADH control. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s21_c",
+          "text": "The filtrate has the highest concentration",
+          "answer": false,
+          "explanation": "Because salts are actively removed while water remains trapped, the fluid in the thick ascending limb actually becomes highly diluted, not concentrated. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s21_d",
+          "text": "Luminal transport of Na is mainly through Na/K/2Cl channels (NKCC)",
+          "answer": true,
+          "explanation": "Sodium enters the cells from the tubular lumen primarily by co-transport with potassium and chloride via the robust NKCC2 transporter. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s21_e",
+          "text": "Concentration gradient is created by Na+/H+ exchanger",
+          "answer": false,
+          "explanation": "The medullary osmotic gradient is created by the action of the NKCC transporter in this segment, while the Na+/H+ exchanger is mostly active in the proximal tubule. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "topic": "Renal Physiology",
+      "stem": "Regarding GFR",
+      "statements": [
+        {
+          "id": "s22_a",
+          "text": "Is about 180mls per day",
+          "answer": false,
+          "explanation": "Normal Glomerular Filtration Rate (GFR) is roughly 125 ml per minute, which equals an enormous 180 LITERS per day, not milliliters. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s22_b",
+          "text": "Decreases when efferent arteriole constricts",
+          "answer": false,
+          "explanation": "Mild to moderate constriction of the efferent arteriole actually increases glomerular hydrostatic pressure, thereby initially increasing GFR. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s22_c",
+          "text": "Is normally 20% of renal plasma flow",
+          "answer": true,
+          "explanation": "The filtration fraction is the ratio of GFR to renal plasma flow, and it is normally about 0.20, meaning 20% of plasma is filtered. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s22_d",
+          "text": "is maintained if mean arterial pressure is between 80 and 180mmHg",
+          "answer": true,
+          "explanation": "Through intrinsic autoregulation mechanisms, the kidneys keep GFR remarkably constant despite wide fluctuations in blood pressure between 80 and 170-180 mmHg. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s22_e",
+          "text": "Increases when afferent arteriole dilates",
+          "answer": true,
+          "explanation": "Dilation of the afferent arteriole allows more blood flow and higher hydrostatic pressure into the glomerulus, directly increasing GFR. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "topic": "Renal Physiology",
+      "stem": "The following is NOT involved in regulation of GFR",
+      "statements": [
+        {
+          "id": "s23_a",
+          "text": "Arterial pressure",
+          "answer": false,
+          "explanation": "Arterial pressure is a primary determinant of GFR, even though it is buffered by autoregulation. Saying it is NOT involved is False. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s23_b",
+          "text": "Efferent arteriolar tone",
+          "answer": false,
+          "explanation": "Efferent arteriolar tone is highly involved; constricting it increases glomerular pressure and GFR. Therefore, saying it is not involved is False. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s23_c",
+          "text": "Afferent arteriolar tone",
+          "answer": false,
+          "explanation": "Afferent arteriolar resistance is the main site of GFR autoregulation. Saying it is not involved is False. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s23_d",
+          "text": "Na+ content in the distal tubule",
+          "answer": false,
+          "explanation": "The macula densa senses sodium content in the distal tubule to regulate GFR via tubuloglomerular feedback. Saying it is not involved is False. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s23_e",
+          "text": "Juxtaglomerular apparatus",
+          "answer": false,
+          "explanation": "The JGA is the essential structural complex responsible for autoregulating GFR. Saying it is not involved is False. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "topic": "Renal Physiology",
+      "stem": "The following constitutes Juxtaglomerular apparatus",
+      "statements": [
+        {
+          "id": "s24_a",
+          "text": "Macula Densa cells",
+          "answer": true,
+          "explanation": "The macula densa is a specialized plaque of cells in the distal tubule that forms a crucial sensory component of the juxtaglomerular apparatus. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s24_b",
+          "text": "Juxta-glomerular cells",
+          "answer": true,
+          "explanation": "These specialized smooth muscle cells in the afferent arteriole synthesize and secrete renin, forming the effector arm of the apparatus. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s24_c",
+          "text": "Glomerular mesangial cells",
+          "answer": true,
+          "explanation": "Extraglomerular mesangial cells (Lacis cells) sit between the macula densa and arterioles, acting as a communication link within the apparatus. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s24_d",
+          "text": "Afferent arteriole",
+          "answer": true,
+          "explanation": "The afferent arteriole is structurally part of the apparatus, as it houses the granular juxtaglomerular cells. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s24_e",
+          "text": "Efferent arteriole",
+          "answer": true,
+          "explanation": "The efferent arteriole is also intimately connected at the vascular pole and interacts with the signals generated by the apparatus. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "topic": "Renal Physiology",
+      "stem": "Regarding sodium potassium pump",
+      "statements": [
+        {
+          "id": "s25_a",
+          "text": "It Pumps 2 Na+ into the cell and 3 K+ out of the cell",
+          "answer": false,
+          "explanation": "The pump works in the exact opposite ratio: it moves 3 Na+ OUT of the cell and 2 K+ INTO the cell against their gradients. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s25_b",
+          "text": "It is important in secondary active transport",
+          "answer": true,
+          "explanation": "By maintaining a low intracellular sodium concentration, the pump creates the steep gradient that drives almost all secondary active transport processes. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s25_c",
+          "text": "It is located on luminal side of the proximal convoluted tubule",
+          "answer": false,
+          "explanation": "In renal tubular cells, the Na+/K+ ATPase pumps are strictly located on the basolateral membrane (blood side), not the luminal side. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s25_d",
+          "text": "It is important in the reabsorption of glucose in the proximal convoluted tubule",
+          "answer": true,
+          "explanation": "The pump creates the sodium gradient required for the SGLT transporters to pull glucose from the lumen into the cell via secondary active transport. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s25_e",
+          "text": "it requires ATP",
+          "answer": true,
+          "explanation": "As a primary active transporter moving ions against steep electrochemical gradients, the pump directly consumes ATP to function. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "topic": "Renal Physiology",
+      "stem": "The following are endocrine functions of the kidney:",
+      "statements": [
+        {
+          "id": "s26_a",
+          "text": "Aldosterone production",
+          "answer": false,
+          "explanation": "Aldosterone is produced by the adrenal cortex (zona glomerulosa) which sits atop the kidney, but it is not produced by the kidney itself. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s26_b",
+          "text": "Erythropoietin production",
+          "answer": true,
+          "explanation": "The kidneys are the primary endocrine source of erythropoietin, which stimulates red blood cell production in response to hypoxia. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s26_c",
+          "text": "Thrombopoietin production",
+          "answer": false,
+          "explanation": "Although the kidney produces trace amounts, thrombopoietin is primarily produced by the liver. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s26_d",
+          "text": "Renin hormone secretion",
+          "answer": true,
+          "explanation": "The kidneys secrete renin, an enzyme that acts as part of an endocrine cascade (RAAS) to regulate blood pressure and volume. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s26_e",
+          "text": "Vitamin D3 activation",
+          "answer": true,
+          "explanation": "The kidneys perform the final hydroxylation step (using 1-alpha-hydroxylase) to convert inactive vitamin D into active calcitriol. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "topic": "Renal Physiology",
+      "stem": "A person with reduced urine PH the following could be the reason",
+      "statements": [
+        {
+          "id": "s27_a",
+          "text": "Damage to the principle cell",
+          "answer": false,
+          "explanation": "Principal cells handle sodium and potassium transport. Acid-base regulation (which determines urine pH) is handled by the intercalated cells. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s27_b",
+          "text": "Damage to the intercalated cells type A",
+          "answer": false,
+          "explanation": "Type A cells secrete acid. If they are damaged, the kidneys cannot excrete acid, which would lead to a higher (more alkaline) urine pH, not reduced. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s27_c",
+          "text": "Damage to the intercalated cells type B",
+          "answer": true,
+          "explanation": "Type B cells secrete bicarbonate into urine. If damaged, less bicarbonate buffers the urine, leading to an excess of H+ and a reduced (acidic) urine pH. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s27_d",
+          "text": "Dysfunctional proximal convoluted tubule",
+          "answer": false,
+          "explanation": "Dysfunction in the proximal tubule impairs bicarbonate reabsorption, initially causing a flood of bicarbonate into the urine, raising the pH. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s27_e",
+          "text": "Diabetic keto acidosis (DKA)",
+          "answer": true,
+          "explanation": "In DKA, massive amounts of ketoacids enter the blood. The kidneys compensate by heavily secreting hydrogen ions, resulting in a profoundly reduced urine pH. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "topic": "Renal Physiology",
+      "stem": "Regarding potassium",
+      "statements": [
+        {
+          "id": "s28_a",
+          "text": "Low PH causes hypokalemia",
+          "answer": false,
+          "explanation": "A low blood pH (acidosis) causes hydrogen ions to enter cells and potassium to exit, typically resulting in hyperkalemia, not hypokalemia. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s28_b",
+          "text": "Insulin causes hypokalemia",
+          "answer": true,
+          "explanation": "Insulin strongly stimulates the Na+/K+ ATPase pump, driving potassium from the blood into cells, which can rapidly cause hypokalemia. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s28_c",
+          "text": "Aldosterone decreases its secretion",
+          "answer": false,
+          "explanation": "Aldosterone acts on principal cells to stimulate sodium reabsorption and explicitly increases the active secretion of potassium into the urine. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s28_d",
+          "text": "Secreted by principle cell at the DCT",
+          "answer": true,
+          "explanation": "The principal cells in the late distal convoluted tubule and cortical collecting duct are the primary sites for actively secreting potassium into the tubular fluid. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s28_e",
+          "text": "Is reabsorbed by intercalated cells at the proximal convoluted tubule",
+          "answer": false,
+          "explanation": "Potassium reabsorption in the proximal tubule is paracellular and passive. Alpha-intercalated cells reabsorb potassium only later in the collecting ducts during hypokalemia. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q29",
+      "topic": "Renal Physiology",
+      "stem": "Diluting mechanism of the kidney:",
+      "statements": [
+        {
+          "id": "s29_a",
+          "text": "Takes place during water excess in the body",
+          "answer": true,
+          "explanation": "When a person drinks excess water, the kidneys engage the diluting mechanism to excrete the surplus water without losing essential salts. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s29_b",
+          "text": "Is associated with production of high volume, less concentrated urine",
+          "answer": true,
+          "explanation": "The primary outcome of the diluting mechanism is a large volume of urine that has an osmolarity significantly lower than that of blood plasma. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s29_c",
+          "text": "Is associated with secretion of Antidiuretic hormone by the hypothalamus",
+          "answer": false,
+          "explanation": "To produce dilute urine, the secretion of ADH must be strongly suppressed, not stimulated. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s29_d",
+          "text": "Is associated with increased permeability of collecting duct to urea and water",
+          "answer": false,
+          "explanation": "In the absence of ADH (during dilution), the collecting ducts become highly impermeable to both water and urea, trapping water in the urine. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s29_e",
+          "text": "Is the principle biological mechanism by which kidneys help us to retain more water",
+          "answer": false,
+          "explanation": "The diluting mechanism sheds excess water. It is the concentrating mechanism (via ADH) that helps the body retain and conserve water during dehydration. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q30",
+      "topic": "Renal Physiology",
+      "stem": "During counter-current multiplier mechanism:",
+      "statements": [
+        {
+          "id": "s30_a",
+          "text": "Water reabsorption at the thin descending limb is via aquaporin-1 (AQP1)",
+          "answer": true,
+          "explanation": "The thin descending limb is highly permeable to water due to the constitutive presence of Aquaporin-1 channels. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s30_b",
+          "text": "Water reabsorption takes place at thick ascending",
+          "answer": false,
+          "explanation": "The thick ascending limb is structurally impermeable to water, an essential feature that allows it to dilute the tubular fluid and multiply the medullary gradient. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s30_c",
+          "text": "Urea re-absorption at thin ascending limb is via UT-A3 transporters",
+          "answer": false,
+          "explanation": "Urea is actively secreted into the thin ascending limb via UT-A2 transporters, while UT-A1/A3 handle reabsorption much later in the inner medullary collecting duct. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s30_d",
+          "text": "At thin descending limb, salt reabsorption takes place via NKCC secondary active transporters",
+          "answer": false,
+          "explanation": "NKCC transporters are located exclusively in the thick ascending limb, not the thin descending limb (which handles water, not active salt pumping). (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s30_e",
+          "text": "Both Salt and urea can be re-absorbed at thin ascending limb",
+          "answer": false,
+          "explanation": "In the thin ascending limb, sodium chloride is passively reabsorbed out, but urea diffuses IN (secretion), so they are not both reabsorbed. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q31",
+      "topic": "Renal Physiology",
+      "stem": "The following factors tend to stimulate Renin secretion by juxtaglomerular cells:",
+      "statements": [
+        {
+          "id": "s31_a",
+          "text": "Parasympathetic signals",
+          "answer": false,
+          "explanation": "Renin secretion is not controlled by the parasympathetic system; it is the sympathetic system that stimulates its release. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s31_b",
+          "text": "Sympathetic signals",
+          "answer": true,
+          "explanation": "Activation of sympathetic nerves directly stimulates beta-1 adrenergic receptors on juxtaglomerular cells, triggering renin release. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s31_c",
+          "text": "Prostaglandin release",
+          "answer": true,
+          "explanation": "Local release of prostaglandins (like PGE2) by the macula densa acts on juxtaglomerular cells to powerfully stimulate renin secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s31_d",
+          "text": "Adenosine release",
+          "answer": false,
+          "explanation": "Unlike most other tissues, adenosine released by the macula densa during high flow binds to A1 receptors and inhibits renin release. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s31_e",
+          "text": "Local stretch receptor",
+          "answer": false,
+          "explanation": "Increased stretch (due to high blood pressure) actually inhibits renin release. A decrease in stretch is what stimulates it. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q32",
+      "topic": "Renal Physiology",
+      "stem": "The following are the roles of kidney when PH falls below normal",
+      "statements": [
+        {
+          "id": "s32_a",
+          "text": "Secretion of HCO3",
+          "answer": false,
+          "explanation": "When blood pH is low (acidosis), the kidneys need to conserve base, so they completely halt bicarbonate secretion and maximize its reabsorption. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s32_b",
+          "text": "Formation of new HCO3",
+          "answer": true,
+          "explanation": "To combat acidosis, tubular cells synthesize new bicarbonate ions while excreting hydrogen ions buffered by titratable acids and ammonium. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s32_c",
+          "text": "Reabsorption of all filtered HCO3",
+          "answer": true,
+          "explanation": "The very first renal response to acidosis is to completely reabsorb 100% of the bicarbonate filtered into the tubules to prevent any base loss. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s32_d",
+          "text": "Secretion of H+ by principal cells",
+          "answer": false,
+          "explanation": "Principal cells handle sodium/potassium. Hydrogen ion secretion is specifically handled by the specialized Type A intercalated cells. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s32_e",
+          "text": "Reabsorption of H+ by intercalated cells",
+          "answer": false,
+          "explanation": "In acidosis, the kidneys need to get rid of acid. Therefore, Type A intercalated cells actively secrete H+ into the urine, not reabsorb it. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q33",
+      "topic": "Renal Physiology",
+      "stem": "The following might lead to hyperkalemia (high level of potassium in the blood):",
+      "statements": [
+        {
+          "id": "s33_a",
+          "text": "Metabolic acidosis",
+          "answer": true,
+          "explanation": "In metabolic acidosis, excess hydrogen ions enter cells to be buffered, displacing intracellular potassium out into the blood and causing hyperkalemia. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s33_b",
+          "text": "Vomiting and diarrhea",
+          "answer": false,
+          "explanation": "Severe vomiting and diarrhea result in massive losses of potassium from the gastrointestinal tract, leading to hypokalemia, not hyperkalemia. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s33_c",
+          "text": "High insulin dose/secretion",
+          "answer": false,
+          "explanation": "Insulin drives potassium from the blood into cells. High doses of insulin will therefore drop blood potassium levels (hypokalemia). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s33_d",
+          "text": "Food highly rich in potassium",
+          "answer": true,
+          "explanation": "While healthy kidneys usually adapt, an acute massive intake of potassium-rich food can cause transient hyperkalemia, especially if renal function is compromised. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s33_e",
+          "text": "Kidney failure/ kidney disease",
+          "answer": true,
+          "explanation": "The kidneys are the sole route for excreting daily potassium loads. If they fail, potassium accumulates rapidly, resulting in lethal hyperkalemia. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q34",
+      "topic": "Respiratory Physiology",
+      "stem": "During breathing",
+      "statements": [
+        {
+          "id": "s34_a",
+          "text": "Pleural pressure becomes more negative during expiration",
+          "answer": false,
+          "explanation": "During expiration, the chest cavity shrinks, compressing the lungs and causing the pleural pressure to become less negative (closer to zero). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s34_b",
+          "text": "Transpulmonary pressure is increased during inspiration",
+          "answer": true,
+          "explanation": "As pleural pressure drops during inspiration, the pressure difference across the lung wall (transpulmonary pressure) increases, pulling the lungs open. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s34_c",
+          "text": "Alveolar pressure becomes positive during expiration",
+          "answer": true,
+          "explanation": "The elastic recoil of the lungs compresses the alveolar gas, raising its pressure above atmospheric (+1 cmH2O) to drive air out. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s34_d",
+          "text": "Pleural pressure becomes more negative during inspiration",
+          "answer": true,
+          "explanation": "As the chest wall expands, the fluid-filled pleural space is stretched, causing the pressure to drop from roughly -5 cmH2O to -7.5 cmH2O. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s34_e",
+          "text": "Diaphragm relaxes during inspiration",
+          "answer": false,
+          "explanation": "Inspiration is an active process that begins specifically when the diaphragm contracts and flattens to enlarge the chest cavity. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q35",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding dead space",
+      "statements": [
+        {
+          "id": "s35_a",
+          "text": "Alveolar dead space is zero in well ventilated and perfused alveoli",
+          "answer": true,
+          "explanation": "If an alveolus receives perfect blood flow and ventilation, all its air participates in gas exchange, meaning it contributes exactly zero to dead space. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s35_b",
+          "text": "If the value is getting higher indicates poor gaseous exchange",
+          "answer": true,
+          "explanation": "An increasing physiological dead space means more inspired air is reaching zones without blood flow, which is a hallmark of failing, inefficient gas exchange. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s35_c",
+          "text": "In a 70kg man is about 150mls",
+          "answer": true,
+          "explanation": "The standard anatomical dead space (the volume of the conducting airways) in an average 70kg adult is approximately 150 ml. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s35_d",
+          "text": "Anatomical dead space is synonymous to conducting zone of the respiratory system",
+          "answer": true,
+          "explanation": "By definition, the anatomical dead space consists precisely of the conducting zone structures (trachea, bronchi) where walls are too thick for gas exchange. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s35_e",
+          "text": "It is important when calculating a minute ventilation",
+          "answer": false,
+          "explanation": "Dead space is irrelevant for calculating total Minute Ventilation (Respiratory Rate x Tidal Volume). It is, however, critical for calculating Alveolar Ventilation. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q36",
+      "topic": "Respiratory Physiology",
+      "stem": "In control of breathing",
+      "statements": [
+        {
+          "id": "s36_a",
+          "text": "Pneumotaxic center controls the duration of filling phase of the lung cycle",
+          "answer": true,
+          "explanation": "The pneumotaxic center functions to switch off the inspiratory ramp signal, effectively limiting the duration of inspiration (filling phase). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s36_b",
+          "text": "CO2 is the potent stimulator of peripheral chemoreceptors",
+          "answer": false,
+          "explanation": "CO2 acts primarily and potently on the CENTRAL chemoreceptors in the brain. Decreased oxygen (hypoxia) is the primary stimulator of the peripheral chemoreceptors. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s36_c",
+          "text": "Increased concentration of 02 stimulate peripheral chemoreceptors",
+          "answer": false,
+          "explanation": "Peripheral chemoreceptors fire rapidly in response to DECREASED oxygen (hypoxia), not increased oxygen. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s36_d",
+          "text": "Ventral respiratory group are usually active during normal quiet respiration",
+          "answer": false,
+          "explanation": "The dorsal respiratory group handles quiet inspiration. The ventral group remains totally inactive during quiet breathing and only activates when high ventilation (forced expiration) is needed. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s36_e",
+          "text": "A decrease in 02 concentration will cause a decrease in respiratory rate",
+          "answer": false,
+          "explanation": "A drop in O2 concentration triggers the peripheral chemoreceptors, which forcefully stimulate the respiratory centers to INCREASE the rate and depth of breathing. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q37",
+      "topic": "Respiratory Physiology",
+      "stem": "The following physiological changes occurs when person go to high altitude",
+      "statements": [
+        {
+          "id": "s37_a",
+          "text": "Oxygen hemoglobin dissociation curve shift to the right",
+          "answer": true,
+          "explanation": "Hypoxia at high altitude triggers red blood cells to produce more 2,3-DPG, which shifts the curve right to facilitate easier oxygen offloading at the tissues. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s37_b",
+          "text": "Increased pH",
+          "answer": true,
+          "explanation": "The low oxygen drives hyperventilation, which blows off excessive CO2. This reduces blood carbonic acid, raising the pH (respiratory alkalosis). (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s37_c",
+          "text": "Formation of new blood vessels at the tissue level",
+          "answer": true,
+          "explanation": "Chronic acclimatization to high altitude involves tissue hypoxia stimulating angiogenesis (new capillary formation) to improve oxygen delivery distance. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s37_d",
+          "text": "Decreased erythropoiesis",
+          "answer": false,
+          "explanation": "Hypoxia is the strongest stimulant for erythropoietin release from the kidneys, resulting in massively INCREASED red blood cell production. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s37_e",
+          "text": "immediate increase in cardiac output",
+          "answer": true,
+          "explanation": "Upon acute exposure to high altitude, heart rate and cardiac output increase immediately to maintain tissue oxygen delivery before blood changes can occur. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q38",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding lung volumes",
+      "statements": [
+        {
+          "id": "s38_a",
+          "text": "Residual volume is the amount of air in the lungs after forceful inspiration",
+          "answer": false,
+          "explanation": "Residual volume is defined as the volume of air left trapped in the lungs after a maximum, forceful EXPIRATION, not inspiration. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s38_b",
+          "text": "IRV is extra volume of air inhaled after normal tidal volume inspiration",
+          "answer": true,
+          "explanation": "Inspiratory Reserve Volume (IRV) represents the maximum additional air you can consciously draw into the lungs above a normal resting breath. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s38_c",
+          "text": "Vital capacity is equal to total lung volume minus residual volume",
+          "answer": true,
+          "explanation": "Total lung capacity is the sum of vital capacity and residual volume. Rearranging the equation: Vital Capacity = Total Lung Capacity - Residual Volume. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s38_d",
+          "text": "Tidal volume is usually higher in males than in female",
+          "answer": true,
+          "explanation": "Because lung volumes correlate directly with body size and chest cavity dimensions, all absolute lung volumes (including tidal volume) are statistically larger in adult males. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s38_e",
+          "text": "Functional residual capacity is the amount of air remained in the lungs after normal tidal expiration",
+          "answer": true,
+          "explanation": "FRC represents the equilibrium point of the respiratory system; it is the resting volume of air remaining when inward lung recoil matches outward chest wall recoil at the end of a quiet exhalation. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q39",
+      "topic": "Respiratory Physiology",
+      "stem": "The following shifts oxygen Hb dissociation curve to the right",
+      "statements": [
+        {
+          "id": "s39_a",
+          "text": "Low temperature",
+          "answer": false,
+          "explanation": "Cold temperatures stabilize the bond between oxygen and hemoglobin, causing a shift to the LEFT. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s39_b",
+          "text": "High pH",
+          "answer": false,
+          "explanation": "A high pH (alkalosis) means fewer hydrogen ions are present to displace oxygen, causing hemoglobin to hold on tighter, shifting the curve to the LEFT. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s39_c",
+          "text": "Increased 2,3 DPG",
+          "answer": true,
+          "explanation": "2,3-DPG binds directly to the hemoglobin beta chains, lowering its affinity for oxygen and forcing a shift to the RIGHT to enhance tissue delivery. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s39_d",
+          "text": "Increased arteriole PO2",
+          "answer": false,
+          "explanation": "Changes in partial pressure of oxygen (PO2) simply represent movement UP OR DOWN along the existing curve, they do not physically shift the curve itself left or right. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s39_e",
+          "text": "increased H+ concentration",
+          "answer": true,
+          "explanation": "High hydrogen ion concentration (low pH) structurally alters hemoglobin, lowering its oxygen affinity (the Bohr effect) and shifting the curve to the RIGHT. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q40",
+      "topic": "Respiratory Physiology",
+      "stem": "Which of the following does NOT affect diffusion",
+      "statements": [
+        {
+          "id": "s40_a",
+          "text": "Surface area for diffusion",
+          "answer": false,
+          "explanation": "According to Fick's Law, diffusion is directly proportional to the available surface area; therefore it DOES affect diffusion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s40_b",
+          "text": "Concentration gradient",
+          "answer": false,
+          "explanation": "The pressure/concentration gradient is the primary driving force in Fick's Law, so it heavily affects diffusion. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s40_c",
+          "text": "Solubility of the gas",
+          "answer": false,
+          "explanation": "Solubility determines the diffusion coefficient; highly soluble gases like CO2 diffuse much faster. Therefore it affects diffusion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s40_d",
+          "text": "Molecular weight of the gas",
+          "answer": false,
+          "explanation": "Graham's Law states diffusion is inversely proportional to the square root of molecular weight, so heavier molecules diffuse slower. It affects diffusion. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s40_e",
+          "text": "Breathing frequency",
+          "answer": true,
+          "explanation": "Breathing frequency changes alveolar ventilation, but it is not a variable in Fick's law of diffusion capacity across the membrane itself. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q41",
+      "topic": "Respiratory Physiology",
+      "stem": "The following statements are true regarding surfactant EXCEPT:",
+      "statements": [
+        {
+          "id": "s41_a",
+          "text": "Produced by type 2 pneumocytes",
+          "answer": true,
+          "explanation": "Surfactant is exclusively manufactured and secreted into the alveoli by the cuboidal Type II alveolar epithelial cells. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s41_b",
+          "text": "Reduce surface tension of the alveoli",
+          "answer": true,
+          "explanation": "The primary biophysical role of the phospholipids in surfactant is to interrupt water-water bonds, significantly reducing surface tension. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s41_c",
+          "text": "Promote stability of the alveoli",
+          "answer": true,
+          "explanation": "Because its density changes with alveolar radius, surfactant prevents small alveoli from collapsing into larger ones, providing essential stability. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s41_d",
+          "text": "Prevent lung collapse",
+          "answer": true,
+          "explanation": "Without surfactant, the inward pull of surface tension would overwhelm the lung's structural integrity, causing massive collapse (atelectasis). (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s41_e",
+          "text": "Large alveoli have lower surface tension than small alveoli",
+          "answer": false,
+          "explanation": "As an alveolus expands, the surfactant molecules spread further apart, actually causing the surface tension in large alveoli to be HIGHER than in small ones. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q42",
+      "topic": "Respiratory Physiology",
+      "stem": "The following pairs are collect EXCEPT:",
+      "statements": [
+        {
+          "id": "s42_a",
+          "text": "Tidal volume = 500 mls",
+          "answer": true,
+          "explanation": "In a healthy, resting adult, the average volume of air moved per breath (tidal volume) is universally accepted as roughly 500 ml. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s42_b",
+          "text": "Alveolar ventilation = 7500 mls",
+          "answer": false,
+          "explanation": "Alveolar ventilation is typically (500-150)ml x 12 breaths = 4200 ml/min. 7500 mls is far too high for resting alveolar ventilation. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s42_c",
+          "text": "Functional residual capacity = volume of gas in the lungs after normal expiration",
+          "answer": true,
+          "explanation": "This is the exact physiological definition of Functional Residual Capacity (FRC). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s42_d",
+          "text": "Pulmonary blood flow = 5000 mls/min",
+          "answer": true,
+          "explanation": "Because the entire cardiac output passes through the lungs, normal resting pulmonary blood flow equals normal cardiac output, roughly 5000 ml/min. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s42_e",
+          "text": "Physiological dead space = 150 mls",
+          "answer": true,
+          "explanation": "In a healthy person with no alveolar dead space, the physiological dead space perfectly matches the anatomical dead space of 150 mls. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q43",
+      "topic": "Respiratory Physiology",
+      "stem": "With respect to regional gas exchange in the up right lung",
+      "statements": [
+        {
+          "id": "s43_a",
+          "text": "Ventilation is greater at the top of the lungs",
+          "answer": false,
+          "explanation": "Because gravity compresses the bases more at rest, the base of the lung actually expands more and receives significantly greater ventilation than the apex. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s43_b",
+          "text": "Perfusion is much greater at the top of the lungs compared with the bases",
+          "answer": false,
+          "explanation": "Gravity pulls blood downward, making perfusion massively higher at the lung bases and very poor at the lung apices. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s43_c",
+          "text": "Ventilation/perfusion ratio is abnormally high at the top of the lungs",
+          "answer": true,
+          "explanation": "While both ventilation and perfusion are low at the apex, perfusion drops off much faster due to gravity, making the resulting V/Q ratio very high (around 3.0). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s43_d",
+          "text": "PO2 is highest at the bases of the lungs",
+          "answer": false,
+          "explanation": "Because the apex has a high V/Q ratio (lots of ventilation relative to poor blood flow), less O2 is extracted, making the PO2 highest at the apex. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s43_e",
+          "text": "PH is highest at the bases of the lungs",
+          "answer": false,
+          "explanation": "The high V/Q ratio at the apex blows off CO2 efficiently, lowering acid levels. Therefore, the pH is highest (most alkaline) at the apex, not the base. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q44",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding oxygen transport",
+      "statements": [
+        {
+          "id": "s44_a",
+          "text": "The predominant way oxygen is transported in the blood as dissolved oxygen",
+          "answer": false,
+          "explanation": "Oxygen is poorly soluble; approximately 98.5% is transported chemically bound to hemoglobin, and only a tiny 1.5% is dissolved. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s44_b",
+          "text": "1 gram of pure Hb can combine with 1.34-1.39 ml of oxygen",
+          "answer": true,
+          "explanation": "The theoretical maximum is 1.39 ml O2/gram Hb, though the practical physiological measurement (Hufner's constant) is often taken as 1.34 ml O2/gram due to small amounts of inactive Hb. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s44_c",
+          "text": "An anemic patient has a lowered arterial p02 because the Hb is low",
+          "answer": false,
+          "explanation": "Arterial PO2 is a measure of DISSOLVED oxygen, which depends on lung function. In anemia, PO2 is completely normal; only the total oxygen CONTENT is lowered. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s44_d",
+          "text": "CO2 is 20 times more soluble than oxygen",
+          "answer": true,
+          "explanation": "Due to its chemical properties, carbon dioxide dissolves in water and plasma roughly 20 to 24 times more easily than oxygen. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s44_e",
+          "text": "The PO2 gradient is less steep than that of CO2",
+          "answer": false,
+          "explanation": "The PO2 gradient from alveoli to blood is massive (104 down to 40 = 64 mmHg), whereas the CO2 gradient is tiny (45 down to 40 = 5 mmHg). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q45",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding ventilation perfusion ratio (V/Q)",
+      "statements": [
+        {
+          "id": "s45_a",
+          "text": "If V/Q is equal to zero indicates poor perfusion",
+          "answer": false,
+          "explanation": "A V/Q ratio of exactly zero means there is zero ventilation (V=0) with normal perfusion, representing a complete physiological shunt. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s45_b",
+          "text": "A value of V/Q less than 0.8 indicates increased ventilation",
+          "answer": false,
+          "explanation": "A normal ratio is 0.8. A value below that means ventilation is dropping relative to perfusion (e.g., airway obstruction), not increasing. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s45_c",
+          "text": "Increased cardiac output will cause an increase in ventilation",
+          "answer": false,
+          "explanation": "While they rise together during exercise via central command, isolated increases in cardiac output alone do not directly drive ventilation mechanics in a simple V/Q framework. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s45_d",
+          "text": "in upper part of the lungs V/Q is less than 0.8",
+          "answer": false,
+          "explanation": "Because gravity reduces perfusion at the apex much more drastically than it reduces ventilation, the V/Q ratio in the upper lung is very high, typically around 3.0. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s45_e",
+          "text": "The lower parts of the lungs are well ventilated",
+          "answer": true,
+          "explanation": "Even though their V/Q ratio is low (< 0.8) due to massive perfusion, the bases actually receive the highest absolute amount of ventilation in the upright lung. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    }
+  ]
+},
+{
+  "examYear": "2025",
+  "title": "2025 Physiology Exam",
+  "definitions": {
+    "Glomerular filtration rate (GFR)": "The total volume of fluid filtered by all the functional units of the kidneys per minute.",
+    "Autoregulation": "The intrinsic ability of an organ, like the kidney, to maintain a constant blood flow despite changes in overall blood pressure.",
+    "Podocytes": "Specialized cells in the kidneys that wrap around capillaries and help filter blood to create urine.",
+    "Countercurrent multiplication": "The process in the kidneys that uses energy to generate an osmotic gradient, which is necessary for concentrating urine.",
+    "Nephrotic Syndrome": "A kidney disorder that causes the body to excrete too much protein in the urine due to damage in the filtering units.",
+    "Surfactant": "A mixture of lipids and proteins in the lungs that reduces surface tension, preventing the small air sacs (alveoli) from collapsing.",
+    "Bohr effect": "A physiological phenomenon where increased carbon dioxide in the blood causes hemoglobin to release its attached oxygen more easily to the tissues.",
+    "Haldane effect": "A property of hemoglobin where releasing oxygen allows it to carry more carbon dioxide away from the tissues.",
+    "Achlorhydria": "A medical condition where the stomach does not produce hydrochloric acid, impairing digestion.",
+    "Steatorrhea": "The presence of excess fat in feces, usually caused by poor absorption or digestion of fats in the digestive tract.",
+    "Macula densa": "A specialized group of cells in the kidney that senses changes in sodium levels and regulates blood pressure and filtration."
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "topic": "Renal Physiology",
+      "stem": "Regarding glomerular filtration rate (GFR)",
+      "statements": [
+        {
+          "id": "s1_a",
+          "text": "Is directly proportional to the net filtration pressure.",
+          "answer": true,
+          "explanation": "GFR is directly determined by the net filtration pressure across the glomerular capillaries multiplied by the capillary filtration coefficient. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s1_b",
+          "text": "is unaffected by changes in renal blood flow.",
+          "answer": false,
+          "explanation": "GFR is highly dependent on renal blood flow; an increase in blood flow generally increases GFR, while a decrease reduces it. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s1_c",
+          "text": "Can be estimated using creatinine clearance.",
+          "answer": true,
+          "explanation": "Creatinine is filtered freely and neither reabsorbed nor heavily secreted, making its clearance rate a reliable clinical estimate of GFR. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s1_d",
+          "text": "Decreases in response to vasodilation of the afferent arteriole.",
+          "answer": false,
+          "explanation": "Vasodilation (widening) of the afferent arteriole increases blood flow and hydrostatic pressure in the glomerulus, which increases GFR. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s1_e",
+          "text": "Is typically around 180 L/day in a healthy adult.",
+          "answer": true,
+          "explanation": "The normal GFR in an average healthy adult is about 125 ml/min, which equates to roughly 180 liters per day. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "topic": "Renal Physiology",
+      "stem": "The following statements are true regarding renal blood flow",
+      "statements": [
+        {
+          "id": "s2_a",
+          "text": "Renal blood flow is autoregulated between 80-180 mmHg.",
+          "answer": true,
+          "explanation": "The kidneys possess intrinsic mechanisms (myogenic and tubuloglomerular feedback) to keep blood flow constant across a mean arterial pressure range of approximately 80 to 170-180 mmHg. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s2_b",
+          "text": "The kidneys receive about 20-25% of cardiac output at rest.",
+          "answer": true,
+          "explanation": "Despite their small size, the kidneys receive a very high blood flow, roughly 22% of total cardiac output, to rapidly filter the blood plasma. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s2_c",
+          "text": "Sympathetic stimulation increases renal blood flow.",
+          "answer": false,
+          "explanation": "Strong sympathetic nerve stimulation constricts the renal arterioles, which decreases renal blood flow. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s2_d",
+          "text": "Renal blood flow is primarily regulated by the renin-angiotensin system.",
+          "answer": false,
+          "explanation": "While the renin-angiotensin system is important for blood pressure, renal blood flow is primarily maintained through local autoregulation. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s2_e",
+          "text": "A decrease in renal blood flow always leads to a decrease in GFR.",
+          "answer": false,
+          "explanation": "Due to autoregulation and efferent arteriole constriction, GFR can be maintained at normal levels even when renal blood flow slightly decreases. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "topic": "Renal Physiology",
+      "stem": "With respect to tubular reabsorption",
+      "statements": [
+        {
+          "id": "s3_a",
+          "text": "The proximal convoluted tubule reabsorbs about 65% of filtered sodium.",
+          "answer": true,
+          "explanation": "The proximal tubule is highly permeable and handles the bulk of reabsorption, reclaiming roughly 65% of filtered sodium and water. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s3_b",
+          "text": "Glucose is completely reabsorbed in the distal convoluted tubule.",
+          "answer": false,
+          "explanation": "In a healthy person, essentially all glucose is reabsorbed early in the proximal convoluted tubule, not the distal tubule. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s3_c",
+          "text": "Water reabsorption in the collecting ducts is regulated by ADH.",
+          "answer": true,
+          "explanation": "Antidiuretic Hormone (ADH) controls the insertion of water channels (aquaporins) in the collecting duct cells, regulating final water excretion. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s3_d",
+          "text": "The loop of Henle is the primary site of bicarbonate reabsorption.",
+          "answer": false,
+          "explanation": "The proximal convoluted tubule is the primary site, reabsorbing about 80-90% of the filtered bicarbonate. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s3_e",
+          "text": "Urea reabsorption occurs passively in the proximal tubule.",
+          "answer": true,
+          "explanation": "As water is reabsorbed in the proximal tubule, the concentration of urea in the remaining fluid increases, causing urea to passively diffuse back into the blood. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "topic": "Renal Physiology",
+      "stem": "The following statements are true regarding renal hormones",
+      "statements": [
+        {
+          "id": "s4_a",
+          "text": "Aldosterone increases sodium reabsorption in the distal tubule.",
+          "answer": true,
+          "explanation": "Aldosterone stimulates the principal cells of the late distal tubule and collecting duct to reabsorb sodium and secrete potassium. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s4_b",
+          "text": "Antidiuretic hormone (ADH) decreases water reabsorption in the collecting ducts",
+          "answer": false,
+          "explanation": "ADH increases water reabsorption by making the collecting ducts permeable to water, thus conserving body water. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s4_c",
+          "text": "Renin is released in response to low blood pressure in the afferent arteriole.",
+          "answer": true,
+          "explanation": "Juxtaglomerular cells in the afferent arteriole act as baroreceptors (pressure sensors) and release renin when they detect a drop in blood pressure. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s4_d",
+          "text": "Erythropoietin is produced by the liver in response to hypoxia.",
+          "answer": false,
+          "explanation": "While the liver produces a small amount, roughly 90% of erythropoietin is produced by the kidneys in response to low tissue oxygen (hypoxia). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s4_e",
+          "text": "Atrial natriuretic peptide (ANP) increases sodium excretion.",
+          "answer": true,
+          "explanation": "ANP is released from the heart and acts on the kidneys to increase sodium and water loss in the urine, lowering blood pressure. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "topic": "Renal Physiology",
+      "stem": "Regarding Acid-Base Balance",
+      "statements": [
+        {
+          "id": "s5_a",
+          "text": "The kidneys excrete hydrogen ions to regulate blood pH.",
+          "answer": true,
+          "explanation": "The kidneys regulate acid-base balance by secreting excess hydrogen ions (acid) into the urine and reabsorbing bicarbonate buffers. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s5_b",
+          "text": "Bicarbonate is filtered and completely reabsorbed in the proximal tubule.",
+          "answer": false,
+          "explanation": "While the proximal tubule reabsorbs the vast majority (about 85%) of filtered bicarbonate, the remainder is reabsorbed in the thick ascending limb and distal segments. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s5_c",
+          "text": "The kidneys can generate new bicarbonate ions.",
+          "answer": true,
+          "explanation": "The kidneys generate new bicarbonate ions when they secrete hydrogen ions that buffer with non-bicarbonate buffers (like phosphate) or during ammonium excretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s5_d",
+          "text": "Respiratory acidosis is primarily compensated by renal excretion of bicarbonate.",
+          "answer": false,
+          "explanation": "In respiratory acidosis, there is too much acid (carbon dioxide) in the blood. The kidneys compensate by reabsorbing and generating MORE bicarbonate, not excreting it. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s5_e",
+          "text": "Ammonia secretion in the tubules helps buffer hydrogen ions.",
+          "answer": true,
+          "explanation": "Tubular cells generate ammonia, which binds with secreted hydrogen ions in the tubular fluid to form ammonium, trapping the acid for excretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "topic": "Renal Physiology",
+      "stem": "Regarding Sodium Regulation",
+      "statements": [
+        {
+          "id": "s6_a",
+          "text": "Sodium reabsorption in the proximal tubule is primarily active.",
+          "answer": true,
+          "explanation": "Sodium reabsorption is driven by the active Na+/K+ ATPase pumps located on the basolateral membrane (blood side) of the tubular cells. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s6_b",
+          "text": "Aldosterone increases sodium reabsorption in the proximal tubule.",
+          "answer": false,
+          "explanation": "Aldosterone exerts its effects on the principal cells of the late distal tubule and the collecting duct, not the proximal tubule. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s6_c",
+          "text": "The majority of sodium reabsorption occurs in the distal convoluted tubule",
+          "answer": false,
+          "explanation": "The vast majority (approximately 65%) of filtered sodium is reabsorbed early on in the proximal tubule. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s6_d",
+          "text": "Sodium reabsorption is coupled with potassium secretion in the distal tubule",
+          "answer": true,
+          "explanation": "In the late distal tubule, principal cells reabsorb sodium from the fluid and simultaneously secrete potassium into the fluid under the influence of aldosterone. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s6_e",
+          "text": "ANP promotes sodium excretion by inhibiting aldosterone release.",
+          "answer": true,
+          "explanation": "Atrial natriuretic peptide (ANP) increases sodium loss (natriuresis) through several mechanisms, one of which is directly inhibiting the secretion of aldosterone and renin. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "topic": "Renal Physiology",
+      "stem": "The following statements are true regarding potassium regulation",
+      "statements": [
+        {
+          "id": "s7_a",
+          "text": "Potassium is primarily reabsorbed in the proximal tubule.",
+          "answer": true,
+          "explanation": "Roughly 65% of the filtered potassium is reabsorbed in the proximal tubule, mirroring sodium and water reabsorption. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s7_b",
+          "text": "Aldosterone increases potassium secretion in the distal tubule.",
+          "answer": true,
+          "explanation": "Aldosterone upregulates sodium-potassium pumps and potassium channels in principal cells, driving active potassium secretion into the urine. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s7_c",
+          "text": "Hyperkalemia stimulates the release of aldosterone.",
+          "answer": true,
+          "explanation": "A high blood potassium level (hyperkalemia) directly stimulates the adrenal cortex to release aldosterone, which helps excrete the excess potassium. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s7_d",
+          "text": "Potassium excretion is inversely related to sodium reabsorption.",
+          "answer": false,
+          "explanation": "In the distal tubule, potassium secretion is directly coupled to sodium reabsorption; as more sodium is reabsorbed, more potassium is secreted. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s7_e",
+          "text": "The majority of filtered potassium is excreted in the urine.",
+          "answer": false,
+          "explanation": "Under normal conditions, most of the filtered potassium is reabsorbed; only about 10-15% of what is filtered is ultimately excreted. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "topic": "Renal Physiology",
+      "stem": "The renal medulla's hypertonicity is maintained by:",
+      "statements": [
+        {
+          "id": "s8_a",
+          "text": "Countercurrent multiplication in the loop of Henle.",
+          "answer": false,
+          "explanation": "Countercurrent multiplication is responsible for initially *creating* or establishing the hyperosmotic gradient, while the vasa recta *maintains* it. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s8_b",
+          "text": "Urea recycling from the collecting duct",
+          "answer": true,
+          "explanation": "Urea recycling from the inner medullary collecting duct into the medullary interstitium contributes significantly to maintaining the high osmolarity of the inner medulla. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s8_c",
+          "text": "Vasa recta.",
+          "answer": true,
+          "explanation": "The vasa recta are specialized capillary beds that act as countercurrent exchangers, specifically preventing the washout of solutes to maintain the medullary gradient. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s8_d",
+          "text": "Active transport of NaCl by thick ascending limb",
+          "answer": false,
+          "explanation": "Active transport of NaCl creates the gradient (via multiplication) rather than functioning purely as the maintenance mechanism. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s8_e",
+          "text": "High medullary blood flow.",
+          "answer": false,
+          "explanation": "Blood flow to the medulla is intentionally very low (sluggish); high blood flow would rapidly wash away the solutes and destroy the hypertonic gradient. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "topic": "Renal Physiology",
+      "stem": "The following is correct regarding the thick ascending limb (TAL) of loop of Henle:",
+      "statements": [
+        {
+          "id": "s9_a",
+          "text": "There is passive absorption of salts",
+          "answer": false,
+          "explanation": "Salt reabsorption in the thick ascending limb is primarily active, driven by the Na-K-2Cl cotransporter (NKCC2) using energy from the sodium gradient. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s9_b",
+          "text": "There is high concentration of aquaporin 2",
+          "answer": false,
+          "explanation": "The thick ascending limb is virtually impermeable to water; aquaporin 2 channels are found later in the collecting ducts under ADH control. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s9_c",
+          "text": "The filtrates have the highest concentration",
+          "answer": false,
+          "explanation": "Because salts are removed actively while water stays trapped, the filtrate actually becomes progressively diluted, giving it the lowest concentration by the time it leaves. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s9_d",
+          "text": "Luminal transport of Na is mainly through NKCC",
+          "answer": true,
+          "explanation": "Sodium is transported across the luminal membrane primarily by the Na-K-2Cl (NKCC2) cotransporter, which is the target of loop diuretics. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s9_e",
+          "text": "Concentration gradient is created by Na+/H+ exchanger",
+          "answer": false,
+          "explanation": "The medullary gradient is created predominantly by the action of the NKCC2 transporter in this segment, not the Na+/H+ exchanger (which is primary in the proximal tubule). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "topic": "Renal Physiology",
+      "stem": "A person with reduced urine pH the following could be the reason",
+      "statements": [
+        {
+          "id": "s10_a",
+          "text": "Damage to the principal cells",
+          "answer": false,
+          "explanation": "Principal cells handle sodium and potassium, while the intercalated cells are the ones responsible for acid-base (H+ and HCO3-) secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s10_b",
+          "text": "Damage to the intercalated cells type A",
+          "answer": false,
+          "explanation": "Type A intercalated cells secrete acid (H+). If damaged, acid secretion fails, causing the urine to become more alkaline (higher pH), not acidic. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s10_c",
+          "text": "Damage to the intercalated cells type B",
+          "answer": true,
+          "explanation": "Type B intercalated cells secrete bicarbonate and retain H+. If they are damaged, less bicarbonate is secreted into urine, resulting in a lower, more acidic urine pH. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s10_d",
+          "text": "Dysfunctional proximal convoluted tubule",
+          "answer": false,
+          "explanation": "Dysfunction in the proximal tubule (Type 2 RTA) impairs bicarbonate reabsorption, initially leading to bicarbonate dumping and alkaline urine. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s10_e",
+          "text": "Diabetic keto acidosis (DKA)",
+          "answer": true,
+          "explanation": "In DKA, the blood contains high levels of ketoacids. The kidneys respond by maximizing hydrogen ion secretion to clear the acid, profoundly reducing urine pH. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "topic": "Renal Physiology",
+      "stem": "The patient with Nephrotic Syndrome",
+      "statements": [
+        {
+          "id": "s11_a",
+          "text": "Presents with proteinuria",
+          "answer": true,
+          "explanation": "Massive proteinuria (protein in the urine) is the hallmark diagnostic feature of nephrotic syndrome due to a damaged glomerular filtration barrier. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s11_b",
+          "text": "Podocytes are usually unaffected",
+          "answer": false,
+          "explanation": "Podocyte injury and the loss of their foot processes (effacement) are central pathological events that cause the leaky barrier in nephrotic syndrome. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s11_c",
+          "text": "Presents with glycosuria",
+          "answer": false,
+          "explanation": "Glycosuria (glucose in urine) is typically a feature of diabetes mellitus or proximal tubule dysfunction, not primarily nephrotic syndrome. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s11_d",
+          "text": "Presents with oedema",
+          "answer": true,
+          "explanation": "The massive loss of albumin in the urine lowers the blood's pulling force (oncotic pressure), causing fluid to leak into tissues and cause severe swelling (edema). (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s11_e",
+          "text": "Presents with hypotension",
+          "answer": false,
+          "explanation": "While fluid shifts can lower blood volume, many patients actually present with hypertension due to fluid retention driven by kidney compensatory mechanisms. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "topic": "Renal Physiology",
+      "stem": "The following endocrine functions of the kidney:",
+      "statements": [
+        {
+          "id": "s12_a",
+          "text": "Aldosterone production",
+          "answer": false,
+          "explanation": "Aldosterone is produced and secreted by the adrenal cortex (zona glomerulosa) sitting on top of the kidney, not the kidney itself. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s12_b",
+          "text": "Erythropoietin production",
+          "answer": true,
+          "explanation": "The kidneys produce the majority of erythropoietin, a hormone that stimulates red blood cell production in the bone marrow. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s12_c",
+          "text": "Thrombopoietin production",
+          "answer": false,
+          "explanation": "The liver is the primary site of thrombopoietin production, though the kidneys produce small amounts; basic physiology highlights the liver as the main source. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s12_d",
+          "text": "Renin hormone secretion",
+          "answer": true,
+          "explanation": "The juxtaglomerular cells in the kidneys secrete renin into the blood, an enzyme that functions as part of the hormonal system regulating blood pressure. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s12_e",
+          "text": "Vitamin D3 activation",
+          "answer": true,
+          "explanation": "The kidneys use the enzyme 1-alpha-hydroxylase to convert inactive vitamin D into its active hormonal form, calcitriol. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "topic": "Renal Physiology",
+      "stem": "Regarding micturition cycle and control of the urinary bladder function:",
+      "statements": [
+        {
+          "id": "s13_a",
+          "text": "Sympathetic signals controls filling phase",
+          "answer": true,
+          "explanation": "Sympathetic nerves relax the bladder wall muscle (detrusor) and contract the internal sphincter, promoting urine storage. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s13_b",
+          "text": "Parasympathetic signals cause bladder wall relaxation",
+          "answer": false,
+          "explanation": "Parasympathetic signals trigger the micturition reflex, causing the bladder wall muscle to contract and expel urine. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s13_c",
+          "text": "Sympathetic signals lead to internal sphincter closure",
+          "answer": true,
+          "explanation": "During the filling phase, sympathetic stimulation keeps the internal urethral sphincter tightly closed to prevent leakage. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s13_d",
+          "text": "Pontine micturition centre (PMC) becomes functional since birth",
+          "answer": false,
+          "explanation": "In infants, micturition is a pure spinal reflex. Brain centers like the PMC mature later in early childhood, enabling voluntary control over urination. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s13_e",
+          "text": "Brain cortex control voluntary closure of external sphincter",
+          "answer": true,
+          "explanation": "The external urethral sphincter is made of skeletal muscle and is under conscious control from the cerebral cortex via the pudendal nerve. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "topic": "Renal Physiology",
+      "stem": "The following factors tend to stimulate Renin secretion by juxtaglomerular cells:",
+      "statements": [
+        {
+          "id": "s14_a",
+          "text": "Parasympathetic signals",
+          "answer": false,
+          "explanation": "Renin release is stimulated by the sympathetic nervous system, not the parasympathetic nervous system. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s14_b",
+          "text": "Sympathetic signals",
+          "answer": true,
+          "explanation": "Sympathetic nerve fibers directly stimulate beta-1 receptors on the juxtaglomerular cells, leading to increased renin release. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s14_c",
+          "text": "Prostaglandins release",
+          "answer": true,
+          "explanation": "Local release of prostaglandins (like PGE2 and PGI2) directly stimulates the juxtaglomerular cells to secrete renin. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s14_d",
+          "text": "Adenosine release",
+          "answer": false,
+          "explanation": "In the kidney, adenosine acts on A1 receptors on the afferent arteriole to inhibit renin release, contrary to its dilating effect elsewhere in the body. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s14_e",
+          "text": "Local stretch receptor",
+          "answer": false,
+          "explanation": "Increased stretch (high blood pressure) inhibits renin release. It is the *decrease* in stretch that stimulates renin secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding breathing",
+      "statements": [
+        {
+          "id": "s15_a",
+          "text": "During inspiration, the diaphragm contracts and flattens.",
+          "answer": true,
+          "explanation": "Inspiration is initiated when the dome-shaped diaphragm contracts and moves downward, expanding the chest cavity. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s15_b",
+          "text": "Intrapleural pressure is always negative relative to atmospheric pressure.",
+          "answer": false,
+          "explanation": "During forced expiration, such as a cough or blowing up a balloon, intrapleural pressure becomes highly positive. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s15_c",
+          "text": "Expiration is an active process during normal breathing.",
+          "answer": false,
+          "explanation": "In normal, quiet breathing, expiration is completely passive and results from the elastic recoil of the lungs and chest wall. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s15_d",
+          "text": "Surfactant reduces surface tension in the alveoli.",
+          "answer": true,
+          "explanation": "Surfactant molecules intersperse with water molecules on the alveolar surface, lowering the surface tension and preventing collapse. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s15_e",
+          "text": "Compliance is a measure of the ease with which the lungs can expand.",
+          "answer": true,
+          "explanation": "Lung compliance describes how much the lung volume changes for a given change in transpulmonary pressure; high compliance means the lungs expand easily. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding Oxygen Transport",
+      "statements": [
+        {
+          "id": "s16_a",
+          "text": "Most oxygen in the blood is bound to hemoglobin.",
+          "answer": true,
+          "explanation": "Approximately 98.5% of the oxygen in the blood is transported chemically bound to hemoglobin inside red blood cells. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s16_b",
+          "text": "Each hemoglobin molecule can bind up to four oxygen molecules.",
+          "answer": true,
+          "explanation": "A hemoglobin molecule consists of four heme subunits, each containing an iron atom that can reversibly bind one molecule of oxygen. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s16_c",
+          "text": "The oxygen-hemoglobin dissociation curve shifts to the left in the presence of increased CO2.",
+          "answer": false,
+          "explanation": "Increased carbon dioxide causes a rightward shift in the dissociation curve (the Bohr effect), encouraging oxygen release at the tissues. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s16_d",
+          "text": "Fetal hemoglobin has a higher affinity for oxygen than adult hemoglobin.",
+          "answer": true,
+          "explanation": "Fetal hemoglobin binds oxygen more tightly because it interacts poorly with 2,3-BPG, allowing the fetus to extract oxygen from the mother's blood. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s16_e",
+          "text": "Oxygen saturation is calculated as the ratio of dissolved oxygen to total oxygen in blood.",
+          "answer": false,
+          "explanation": "Oxygen saturation is the percentage of available hemoglobin binding sites that are occupied by oxygen, not a ratio of dissolved to total oxygen. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "topic": "Respiratory Physiology",
+      "stem": "With respect to carbon dioxide transport",
+      "statements": [
+        {
+          "id": "s17_a",
+          "text": "Most carbon dioxide is transported in the blood as bicarbonate ions.",
+          "answer": true,
+          "explanation": "About 70% of the carbon dioxide transported in the blood is carried in the form of bicarbonate ions dissolved in the plasma. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s17_b",
+          "text": "Carbonic anhydrase catalyzes the conversion of CO2 and water to carbonic acid.",
+          "answer": true,
+          "explanation": "This crucial enzyme, found inside red blood cells, dramatically speeds up the reaction between CO2 and water to form carbonic acid. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s17_c",
+          "text": "The Haldane effect describes the increased binding of CO2 to hemoglobin when oxygen is released.",
+          "answer": true,
+          "explanation": "Deoxygenated hemoglobin is a better buffer for hydrogen ions and can bind more CO2, a phenomenon known as the Haldane effect. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s17_d",
+          "text": "CO2 has a lower solubility in blood than oxygen.",
+          "answer": false,
+          "explanation": "Carbon dioxide is roughly 20 to 24 times more soluble in body fluids than oxygen. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s17_e",
+          "text": "The chloride shift helps maintain electrical neutrality in red blood cells.",
+          "answer": true,
+          "explanation": "As negative bicarbonate ions leave the red blood cell, negative chloride ions move in, keeping the electrical charge inside the cell neutral. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding regulation of respiration",
+      "statements": [
+        {
+          "id": "s18_a",
+          "text": "The primary respiratory center is located in the medulla oblongata.",
+          "answer": true,
+          "explanation": "The dorsal respiratory group in the medulla controls the basic rhythm of inspiration. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s18_b",
+          "text": "Chemoreceptors in the aorta and carotid arteries respond to changes in blood oxygen levels.",
+          "answer": true,
+          "explanation": "These peripheral chemoreceptors are highly sensitive to drops in arterial oxygen pressure (hypoxia) and send signals to increase breathing. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s18_c",
+          "text": "Central chemoreceptors are primarily sensitive to changes in blood pH.",
+          "answer": false,
+          "explanation": "Central chemoreceptors monitor the pH of the cerebrospinal fluid, which changes when CO2 diffuses across the blood-brain barrier. Hydrogen ions in the blood cannot easily cross this barrier. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s18_d",
+          "text": "Hyperventilation leads to an increase in blood CO2 levels.",
+          "answer": false,
+          "explanation": "Hyperventilation (breathing rapidly) blows off excess carbon dioxide, leading to decreased CO2 levels in the blood (hypocapnia). (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s18_e",
+          "text": "The Hering-Breuer reflex prevents over inflation of the lungs.",
+          "answer": true,
+          "explanation": "Stretch receptors in the lung walls trigger this reflex to switch off inspiration and stop further lung expansion once a certain volume is reached. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding lung volumes and capacities",
+      "statements": [
+        {
+          "id": "s19_a",
+          "text": "Tidal volume is the volume of air inhaled exhaled during normal breathing.",
+          "answer": true,
+          "explanation": "Tidal volume is the amount of air that enters or leaves the lungs during a single, normal, quiet breath. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s19_b",
+          "text": "Inspiratory reserve volume is the maximum amount of air that can be inhaled after a normal inspiration.",
+          "answer": true,
+          "explanation": "This represents the extra volume of air you can force into your lungs above a normal tidal inspiration. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s19_c",
+          "text": "Residual volume is the volume of air remaining in the lungs after a forced expiration.",
+          "answer": true,
+          "explanation": "Because the chest wall is rigid and airways collapse, a certain amount of air (residual volume) always remains trapped in the lungs and cannot be exhaled. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s19_d",
+          "text": "Vital capacity is the sum of tidal volume and residual volume.",
+          "answer": false,
+          "explanation": "Vital capacity is the sum of the inspiratory reserve volume, tidal volume, and expiratory reserve volume; it does not include the residual volume. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s19_e",
+          "text": "Total lung capacity includes residual volume.",
+          "answer": true,
+          "explanation": "Total lung capacity represents the maximum volume of air the lungs can hold, which is the vital capacity plus the residual volume. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "topic": "Respiratory Physiology",
+      "stem": "With respect to acid-base balance and respiration",
+      "statements": [
+        {
+          "id": "s20_a",
+          "text": "Respiratory acidosis occurs when CO2 levels in the blood increases.",
+          "answer": true,
+          "explanation": "An accumulation of carbon dioxide (due to inadequate ventilation) forms excess carbonic acid in the blood, causing the pH to drop. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s20_b",
+          "text": "Hyperventilation can lead to respiratory alkalosis.",
+          "answer": true,
+          "explanation": "Over-breathing washes out too much carbon dioxide from the blood, reducing blood acid levels and raising the pH. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s20_c",
+          "text": "The kidneys compensate for respiratory acidosis by excreting more bicarbonate ions.",
+          "answer": false,
+          "explanation": "To compensate for acidosis, the kidneys need to retain base; they reabsorb and generate more bicarbonate, not excrete it. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s20_d",
+          "text": "The bicarbonate buffer system is the primary buffer in the blood.",
+          "answer": true,
+          "explanation": "The bicarbonate buffer system is the most important extracellular buffer for maintaining normal blood pH. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s20_e",
+          "text": "Metabolic acidosis can stimulate an increase in respiratory rate.",
+          "answer": true,
+          "explanation": "Low blood pH stimulates the peripheral chemoreceptors to rapidly increase ventilation to blow off CO2 and compensate for the acid load. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding ventilation-perfusion matching",
+      "statements": [
+        {
+          "id": "s21_a",
+          "text": "A ventilation-perfusion (V/Q) ratio of 1 indicates optimal gas exchange.",
+          "answer": true,
+          "explanation": "A ratio nearing 1 means that the airflow perfectly matches the blood flow, providing the best possible environment for transferring oxygen and carbon dioxide. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s21_b",
+          "text": "A V/Q ratio of 0 indicates no perfusion but normal ventilation.",
+          "answer": false,
+          "explanation": "A ratio of 0 means there is zero ventilation (V=0) with normal perfusion, effectively creating a physiological shunt. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s21_c",
+          "text": "A V/Q ratio of infinity indicates no ventilation but normal perfusion.",
+          "answer": false,
+          "explanation": "A ratio of infinity occurs when ventilation is normal but there is zero perfusion (blood flow), creating physiological dead space. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s21_d",
+          "text": "Shunting occurs when blood passes through the lungs without being oxygenated.",
+          "answer": true,
+          "explanation": "A shunt is defined as blood that reaches the arterial system without passing through ventilated lung regions, skipping gas exchange. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s21_e",
+          "text": "The apex of the lung has a higher V/Q ratio than the base.",
+          "answer": true,
+          "explanation": "Due to gravity, blood flow (perfusion) is much lower at the top (apex) of the upright lung than at the base, making the V/Q ratio significantly higher at the apex. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "topic": "Respiratory Physiology",
+      "stem": "Which statements about O2-Hb curve shifts are true?",
+      "statements": [
+        {
+          "id": "s22_a",
+          "text": "A left shift improves O2 loading in the lungs but impairs unloading in tissues.",
+          "answer": true,
+          "explanation": "A left shift means hemoglobin has a higher affinity for oxygen; it picks it up easily but holds onto it tightly, making tissue delivery difficult. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s22_b",
+          "text": "Carbon monoxide (CO) shifts the curve left and lowers P50.",
+          "answer": true,
+          "explanation": "Carbon monoxide binding prevents the release of bound oxygen molecules by increasing their affinity to hemoglobin, shifting the curve left and lowering the pressure at which hemoglobin is 50% saturated. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s22_c",
+          "text": "Methemoglobinemia (Fe3+) causes a left shift, reducing O2 delivery.",
+          "answer": true,
+          "explanation": "Oxidized iron in hemoglobin not only can't bind oxygen well, but it also increases the affinity of the remaining normal heme groups for oxygen, shifting the curve left. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s22_d",
+          "text": "High altitude acclimatization shifts the curve right due to ↑2,3-BPG.",
+          "answer": true,
+          "explanation": "Low oxygen at high altitudes prompts red blood cells to produce more 2,3-BPG, shifting the curve right to help offload scarce oxygen more easily to tissues. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s22_e",
+          "text": "Hypothermia shifts the curve left, increasing Hb-O2 affinity.",
+          "answer": true,
+          "explanation": "Cold temperatures increase the bond strength between hemoglobin and oxygen, resulting in a leftward shift of the dissociation curve. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding dead space which of the following statement is NOT TRUE",
+      "statements": [
+        {
+          "id": "s23_a",
+          "text": "Alveolar dead space is zero in well ventilated and perfused alveoli",
+          "answer": true,
+          "explanation": "Healthy, well-perfused alveoli participate fully in gas exchange, meaning they contribute nothing to alveolar dead space. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s23_b",
+          "text": "If the value is getting higher indicates good gaseous exchange",
+          "answer": false,
+          "explanation": "A higher dead space means more air is being wasted in non-exchanging zones, indicating poor or inefficient gas exchange. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s23_c",
+          "text": "In a 70kg man is about 150mls",
+          "answer": true,
+          "explanation": "The anatomical dead space (the conducting airways) in an average adult male is approximately 150 milliliters. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s23_d",
+          "text": "Anatomical dead space is synonymous to respiratory zone of the respiratory system",
+          "answer": false,
+          "explanation": "Anatomical dead space is synonymous with the conducting zone (trachea, bronchi) where no gas exchange occurs, whereas the respiratory zone is where gas exchange happens. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s23_e",
+          "text": "It is important when calculating a minute ventilation",
+          "answer": false,
+          "explanation": "Dead space is critical when calculating ALVEOLAR ventilation. Minute ventilation is simply tidal volume multiplied by respiratory rate, irrespective of dead space. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "topic": "Respiratory Physiology",
+      "stem": "During transport of gases in blood",
+      "statements": [
+        {
+          "id": "s24_a",
+          "text": "About one liter of O2 is transported in each minute",
+          "answer": true,
+          "explanation": "With a normal cardiac output of 5 L/min and blood containing 200 ml of oxygen per liter, the total delivery is roughly 1000 ml (1 liter) per minute. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s24_b",
+          "text": "Majority of CO2 is transported as bicarbonate in plasma",
+          "answer": true,
+          "explanation": "Approximately 70% of the body's carbon dioxide dissolves and travels safely through the plasma in the chemical form of bicarbonate. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s24_c",
+          "text": "At the pulmonary capillary there is a movement of Cl from RBC to the plasma",
+          "answer": true,
+          "explanation": "In the lungs, the chloride shift reverses; bicarbonate enters the red blood cell to become CO2, and chloride moves out into the plasma. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s24_d",
+          "text": "CO increases affinity of oxygen for hemoglobin",
+          "answer": true,
+          "explanation": "Carbon monoxide binding causes the remaining heme sites to bind oxygen much more tightly, preventing oxygen offloading to tissues. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s24_e",
+          "text": "In a normal individual oxygen saturation is about 95 to 97%",
+          "answer": true,
+          "explanation": "Normal arterial blood achieves near-maximum binding, typically reaching a saturation between 95% and 98%. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding lung volumes",
+      "statements": [
+        {
+          "id": "s25_a",
+          "text": "Functional residual capacity is the amount of air in the lungs after normal tidal expiration",
+          "answer": true,
+          "explanation": "FRC represents the resting baseline lung volume at the end of a quiet breath, balancing the inward recoil of the lungs with the outward pull of the chest. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s25_b",
+          "text": "ERV is extra volume of air inhaled after normal tidal volume inspiration",
+          "answer": false,
+          "explanation": "Expiratory Reserve Volume (ERV) is the maximum air you can forcefully exhale *after* a normal breath out, not inhaled. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s25_c",
+          "text": "Vital capacity is equal to total lung volume minus residual volume",
+          "answer": true,
+          "explanation": "Since total lung capacity is the sum of vital capacity and residual volume, subtracting residual volume from total capacity yields vital capacity. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s25_d",
+          "text": "Tidal volume is usually higher in females than in males",
+          "answer": false,
+          "explanation": "Lung volumes, including tidal volume, are generally proportionate to body size, making them statistically larger in adult males on average. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s25_e",
+          "text": "Residual volume is the amount of air remained in the lungs after forcefully inspiration",
+          "answer": false,
+          "explanation": "Residual volume is the air left trapped in the lungs after a maximal, forceful *expiration*. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "topic": "Respiratory Physiology",
+      "stem": "The following statements is/are true regarding surfactant:",
+      "statements": [
+        {
+          "id": "s26_a",
+          "text": "Produced by type 2 pneumocytes",
+          "answer": true,
+          "explanation": "Surfactant is synthesized and secreted by the specialized Type II alveolar epithelial cells in the lungs. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s26_b",
+          "text": "Reduce surface tension of the alveoli",
+          "answer": true,
+          "explanation": "The lipid molecules in surfactant push water molecules apart, greatly lowering the surface tension of the fluid lining the alveoli. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s26_c",
+          "text": "Promote stability of the alveoli",
+          "answer": true,
+          "explanation": "By adjusting surface tension dynamically based on size, surfactant prevents small alveoli from collapsing into larger ones, providing stability. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s26_d",
+          "text": "Prevent lung collapse",
+          "answer": true,
+          "explanation": "By drastically reducing the collapsing inward force of surface tension, surfactant prevents the lungs from caving in on themselves. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s26_e",
+          "text": "Large alveoli have lower surface tension than small alveoli",
+          "answer": false,
+          "explanation": "Because surfactant molecules spread out as the alveolus expands, large alveoli actually experience higher surface tension than small, densely surfactant-coated alveoli. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "topic": "Respiratory Physiology",
+      "stem": "Regarding ventilation",
+      "statements": [
+        {
+          "id": "s27_a",
+          "text": "Normal FEV1 is 70% of FVC",
+          "answer": false,
+          "explanation": "In a normal healthy adult, the FEV1/FVC ratio is approximately 80%; 70% is generally used as the threshold defining obstruction. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s27_b",
+          "text": "FEV1 is decreased much more than FVC in patients with lung fibrosis",
+          "answer": false,
+          "explanation": "Lung fibrosis is a restrictive disease where the total capacity (FVC) drops drastically, keeping the FEV1/FVC ratio normal or even higher than normal. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s27_c",
+          "text": "FEV1 is dependent on expiratory effort",
+          "answer": true,
+          "explanation": "Because it relies on dynamic airway compression during maximum forced exhalation, the measurement relies heavily on patient effort. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s27_d",
+          "text": "FVC in an average healthy person is about 3100 ml",
+          "answer": false,
+          "explanation": "The average Forced Vital Capacity (FVC) for a young, healthy adult male is closer to 4.5 to 5 liters (4500-5000 ml). (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s27_e",
+          "text": "FEV1 is about 42% of FVC in a patient with obstructive lung disease",
+          "answer": true,
+          "explanation": "In obstructive disease like severe asthma or COPD, airway resistance slows exhalation profoundly, dropping the ratio well below normal, sometimes to 42% or worse. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Salivary secretion:",
+      "statements": [
+        {
+          "id": "s28_a",
+          "text": "is entirely under neural control",
+          "answer": true,
+          "explanation": "Unlike most of the GI tract, the salivary glands do not respond significantly to hormones; their secretion is controlled entirely by the autonomic nervous system. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s28_b",
+          "text": "Has a constant composition regardless of the rate of secretion.",
+          "answer": false,
+          "explanation": "As the rate of saliva flow increases, the salivary ducts have less time to modify the fluid, causing the electrolyte composition to become closer to plasma. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s28_c",
+          "text": "Is increased after injection of atropine.",
+          "answer": false,
+          "explanation": "Atropine blocks the parasympathetic nervous system (anticholinergic), which halts salivary secretion and causes severe dry mouth. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s28_d",
+          "text": "is markedly increased in amount after sympathetic stimulation.",
+          "answer": false,
+          "explanation": "Parasympathetic stimulation produces a large volume of watery saliva, whereas sympathetic stimulation produces a very small volume of thick, viscous saliva. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s28_e",
+          "text": "By the parotid gland is about 70% of the total secretion",
+          "answer": false,
+          "explanation": "The submandibular glands produce the vast majority (about 70%) of total salivary secretion, not the parotid glands. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q29",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "With regard to electrolyte present in the saliva",
+      "statements": [
+        {
+          "id": "s29_a",
+          "text": "Sodium concentration decreases during ductal modification of saliva",
+          "answer": true,
+          "explanation": "The cells lining the salivary ducts actively reabsorb sodium ions out of the primary secretion, making final saliva low in sodium. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s29_b",
+          "text": "Chloride is present in saliva at lower concentration than the plasma",
+          "answer": true,
+          "explanation": "Chloride is actively reabsorbed by the salivary ducts along with sodium, resulting in a much lower concentration than in plasma. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s29_c",
+          "text": "Calcium is present in saliva at a higher concentration than the plasma",
+          "answer": false,
+          "explanation": "While saliva contains calcium to help teeth, its overall dissolved free concentration is lower than that of blood plasma. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s29_d",
+          "text": "Magnesium is present at lower concentration than the plasma",
+          "answer": true,
+          "explanation": "Like many other divalent cations, magnesium is kept at lower concentrations in saliva compared to plasma. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s29_e",
+          "text": "Potassium level decreases during ductal modification of saliva",
+          "answer": false,
+          "explanation": "The salivary ducts actively secrete potassium into the saliva, making its final concentration significantly higher than in plasma. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q30",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The appetite for food is lost when",
+      "statements": [
+        {
+          "id": "s30_a",
+          "text": "Satiety center in the hypothalamus is stimulated",
+          "answer": true,
+          "explanation": "Stimulation of the satiety center located in the ventromedial hypothalamus signals fullness and directly suppresses the urge to eat. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s30_b",
+          "text": "Appetite center in the hypothalamus is destroyed",
+          "answer": true,
+          "explanation": "If the lateral hypothalamus (the hunger center) is destroyed, an animal loses the drive to eat, resulting in severe weight loss. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s30_c",
+          "text": "Ghrelin hormone levels falls",
+          "answer": true,
+          "explanation": "Ghrelin is a hormone from the stomach that strongly triggers hunger; when its levels fall (e.g., after a meal), appetite is lost. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s30_d",
+          "text": "Leptin hormone levels falls",
+          "answer": false,
+          "explanation": "Leptin from fat cells suppresses appetite. Therefore, a fall in leptin levels actually triggers hunger rather than causing appetite loss. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s30_e",
+          "text": "Blood glucose level falls",
+          "answer": false,
+          "explanation": "A fall in blood glucose (hypoglycemia) activates the hunger center to seek food, thus increasing rather than losing appetite. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q31",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Swallowing is accompanied by:",
+      "statements": [
+        {
+          "id": "s31_a",
+          "text": "Relaxation of the upper esophageal sphincter.",
+          "answer": true,
+          "explanation": "During swallowing, the upper esophageal sphincter relaxes to allow food to safely pass from the throat into the esophagus. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s31_b",
+          "text": "Contraction of the pharyngeal wall muscles",
+          "answer": true,
+          "explanation": "Sequential contraction of the muscles in the pharynx propels the food bolus downward toward the esophagus. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s31_c",
+          "text": "Opening of the larynx by epiglottis.",
+          "answer": false,
+          "explanation": "The epiglottis swings backward to cover and completely close the larynx to prevent food from entering the windpipe. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s31_d",
+          "text": "Pulling of the soft palate upward.",
+          "answer": true,
+          "explanation": "The soft palate elevates to block off the nasal passages, ensuring food doesn't reflux into the nose. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s31_e",
+          "text": "Inhibition of respiration.",
+          "answer": true,
+          "explanation": "Breathing is temporarily halted during the swallowing reflex (deglutition apnea) to protect the airway from aspirating food. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q32",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Many medications have anticholinergic side effects, which block the activity of parasympathetic neurons throughout the body. Older individuals may be on many such medications simultaneously, exacerbating the side effects. The following would be expected in an individual taking medications with anticholinergic activity:",
+      "statements": [
+        {
+          "id": "s32_a",
+          "text": "Dry mouth.",
+          "answer": true,
+          "explanation": "Parasympathetic nerves stimulate salivary glands; blocking them halts saliva production, leading to severe dry mouth. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s32_b",
+          "text": "Diarrhea.",
+          "answer": false,
+          "explanation": "Parasympathetic blockade slows gut motility. Therefore, anticholinergic drugs typically cause constipation, not diarrhea. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s32_c",
+          "text": "Slow gastric emptying.",
+          "answer": true,
+          "explanation": "Vagal (parasympathetic) tone coordinates stomach muscle contractions; blocking it significantly delays the emptying of food into the intestines. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s32_d",
+          "text": "Decreased gastric acid production.",
+          "answer": true,
+          "explanation": "Acetylcholine from the vagus nerve directly stimulates acid production. Anticholinergic drugs block this signal, lowering acid output. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s32_e",
+          "text": "Constipation",
+          "answer": true,
+          "explanation": "Reduced muscle contractions and movement throughout the entire gastrointestinal tract leads to hardened stool and constipation. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q33",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following may lead to an increased gastric acid secretion",
+      "statements": [
+        {
+          "id": "s33_a",
+          "text": "Increased D cell activity",
+          "answer": false,
+          "explanation": "D cells secrete somatostatin, which is the primary hormone that turns down and inhibits gastric acid secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s33_b",
+          "text": "Increased G cell activity",
+          "answer": true,
+          "explanation": "G cells secrete the hormone gastrin, which powerfully stimulates the parietal cells in the stomach to produce more acid. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s33_c",
+          "text": "Increased vagal discharge",
+          "answer": true,
+          "explanation": "Stimulation of the vagus nerve (like when anticipating or eating a meal) releases acetylcholine, drastically increasing acid secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s33_d",
+          "text": "H. pylori infection",
+          "answer": true,
+          "explanation": "Certain strains of H. pylori inflame the stomach lining, inhibiting D cells and hyper-activating G cells, leading to excess acid and ulcers. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s33_e",
+          "text": "Fresh Milk uptake",
+          "answer": true,
+          "explanation": "While milk initially coats the stomach, its high calcium and protein content act as potent chemical stimulants, causing a rebound surge in gastric acid secretion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q34",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Normal mechanism of defense of the GIT from acid include:",
+      "statements": [
+        {
+          "id": "s34_a",
+          "text": "Tight junctions.",
+          "answer": true,
+          "explanation": "Epithelial cells in the stomach are linked by tight junctions that act as a physical barrier to stop acid from leaking into underlying tissues. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s34_b",
+          "text": "Bicarbonate from pancreas.",
+          "answer": true,
+          "explanation": "The pancreas dumps massive amounts of alkaline bicarbonate into the duodenum to instantly neutralize stomach acid as it enters. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s34_c",
+          "text": "Mucus production.",
+          "answer": true,
+          "explanation": "A thick, viscous gel of mucus coats the stomach lining, providing a physical buffer zone between stomach cells and harsh acid. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s34_d",
+          "text": "Rapid turnover of enterocytes.",
+          "answer": true,
+          "explanation": "The gut lining constantly sheds old damaged cells and replaces them with fresh cells within days, ensuring rapid repair from acid wear-and-tear. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s34_e",
+          "text": "Normal colonic microflora..",
+          "answer": false,
+          "explanation": "Gut bacteria in the colon perform many functions, but they are located far downstream and do not protect the stomach or upper intestines from stomach acid. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q35",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Regarding the physiology of pancreas",
+      "statements": [
+        {
+          "id": "s35_a",
+          "text": "CCK stimulates secretion of pancreatic juice rich in bicarbonate",
+          "answer": false,
+          "explanation": "Cholecystokinin (CCK) primarily causes the pancreas to secrete digestive enzymes; it is the hormone secretin that prompts the watery, bicarbonate-rich juice. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s35_b",
+          "text": "CCK stimulates the contraction of gall bladder and relaxation of sphincter of Oddi",
+          "answer": true,
+          "explanation": "CCK is the key hormone that squeezes the gallbladder and opens the sphincter of Oddi, dumping bile into the intestines to digest fats. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s35_c",
+          "text": "Trypsinogen is activated to trypsin by enterokinase",
+          "answer": true,
+          "explanation": "Enterokinase (enteropeptidase) on the intestinal brush border snips trypsinogen to create active trypsin, which then activates all other pancreatic enzymes. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s35_d",
+          "text": "Enterokinase is a hormone secreted by pancreas",
+          "answer": false,
+          "explanation": "Enterokinase is an enzyme, not a hormone, and it is located on the lining of the duodenum, not secreted by the pancreas. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s35_e",
+          "text": "Secretin stimulates secretion of pancreatic juice rich in enzymes",
+          "answer": false,
+          "explanation": "Secretin stimulates the pancreatic duct cells to release a massive volume of fluid rich in bicarbonate, not enzymes. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q36",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following enzymes and their functions are correctly paired",
+      "statements": [
+        {
+          "id": "s36_a",
+          "text": "Chymotrypsin: hydrolyses cholesterol esters",
+          "answer": false,
+          "explanation": "Chymotrypsin is a protease that cuts proteins into smaller peptides; cholesterol esterase handles cholesterol esters. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s36_b",
+          "text": "Lactase: hydrolyses maltose to glucose molecules",
+          "answer": false,
+          "explanation": "Lactase hydrolyzes the milk sugar lactose into glucose and galactose. Maltase is the enzyme that breaks down maltose into glucose. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s36_c",
+          "text": "Salivary alpha amylase: hydrolyses starch to maltose",
+          "answer": true,
+          "explanation": "Salivary amylase begins carbohydrate digestion in the mouth by slicing large starch molecules down into smaller sugars like maltose. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s36_d",
+          "text": "Lipase: emulsifies fats",
+          "answer": false,
+          "explanation": "Bile salts act as the detergent that emulsifies fats; lipase is the enzyme that chemically chops those fats into fatty acids. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s36_e",
+          "text": "Deoxy-ribonuclease: hydrolyses protein to amino acids",
+          "answer": false,
+          "explanation": "Deoxyribonuclease (DNAse) breaks down DNA into nucleotides. Proteases are the enzymes that break proteins into amino acids. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q37",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following substances must further be digested before they can be absorbed by specific carriers in intestinal cells",
+      "statements": [
+        {
+          "id": "s37_a",
+          "text": "Fructose",
+          "answer": false,
+          "explanation": "Fructose is a simple monosaccharide and requires no further digestion; it is absorbed directly via the GLUT5 transporter. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s37_b",
+          "text": "Sucrose",
+          "answer": true,
+          "explanation": "Sucrose is a disaccharide (table sugar) that must be cut by the brush border enzyme sucrase into glucose and fructose before absorption. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s37_c",
+          "text": "Galactose",
+          "answer": false,
+          "explanation": "Galactose is a single sugar unit (monosaccharide) that is readily absorbed directly through the SGLT1 transporter alongside sodium. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s37_d",
+          "text": "Alanine",
+          "answer": false,
+          "explanation": "Alanine is an individual amino acid. It represents the final digested form of a protein and is absorbed directly by specific amino acid transporters. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s37_e",
+          "text": "Tripeptides",
+          "answer": false,
+          "explanation": "Tripeptides (small chains of 3 amino acids) don't need to be broken down to single amino acids in the lumen; they are absorbed directly intact by the PEPT1 transporter. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q38",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Malabsorption of lipids is likely to occur as a result of:",
+      "statements": [
+        {
+          "id": "s38_a",
+          "text": "Cholelithiasis",
+          "answer": true,
+          "explanation": "Gallstones (cholelithiasis) can block the bile duct, preventing bile from reaching the intestine to emulsify fats, causing severe fat malabsorption. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s38_b",
+          "text": "Hepatocellular damage",
+          "answer": true,
+          "explanation": "A damaged liver fails to produce adequate bile salts required for breaking down dietary fats. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s38_c",
+          "text": "Obstructive jaundice",
+          "answer": true,
+          "explanation": "Obstruction of the biliary tree halts all bile flow, depriving the gut of the detergent action necessary for lipid absorption. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s38_d",
+          "text": "Chronic pancreatitis",
+          "answer": true,
+          "explanation": "Chronic inflammation destroys the pancreas, cutting off the supply of pancreatic lipase, making fat digestion nearly impossible. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s38_e",
+          "text": "The removal of stomach antrum during partial gastrectomy",
+          "answer": true,
+          "explanation": "Surgery on the stomach alters emptying speed, causing poorly mixed food to rush into the intestine, mismatching the release of pancreatic juices and impairing fat digestion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q39",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Regarding GIT",
+      "statements": [
+        {
+          "id": "s39_a",
+          "text": "Stomach contain content with highest pH",
+          "answer": false,
+          "explanation": "The stomach secretes concentrated hydrochloric acid, giving it the lowest (most acidic) pH in the entire body, not the highest. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s39_b",
+          "text": "Jejunum is the main site of Vitamin B12 absorption",
+          "answer": false,
+          "explanation": "Vitamin B12 bound to intrinsic factor specifically travels past the jejunum and is exclusively absorbed in the terminal ileum. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s39_c",
+          "text": "Colon is the site of action of aldosterone",
+          "answer": true,
+          "explanation": "Just like in the kidneys, aldosterone acts on the cells lining the colon to reabsorb sodium and water, firming up the stool. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s39_d",
+          "text": "Duodenum is the main site of iron absorption",
+          "answer": true,
+          "explanation": "Dietary iron is primarily absorbed in the very first segment of the small intestine, the duodenum. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s39_e",
+          "text": "Large intestine is the site where major proportion of water is absorbed",
+          "answer": false,
+          "explanation": "While the large intestine absorbs remaining water to form solid feces, the small intestine is responsible for absorbing the vast majority of water we drink and secrete. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q40",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "A woman undergoes total pancreatectomy because of the presence of a tumor. The following would be expected after she recovers from the operation:",
+      "statements": [
+        {
+          "id": "s40_a",
+          "text": "Steatorrhea",
+          "answer": true,
+          "explanation": "Removing the pancreas completely removes the source of pancreatic lipase, leading to massive fat malabsorption and fatty, foul-smelling stools (steatorrhea). (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s40_b",
+          "text": "Hyperglycemia",
+          "answer": true,
+          "explanation": "Removal of the pancreas removes all the beta cells that make insulin, instantly causing severe, insulin-dependent diabetes and high blood sugar. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s40_c",
+          "text": "Metabolic alkalosis",
+          "answer": false,
+          "explanation": "A diabetic state without insulin leads to ketoacidosis (metabolic acidosis). Additionally, losing the alkaline pancreatic secretions generally doesn't cause blood alkalosis. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s40_d",
+          "text": "Ongoing weight gain",
+          "answer": false,
+          "explanation": "Loss of digestion means calories pass straight through the gut unabsorbed. Combined with zero insulin, the patient will experience severe weight loss. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s40_e",
+          "text": "Decreased absorption of amino acids",
+          "answer": true,
+          "explanation": "The pancreas secretes the major proteases (like trypsin). Without them, whole proteins cannot be broken down to amino acids for absorption. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q41",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Causes of bile deficiency include:",
+      "statements": [
+        {
+          "id": "s41_a",
+          "text": "Intrinsic factor deficiency",
+          "answer": false,
+          "explanation": "Intrinsic factor is secreted by the stomach and binds Vitamin B12; its absence causes pernicious anemia, but it has absolutely no connection to bile production. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s41_b",
+          "text": "Liver diseases",
+          "answer": true,
+          "explanation": "The liver manufactures all bile salts from cholesterol. Severe liver disease inherently impairs or stops bile production. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s41_c",
+          "text": "Major ileal resection",
+          "answer": true,
+          "explanation": "Most bile is recycled by being reabsorbed in the ileum. Surgically removing the ileum breaks this cycle, leading to bile depletion. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s41_d",
+          "text": "Gallstones",
+          "answer": true,
+          "explanation": "Gallstones can become wedged in the biliary ducts, causing an obstruction that physically blocks bile from reaching the digestive tract. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s41_e",
+          "text": "Intestinal fistula",
+          "answer": true,
+          "explanation": "An abnormal connection (fistula) in the digestive tract can cause bile to drain out improperly or bypass the ileum, destroying the body's bile pool. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q42",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "In achlorhydria",
+      "statements": [
+        {
+          "id": "s42_a",
+          "text": "Malabsorption of fat is uncommon",
+          "answer": true,
+          "explanation": "Achlorhydria involves a lack of stomach acid. Since fat digestion depends primarily on pancreatic lipase and bile in the intestines, fat absorption remains mostly intact. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s42_b",
+          "text": "Protein digestion is impaired",
+          "answer": true,
+          "explanation": "Pepsin, the primary protein-digesting enzyme in the stomach, requires a highly acidic environment to activate and function properly. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s42_c",
+          "text": "There is increased bacterial overgrowth in the stomach",
+          "answer": true,
+          "explanation": "Stomach acid is a powerful sterilizing agent. Without it, swallowed bacteria survive and multiply inside the stomach. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s42_d",
+          "text": "Pepsin activity is increased",
+          "answer": false,
+          "explanation": "Pepsinogen requires an acidic pH (less than 3.0) to convert into active pepsin. Thus, in achlorhydria, pepsin activity drops to zero. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s42_e",
+          "text": "Gastric pH falls below 6.5 with maximal stimulation",
+          "answer": false,
+          "explanation": "By definition, achlorhydria is the failure of the stomach to secrete acid even with powerful stimulants, meaning the pH stays unnaturally high (neutral) and fails to fall. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q43",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "In the causation of peptic ulcer disease, the following are grouped as aggressive factor:",
+      "statements": [
+        {
+          "id": "s43_a",
+          "text": "Pepsin",
+          "answer": true,
+          "explanation": "Along with acid, pepsin is a powerful digestive enzyme that can actively eat away the protective stomach lining if it gets past the mucus barrier. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s43_b",
+          "text": "prostaglandin",
+          "answer": false,
+          "explanation": "Prostaglandins are key defensive factors. They maintain blood flow to the stomach and stimulate mucus and bicarbonate production to protect the lining. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s43_c",
+          "text": "Corticosteroids",
+          "answer": true,
+          "explanation": "Corticosteroids act as an aggressive factor because they block the production of protective prostaglandins in the stomach, rendering the lining vulnerable. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s43_d",
+          "text": "Cigarette smoking",
+          "answer": true,
+          "explanation": "Smoking harms blood flow to the stomach lining, lowers bicarbonate secretion, and impairs healing, acting as a potent aggressive factor. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s43_e",
+          "text": "Alcohol",
+          "answer": true,
+          "explanation": "High concentrations of alcohol can directly breach the mucosal barrier, damage cells, and promote acid-induced injury. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q44",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "Physiological treatment of peptic ulcer is based on:",
+      "statements": [
+        {
+          "id": "s44_a",
+          "text": "Neutralization of gastric acid",
+          "answer": true,
+          "explanation": "Administering basic compounds (antacids) neutralizes existing stomach acid, immediately relieving pain and reducing the aggressive chemical load. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s44_b",
+          "text": "Eradicating H. pylori",
+          "answer": true,
+          "explanation": "Because the H. pylori bacterium is the leading root cause of mucosal breakdown, antibiotics must be used to eradicate it and ensure long-term healing. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s44_c",
+          "text": "Protecting the mucosa from acid",
+          "answer": true,
+          "explanation": "Medications like sucralfate bind directly to the ulcer crater, forming a physical shield against incoming acid and pepsin. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s44_d",
+          "text": "Reducing gastric acid secretion",
+          "answer": true,
+          "explanation": "The most effective modern therapies (proton pump inhibitors and H2 blockers) physiologically halt the parietal cells from pumping acid in the first place. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s44_e",
+          "text": "Decreasing appetite",
+          "answer": false,
+          "explanation": "Appetite suppression is not a targeted physiological mechanism for treating ulcers; managing acid and mucosal defense is the goal. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    },
+    {
+      "id": "q45",
+      "topic": "Gastrointestinal Physiology",
+      "stem": "The following is/are likely to be seen in a patient with liver failure",
+      "statements": [
+        {
+          "id": "s45_a",
+          "text": "High concentrations of urea in the blood",
+          "answer": false,
+          "explanation": "The liver normally converts toxic ammonia into urea. In liver failure, this process stops, resulting in dangerously low blood urea levels and high ammonia. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s45_b",
+          "text": "High concentrations of albumin in the blood",
+          "answer": false,
+          "explanation": "Albumin is synthesized exclusively by the liver. When the liver fails, albumin production drops, leading to very low blood albumin and subsequent severe swelling. (Source: Ganong’s Review of Medical Physiology, 26th edition)"
+        },
+        {
+          "id": "s45_c",
+          "text": "Low concentrations of ammonia in the blood",
+          "answer": false,
+          "explanation": "Because a failing liver cannot process ammonia into harmless urea, ammonia rapidly builds up to high, toxic levels in the blood, causing brain dysfunction. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        },
+        {
+          "id": "s45_d",
+          "text": "Low concentrations of clotting factors in the blood",
+          "answer": true,
+          "explanation": "The liver synthesizes almost all essential blood coagulation factors; its failure drastically lowers their blood concentrations, leading to severe bleeding risks. (Source: Human Physiology, the Mechanisms of body Function; by Vander, 6th edition)"
+        },
+        {
+          "id": "s45_e",
+          "text": "A fall in immunoglobulin levels in the blood",
+          "answer": false,
+          "explanation": "Immunoglobulins (antibodies) are primarily produced by immune plasma cells, not the liver. In chronic liver disease, immunoglobulin levels actually tend to rise significantly. (Source: Guyton and Hall Textbook of Medical Physiology, 15th edition)"
+        }
+      ]
+    }
+  ]
+}
+
+
+
         ]
       }
     ]
