@@ -1,0 +1,67 @@
+{
+  "examYear": "2000s",
+  "title": "2000s Physiology Exam",
+  "definitions": {
+    "Orthopnea": "Shortness of breath that occurs when lying flat, causing the person to have to sleep propped up in bed or sitting in a chair.",
+    "Paroxysmal nocturnal dyspnea": "Attacks of severe shortness of breath and coughing that generally occur at night, usually awakening the person from sleep.",
+    "Pernicious anaemia": "A type of megaloblastic anemia caused by the body's inability to absorb vitamin B12 due to a lack of intrinsic factor.",
+    "Macula densa": "An area of closely packed specialized cells lining the wall of the distal tubule that monitors the sodium chloride concentration of the tubular fluid.",
+    "Glomerular filtration rate": "The volume of fluid filtered from the renal glomerular capillaries into Bowman's capsule per unit time.",
+    "Isovolumetric contraction": "The early phase of ventricular systole when the ventricles contract with no corresponding volume change because all heart valves are closed.",
+    "Surfactant": "A surface-active lipoprotein complex formed by type II alveolar cells that reduces surface tension in the alveoli, preventing their collapse.",
+    "Chemoreceptor": "A sensory cell or organ responsive to chemical stimuli, such as changes in the concentration of carbon dioxide, oxygen, or hydrogen ions.",
+    "Ptyalin": "A form of amylase found in the saliva of humans and some other animals that catalyzes the hydrolysis of starch into maltose and dextrin."
+  },
+  "questions": [
+    {
+      "id": "q60",
+      "topic": "Renal Physiology",
+      "stem": "Water permeability of the collecting duct is primarily regulated by:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Aldosterone"
+        },
+        {
+          "letter": "B",
+          "text": "Antidiuretic hormone (ADH)"
+        },
+        {
+          "letter": "C",
+          "text": "Renin"
+        },
+        {
+          "letter": "D",
+          "text": "Angiotensin II"
+        },
+        {
+          "letter": "E",
+          "text": "Atrial natriuretic peptide (ANP)"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Antidiuretic hormone (ADH, or vasopressin) regulates water permeability in the late distal tubule and collecting duct by stimulating the insertion of aquaporin-2 channels into the apical membrane (Ganong's Review of Medical Physiology)."
+    },
+    {
+      "id": "q61",
+      "topic": "Renal Physiology",
+      "stem": "Ammonia produced by the kidneys:",
+      "options": [
+        {
+          "letter": "A",
+          "text": "Buffers H+ ions"
+        },
+        {
+          "letter": "B",
+          "text": "Comes from oxidative respiration"
+        },
+        {
+          "letter": "C",
+          "text": "Increases during alkalosis"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Ammonia (NH3) binds to secreted hydrogen ions (H+) to form ammonium (NH4+), acting as a crucial urinary buffer."
+    }
+  ]
+}
